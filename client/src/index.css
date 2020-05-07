@@ -79,3 +79,10 @@ button{
   background-color: #eee;
   padding: 10px;
 }
+.post-comm{
+  border: none;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  color: grey;
+}

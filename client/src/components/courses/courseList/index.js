@@ -72,7 +72,7 @@ export default class index extends Component {
             <div className={'col-12 ' + Styles.listWrapper}>
                 <div className="col-12"  style={{overflow: "hidden" }}>
                     <h2 className="col-lg-12 col-12 heading-primary" style={{ fontWeight: '700', marginTop: '50px' }}>
-                        {this.props.heading} </h2>
+                        {this.props.title} </h2>
                     <div style={{position: `relative`}}>
                     {leftDom}
                     {/* <div  className={Styles.list}  style={{ borderBottom: '1px solid #dcdde1', whiteSpace: "nowrap", marginLeft: this.state.slide  }}>
