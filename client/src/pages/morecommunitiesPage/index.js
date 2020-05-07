@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/nav';
 import Community from '../../components/morecommunities';
+import Footer from '../../components/footer';
 import { connect } from 'react-redux';
 
 class index extends Component {
@@ -11,6 +12,7 @@ class index extends Component {
             <div className="p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={1} />
                 <Community auth={Auth} profile={profile} />
+                <Footer/>
             </div>
         )
     }

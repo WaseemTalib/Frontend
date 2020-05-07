@@ -21,7 +21,7 @@ export default class index extends Component {
 
                         <label className="label">Suggest Name:</label>
                         <div className="input-group mb-3" style={{ marginTop: '12px' }}>
-                            <input type="number" className="form-control inputStyle" name='email'
+                            <input type="text" className="form-control inputStyle" name='email'
                                  required />
                         </div>
                         <label className="label">Add Description:</label>
