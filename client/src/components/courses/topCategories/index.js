@@ -4,7 +4,7 @@ export default class index extends Component {
 
     renderList(list) {
         return list.map( i => {
-            return <div className="col-lg-4 col-12" key={i._id}>
+            return <div className="col-lg-2 col-md-3 col-md-4" key={i._id}>
                 <div className="col-12 course-card p-0">
                     <img src={i.image} alt="category"/>
                     <h6>{i.name}</h6>

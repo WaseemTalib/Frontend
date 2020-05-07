@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import '../style.css';
 import Styles from './styles.module.css';
 import Card from '../card';
-const styleActive = { color: '#c23616', borderBottom: '6px solid #c23616', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
-const simpleStyle = { color: '#718093', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
 export default class index extends Component {
-    CARD_LENGTH = 250;
+    CARD_LENGTH = 200;
     CL = this.CARD_LENGTH * -1;
     CARD_SPACING = 30;
     state = { id: '', slide: 0 };
@@ -48,8 +46,8 @@ export default class index extends Component {
 
     render() {
         //const { list } = this.props;
-        const leftDom = (this.state.slide < 0) ? <div className={Styles.leftWrapper} style={{ position: "absolute", top: "50%" }}>
-            <button className={Styles.btnNav} onClick={this.handleLeft}><i className="fa fa-chevron-left" style={{ margin: "15px 18px 15px 12px" }}></i></button>
+        const leftDom = (this.state.slide < 0) ? <div className={Styles.leftWrapper} style={{ position: "absolute", top: "50%",left:0 }}>
+            <button className={Styles.btnNav} onClick={this.handleLeft}><i className="fa fa-chevron-left" style={{ margin: "5px" }}></i></button>
         </div> : ""
         return (
             <div className={'col-12 ' + Styles.listWrapper} >
@@ -60,8 +58,8 @@ export default class index extends Component {
                     <div className={Styles.list} style={{ whiteSpace: "nowrap", marginLeft: this.state.slide }}>
                         {this.renderEBooks(this.props.bookList)}
                     </div>
-                    <div className={Styles.rightWrapper} style={{ position: "absolute", top: "50%", width: "50px", background: "transparent" }}>
-                        <button className={Styles.btnNav + " " + Styles.rightbtn} ><i className="fa fa-chevron-right" onClick={this.handleRight} style={{ margin: "15px 12px 15px 18px" }}></i></button>
+                    <div className={Styles.rightWrapper} style={{ position: "absolute", top: "50%", width: "50px", background: "transparent",right:0 }}>
+                        <button className={Styles.btnNav + " " + Styles.rightbtn} ><i className="fa fa-chevron-right" onClick={this.handleRight} style={{ margin: "5px" }}></i></button>
                     </div>
                 </div>
 

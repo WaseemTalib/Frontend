@@ -7,16 +7,22 @@
     overflow: auto;
     cursor: pointer;
 }
-@media (max-width:1000px) {
+@media only screen and (max-width:1000px) {
     .btn-nav{
         display: none !important
+    }
+    .heading-primary{
+        font-size: 2rem !important;
     }
 }
 .course:hover{
     scale: 1.1;
     box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.08), 1px 4px 10px 1px rgba(0, 0, 0, 0.05 );
 }
-
+.heading-primary{
+    font-size: 2.5rem !important;
+    font-weight: 100;
+}
 .course .course-img{
     width: 100%;
     height: 150px !important;
@@ -91,7 +97,7 @@
 
 
 .course-card{
-    height: 390px;
+    height: 200px;
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.08), 1px 1px 10px 1px rgba(0, 0, 0, 0.05 );
     margin-bottom: 30px;
     position: relative;
@@ -104,10 +110,26 @@
 }
 
 .course-card img{
-    height: 320px;
+    height: 150px;
     width: 100%;
 }
-
+.display_on_short{
+    height: 0;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+    padding: 0 !important;
+    /* animation: animate 0.5s ease-in-out; */
+}
+/* @keyframes animate {
+    0%{
+        height: 100%;
+        overflow: visible; 
+    }
+    100%{
+        height: 0%;
+        overflow: hidden; 
+    }
+} */
 .course-card h6{
     font-weight: 700;
     font-size: 18px;
