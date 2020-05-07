@@ -211,8 +211,8 @@ ul > li{
   font-size: .6rem
 }
 @media (max-width: 1000px){
-  .side-social-list{
-    flex-direction: column
+  .side-social{
+    display: none
   }
 }
 .side-social-item {
