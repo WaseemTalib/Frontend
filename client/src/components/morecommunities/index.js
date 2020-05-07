@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { registerFeeds, getFeeds, getFeedsAuth } from '../../redux/actions/feedActions';
 import { Link } from 'react-router-dom';
 import List from './courseList';
-
+import Model from './model'
 class index extends Component {
 
     constructor(props) {
@@ -58,6 +58,7 @@ class index extends Component {
         return <div className="content">
 
             <nav className="sidebar ">
+                <a href="#popup" className="left-side-popup-button">+ Suggest Community</a>
                 <h2 className="left-side-heading-h">Recommended Courses</h2>
                 <ul className="side-nav">
                     {this.renderCoursesLinks(TopicList)}
@@ -82,13 +83,14 @@ class index extends Component {
                         <li className="side-social-item"><a className="side-social-link" href="#"> Google Play Store</a></li>
                     </ul>
                 </div>
+                <Model></Model>
             </nav>
             <div className="center1">
                     <List />
             </div>
             <div className="left-side">
                 <div className="left-side-border">
-                    <h6 style={{ width: '100%', backgroundColor: '#f4f2f2', letterSpacing: "1px", textTransform: "uppercase", textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className="p-2"><span className="fa fa-feed mr-2"></span> Communities</h6>
+                    <h6 style={{ width: '100%', backgroundColor: '#f4f2f2', letterSpacing: "1px", textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className="p-2"><span className="fa fa-feed mr-2"></span> Communities</h6>
                     <ul className="left-side-list">
                         {this.renderCommunityLinks(TopicList)}
                     </ul>
