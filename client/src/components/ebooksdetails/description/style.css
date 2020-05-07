@@ -1,0 +1,22 @@
+.description{
+    font-size: 1.4rem;
+    color: rgb(179, 178, 178);
+    line-height: 2;
+    margin-bottom: 4rem;
+}
+.description-heading{
+    font-weight: 700;
+     font-size: 21px
+}
+@media (max-width:800px) {
+    .description{
+        font-size: 1rem;
+        text-align: center
+    }
+    .description-heading{
+         font-size: 17px
+    }
+}
+.description-p{
+    margin: 2rem 0;
+}

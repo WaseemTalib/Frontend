@@ -1,0 +1,30 @@
+.btnNav{
+    border-radius: 50px !important;
+    border: 0px;
+    font-size: 28px !important;
+    background-color: white !important;
+    color:rgb(192, 57, 43);
+}
+.list{
+    transition: margin linear 0.5s;
+}
+.listWrapper{
+    padding: 0 5% !important;
+}
+.rightWrapper{
+    right:5%;
+}
+.leftWrapper{
+    left:5%;
+}
+@media screen and (max-width: 600px){
+    .listWrapper{
+        padding: 0 10px !important;
+    }
+    .rightWrapper{
+        right:30px;
+    }
+    .leftWrapper{
+        left:30px;
+    }
+}

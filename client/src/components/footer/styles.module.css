@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem !important;
+  margin: 0 !important;
+  height: 300px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+}
+.a {
+  padding: 50px 50px !important;
+}
+
+.aG {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+.aP {
+  font-size: 16px;
+  font-weight: 500;
+}
+.appBanner {
+  display: inline-block;
+  text-align: left;
+  width: 120px;
+  margin-bottom: 10px;
+}
+.apfc {
+  padding: 3rem;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .styles_copy__2nEqk {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.copy {
+  display: inline-block;
+  text-align: center;
+}
+.signUp {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  padding: 5px 30px;
+  background: white;
+}
+.list {
+  text-decoration: none;
+  list-style: none;
+  padding: 25px !important;
+  margin-bottom: 0 !important;
+  color: black !important;
+}
+
+.lItem {
+  cursor: pointer;
+  color: black !important;
+}
