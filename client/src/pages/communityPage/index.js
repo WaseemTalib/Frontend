@@ -8,7 +8,7 @@ class index extends Component {
     render() {
         const { Auth, profile } = this.props;
         return (
-            <div className="p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
+            <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={1} />
                 <Community auth={Auth} profile={profile} />
             </div>
