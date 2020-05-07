@@ -7,7 +7,7 @@ import Model from '../model';
 export default class extends React.Component {
     render() {
         return <div className={"details d-flex" }>
-           <div className={"two-cols d-flex"}>
+           <div className={"two-cols d-flex mr-auto"}>
             <div className={"left p-5"}>
                 <img src={"http://covertopia.com/wp-content/uploads/2015/05/000227_Alt-320x500.jpg"} className={"left-image br-3"} style={{ }} alt="EBook" />
             </div>
@@ -29,7 +29,7 @@ export default class extends React.Component {
                         Buy Now
                     </a>
                 </div>
-                <div className={"appinfo d-flex p-3"} style={{width: `100%`}}>
+                <div className={"appinfo d-flex p-3"}>
                     <img src={"https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?size=626&ext=jpg"} className={"right-image"} style={{ width: "7rem" }} alt="EBook" />
                     <div className={"appinfotext d-flex justify-content-around flex-column"}>
                         <span>Read on Every Device</span>

@@ -243,8 +243,6 @@ ul > li{
 .left-side-heading-h {
  color: #e74c3c;
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
   background-color: #f4f2f2;
@@ -254,6 +252,25 @@ ul > li{
   margin-top: 1px;
   border-bottom: 1px solid #f0eeee;
   overflow: hidden;
+}
+.left-side-popup-button{
+  color: #f7f7f7;
+  font-size: 1.1rem;
+  word-spacing: 2px;
+  font-weight: 600;
+  background-color: #e74c3c;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 1px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5)
+}
+.left-side-popup-button:hover{
+  color: #f7f7f7;
+ text-decoration: none 
 }
 .left-side-list {
   padding: 1.2rem;
@@ -290,3 +307,7 @@ ul > li{
   font-size: 1rem;
   line-height: 1.5;
 }
+
+
+
+

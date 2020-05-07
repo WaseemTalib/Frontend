@@ -9,11 +9,11 @@ import Footer from '../../components/footer';
 class index extends Component {
     render() {
         const { TopicList } = this.props;
-        const titles= ["Choose from 100,000 video courses with new additions pusblished every month","ABC"]
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={2} />
                 <Header />
-                {TopicList && TopicList.length > 0 && titles.map(el=> <Courses list={TopicList.slice(0, TopicList.length > 5 ? 5 : TopicList.length)} title={el} />)}
+                {TopicList && TopicList.length > 0 && <Courses list={TopicList.slice(0, TopicList.length > 5 ? 5 : TopicList.length)} />}
+                
                 {TopicList && TopicList.length > 0 && <Categories list={TopicList.slice(0, TopicList.length > 6 ? 6 : TopicList.length)} />}
                 <Footer/>
                 </div>

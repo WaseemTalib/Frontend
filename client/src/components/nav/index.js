@@ -35,7 +35,7 @@ class index extends Component {
             <React.Fragment>
                 <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
                 <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fas fa-book" style={{ marginRight: '12px' }}></span>E-Books</Link>
+                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
                 <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
             </React.Fragment>
         )
@@ -48,7 +48,7 @@ class index extends Component {
                 <div className='d-flex flex-row justify-content-between pt-3 pb-3 pl-5 pr-5 col-12'>
                 <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
                 <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fas fa-book" style={{ marginRight: '12px' }}></span>E-Books</Link>
+                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
                 <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
                 </div>
             </React.Fragment>

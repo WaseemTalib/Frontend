@@ -1,3 +1,4 @@
+
 .center1 {
   flex: 1;
   margin-right: 2rem;
@@ -260,16 +261,19 @@ ul > li{
   margin-bottom: 8px;
 }
 .right-side-link:link {
-  color: #777;
   text-decoration: none;
   text-transform: capitalize;
   font-size: .8rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 1;
   padding: 5px 0px;
 } 
+.right-side-link:hover{
+  color: #e74c3c;
+}
 .right-side-img {
   width: 2.5rem;
   height: 2.5rem;
@@ -278,5 +282,5 @@ ul > li{
 }
 .right-side-text{
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.5
 }

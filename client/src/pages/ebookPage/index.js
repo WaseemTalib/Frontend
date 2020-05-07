@@ -79,12 +79,14 @@ class index extends Component {
                                 id:1,
                                 price:"$25",
                                 star:4.2}];
-                                const titles = ["Top Release in March","New & Hot in Biography & Memoir","New & Hot in Biography & Memoir","New Section......"]
+
         const { TopicList } = this.props;
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={3} />
                 <Header />
-                {TopicList && TopicList.length > 0 && titles.map(title=><EBooks title={title} bookList = {topRIM}/>)}
+                {TopicList && TopicList.length > 0 && <EBooks title="Top Release in March" bookList = {topRIM}/>}
+                {TopicList && TopicList.length > 0 && <EBooks title={"New & Hot in Biography & Memoir"}  bookList = {topRIM} />}
+             {TopicList && TopicList.length > 0 && <EBooks title={"New & Hot in Biography & Memoir"}  bookList = {nHSFF} />}
                 <Footer></Footer>
              </div>
     }

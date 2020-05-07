@@ -69,7 +69,7 @@
   .two-cols {
     display: flex;
     justify-content: center; 
-    margin: 0 !important;
+    flex: wrap !important;
     text-align: center;
     flex-direction: column;
   }
