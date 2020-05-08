@@ -56,7 +56,7 @@ class index extends Component {
         const { auth, profile, Feed, TopicList } = this.props;
 
         return <div className="content">
-            <Model></Model>
+            <Model/>
             <nav className="sidebar ">
                 <h2 className="page-heading">Freelancer of Upwork Fiverr and PeoplePerHour</h2>
                 <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} style={{ width: '100%', backgroundColor: '#f4f2f2', textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span>Communities You're In</h6>

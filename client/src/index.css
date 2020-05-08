@@ -52,7 +52,7 @@ button{
 .profile_image_wrapper{
   position: absolute;
   top: 100%;
-  left: 100px;
+  left: 70px;
   transform: translateY(-25%);
 }
 .profile_image label{
@@ -77,7 +77,8 @@ button{
   width: 100%;
   margin: 0 auto;
   background-color: #eee;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 .post-comm{
   border: none;
@@ -85,4 +86,117 @@ button{
   height: 100px;
   resize: none;
   color: grey;
+}
+.side_content{
+  margin-top: 20px;
+}
+
+.items_list{
+  list-style: none;
+}
+.phone_no_icon{
+  color: #fb26e4;
+  background-color: #efa4de;
+  
+}
+.envalope_icon{
+  color: #0f2b89;
+  background-color: #b8c2e0;
+}
+.location_icon{
+  color: #57b3a3;
+  background-color: #c6f6f0;
+}
+.list_content i{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transform: translateY(-12px);
+}
+.list_content .detail{
+  display: inline-block;
+}
+.list_content .detail .heading_content{
+  font-weight: 100;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+.my_courses .course{
+  height: 320px;
+}
+.progress_bar{
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+}
+.add_course{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #000;
+}
+.add_course:hover{
+  color: #000;
+}
+.add_course i{
+  font-size: 1.8rem;
+}
+.progress_bar::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ff3000;
+  width: calc(var(--i)* 1%);
+}
+.pagination_profile{
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  margin-right: 20px;
+  display: inline-block;
+  font-weight: 650;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+.pagination_profile:hover{
+  text-decoration: none;
+  color: #000;
+}
+.pagination_profile::after{
+  content: "";
+  position: absolute;
+  transition: all 0.5s;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff3000;
+}
+.pagination_profile:hover::after{
+  width: 80%;
+}
+.pagination_profile.page_active::after{
+  width: 80% !important;
+}
+.education_icon{
+  background-color: #ffc49c;
+  color: #ff6f00;
+}
+.job_icon{
+  background-color: #fa9c9c;
+  color: #f41a1a;
 }

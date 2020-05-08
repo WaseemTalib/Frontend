@@ -1,78 +1,61 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PostCard = (item) => {
   return (
-    <div key={item._id} className="post col-12">
-      <div className="post-head">
-        <div
-          style={{
-            width: "45px",
-            height: "45px",
-            borderRadius: "50%",
-            backgroundColor: "#f9ca24",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h4 style={{ fontWeight: "700", color: "white", marginTop: "3px" }}>
-            {item.postedBy && item.postedBy.name ? item.postedBy.name[0] : ""}
-          </h4>
+    <div className="f-card">
+        <div className="header">
+          <div className="options">
+            <i className="fa fa-chevron-down"></i>
+          </div>
+          <img
+            className="co-logo"
+            src={
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png"
+            }
+            alt="user.name"
+          />
+          <div className="co-name" style={{display: `inline-block`}}>
+            <Link to="/">
+              {item.postedBy.name}
+            </Link>
+          </div>
+          <div style={{display: `inline-flex`}} class="align-items-center ml-3"><div class="post-option"><span class="fa fa-caret-right post-head-icon"></span></div><div class="post-group-ref">Computers</div></div>
         </div>
-        <div className="d-flex flex-direction-row mr-auto">
-        <div className="post-user-detail d-flex">
-          <div>
-          <div className="post-name">
-            {item.postedBy ? item.postedBy.name : ""}
-          </div>
-          <div className="post-sub-name">
-            {item.topicId ? item.topicId.name : ""}
-          </div>
-          </div>
-          <div className="d-flex align-items-center ml-3">
-          <div className="post-option">
-            <span className="fa fa-caret-right post-head-icon"></span>
-          </div>
-          <div className="post-group-ref">
-            {item.topicId ? item.topicId.name : ""}
-          </div>
-          </div>
+        <div>
+        <div className="content">
+          <p>{item.feed}</p>
+        </div>
+        <div className="reference">
+          {item.url ? <img className="reference-thumb" alt="imga" src={item.url} /> : ""}
         </div>
         </div>
-        <div className="post-buttons">
-          <div className="post-option">
-            <span className="fa fa-share-alt post-head-icon"></span>
-          </div>
-          <div className="post-option">
-            <span className="fa fa-ellipsis-h post-head-icon"></span>
+        <span className="line" style={{ height: `1px` }}></span>
+        <div className="" style={{ marginBottom: `30px` }}>
+          <div className="right">  Comments </div>
+        </div>
+        <div className="social">
+          <div className="social-content"></div>
+          <div className="social-buttons">
+            <span
+              data-fill="favorite"
+            >
+              <i className="fa fa-thumbs-o-up post-icon"></i>
+              Approve
+            </span>
+            <span>
+              <i className="fa fa-comment-o post-icon"></i>
+              Comment
+            </span>
+              <span>
+                <i className="fa fa-share-square-o post-icon"></i>Share
+              </span>
           </div>
         </div>
       </div>
-      <div className="post-body">
-        {item.feed && <p className="post-body-detail">{item.feed}</p>}
-        {item.url && (
-          <img src={item.url} alt="post" className="post-body-img" />
-        )}
-      </div>
-      <div className="post-footer">
-        <h6 className="post-icons">
-          {" "}
-          <span className="fa fa-thumbs-o-up post-icon"></span>
-          <span className="post-icon-text">Approve</span>
-        </h6>
-        <h6 className="post-icons">
-          {" "}
-          <span className="fa fa-comment-o post-icon"></span>
-          <span className="post-icon-text">Comment</span>
-        </h6>
-        <h6 className="post-icons">
-          {" "}
-          <span className="fa fa-share-square-o post-icon"></span>
-          <span className="post-icon-text">Share</span>
-        </h6>
-      </div>
-    </div>
   );
 };
+/* 
 
+*/
 export default PostCard;

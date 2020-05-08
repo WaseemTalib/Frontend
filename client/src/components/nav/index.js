@@ -33,10 +33,10 @@ class index extends Component {
         var { active } = this.props;
         return (
             <React.Fragment>
-                <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Community</span></Link>
-                <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>Courses</span></Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>E-Books</span></Link>
-                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Purchases</span></Link>
+                <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
+                <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
+                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
+                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
             </React.Fragment>
         )
     }
@@ -46,10 +46,10 @@ class index extends Component {
         return (
             <React.Fragment>
                 <div className='d-flex flex-row justify-content-between pt-3 pb-3 pl-5 pr-5 col-12'>
-                <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Community</span></Link>
-                <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>Courses</span></Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>E-Books</span></Link>
-                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '6px' }}></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Purchases</span></Link>
+                <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
+                <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
+                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
+                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
                 </div>
             </React.Fragment>
         )
@@ -59,10 +59,10 @@ class index extends Component {
         return (
             <React.Fragment>
                 <div className='d-flex flex-column align-items-center justify-content-center col-12'>
-                <Link to='/community' className={active === 1 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-users align-self-center p-1"></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Community</span></Link>
-                <Link to='/courses' className={active === 2 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-book align-self-center p-1"></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>Courses</span>Courses</Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-gg-circle align-self-center p-1"></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>E-Books</span></Link>
-                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-credit-card align-self-center p-1"></span><span style={{textTransform: "uppercase", fontSize:"14px"}}>My Purchases</span></Link>
+                <Link to='/community' className={active === 1 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-users align-self-center p-1"></span>My Community</Link>
+                <Link to='/courses' className={active === 2 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-book align-self-center p-1"></span>Courses</Link>
+                <Link to='/ebooks' className={active === 3 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-gg-circle align-self-center p-1"></span>E-Books</Link>
+                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-credit-card align-self-center p-1"></span>My Purchases</Link>
             </div>
             </React.Fragment>
         )
@@ -89,7 +89,9 @@ class index extends Component {
                     <img src={profile.image ? profile.img : Avat} alt="profile" className="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style={{ width: '30px', height: '30px', marginRight: '8px', borderRadius: '1000px' }} />
                     <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button className="dropdown-item" type="button">View Profile</button>
+                        <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
+                        <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                        <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
             {isActive && <div className="m-2"></div>}
@@ -118,7 +120,9 @@ class index extends Component {
                     <img src={profile.image ? profile.img : Avat} alt="profile" className="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style={{ width: '30px', height: '30px', marginRight: '8px', borderRadius: '1000px' }} />
                     <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button className="dropdown-item" type="button">View Profile</button>
+                    <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
+                        <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                        <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
                     {isActive && <div className="m-2"></div>}
@@ -132,12 +136,12 @@ class index extends Component {
         const { Auth, isError, profile } = this.props;
         if (width && width !== 0 && width >= 992)
             return (
-                <div className="navbar d-flex flex-lg-row flex-column col-12">
+                <div className="navbar d-flex flex-lg-row flex-column col-12 p-4">
                     <h6 style={logoName}>GENIVERSITY</h6>
                     <div className="input-group col-lg-3 col-12">
                         <input type="text" className="form-control" placeholder="Search Geniversity" />
                         <div className="input-group-append">
-                            <button className="btn btn-outline-danger bg-danger" style={{fontSize:"16px"}} type="button"><span className="fa fa-search" style={{ color: 'white' }}></span></button>
+                            <button className="btn btn-outline-danger bg-danger" type="button"><span className="fa fa-search" style={{ color: 'white' }}></span></button>
                         </div>
                     </div>
                     {this.renderActiveLink()}
@@ -147,7 +151,9 @@ class index extends Component {
                             <img src={profile.image ? profile.img : Avat} alt="profile" className="dropdown-toggle dropleft" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 style={{ width: '40px', height: '40px', marginRight: '8px', borderRadius: '1000px' }} />
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                <button className="dropdown-item" type="button">View Profile</button>
+                            <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
+                            <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                            <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
                                 <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                             </div>
                         </div>}
