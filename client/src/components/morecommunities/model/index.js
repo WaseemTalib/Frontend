@@ -29,9 +29,9 @@ export default class index extends Component {
                             <textarea id="detail" className="form-control inputStyle" name="detail" rows="4" cols="50"  required>
                             </textarea>
                         </div>
-                        <a href="#" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
+                        <Link to="/groups" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
                             Submit
-                        </a>
+                        </Link>
 
                     </form>
                 </div>
