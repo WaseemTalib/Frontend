@@ -1,16 +1,22 @@
 .center1 {
   flex: 1;
-  margin-right: 20px;
+  padding-right: 25px;
   background-color: #fff;
   line-height: 15px;
 }
 .content {
   display: flex;
-  padding: 2.5rem;
+  padding: 25px 65px;
 }
 .sidebar-heading{
-  padding: .5rem 0
-}
+    color: #e74c3c;
+     font-size: 14px;
+     font-weight: bold;
+     background-color: #f4f2f2;
+     padding: 12px 0;
+     text-align: center;
+   }
+
 @media (max-width: 1000px){
   .content{
     flex-direction: column;
@@ -24,17 +30,21 @@
    padding: 1.2rem 0 
   }
   .center1{
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
   }
   .right-side{
     padding: 0;
     margin: 0
   }
+  .post-body{
+    padding: 25px 30px !important
+  }
 }
 .post {
   background-color: #faf9f9;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+  border-radius: 5px
 }
 /* ///////////////////////////////////////////// post head */
 
@@ -51,7 +61,7 @@
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  margin-left: 2rem;
+  margin-left: 20px;
 }
 .post-name {
   font-size: 18px;
@@ -96,7 +106,7 @@
 .post-footer {
   display: flex;
   justify-content: space-between;
-  padding: 14px 14px;
+  padding: 14px 30px;
   border-top: 1px solid #dcdde1;
 }
 .post-icons {
@@ -122,7 +132,7 @@
 }
 .sidebar {
   display: flex;
-  flex: 0 0 20%;
+  flex: 0 0 22%;
   flex-direction: column;
   background-color: #fff;
   padding-right: 25px;
@@ -131,9 +141,9 @@
 /* /////////////////////////////// Left Side //////////////////// */
 
 .side-nav {
-  font-size: 10px;
+  font-size: 18px;
   list-style: none;
-  padding: 1rem 0rem 0 1rem !important
+  padding: 0 !important
 }
 .side-nav-main-heading {
   display: flex;
@@ -147,17 +157,15 @@ ul > li{
 .side-item {
   position: relative;
   transition: all 0.5s;
-}
-.side-item:not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 2px
 }
 .side-link:link {
   text-transform: capitalize;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  padding: 5px 0;
+  padding: 5px 0 0 15px;
   position: relative;
   z-index: 1;
 }
@@ -165,66 +173,70 @@ ul > li{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 10px
 }
 .side-link:hover{
   color: #e74c3c
 }
 .side-img {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 14px;
 }
 .side-more-images {
   display: flex;
   align-items: center;
   box-sizing: content-box;
-  margin-left: 1.2rem;
-  margin-bottom: 1rem
+  margin-left: 14px;
+  margin-bottom: 14px
 }
 .side-more-img {
   color: #fff;
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 .side-more-img:not(:last-child) {
-  margin-right: -1rem;
+  margin-right: -14px;
 }
 .side-more-text {
  align-self: center;
-  margin-left: 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .side-nav-hr {
-  margin: .5rem auto;
+  margin: 10px auto;
   width: 95%;
   border: 0.5px solid #ccc;
 }
-.side-social {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-left: 10px
-}
-.side-list-heading {
-  font-size: .8rem;
-  text-align: left;
-  color: #777;
-  margin-bottom: 2px;
-}
-.side-social-list {
-  display: flex;
-  font-size: .6rem
-}
 @media (max-width: 1000px){
+  .side-nav-hr{
+    display: none
+  }
   .side-social{
     display: none
   }
 }
+.side-social {
+  font-weight: 600;
+  margin-left: 5px;
+}
+.side-list-heading {
+  font-size: 16px;
+  text-align: left;
+  color: #777;
+  margin-bottom: 8px;
+}
+.side-social-list {
+  display: flex;
+  font-size: 10px;
+  padding: 0 10px
+}
 .side-social-item {
-  margin-right: 1.7rem;
+  margin-right: 22px;
   color: #999;
 }
 .side-social-link{
@@ -253,20 +265,16 @@ ul > li{
   width: 100%
 }
 .right-side-heading-h {
- color: #e74c3c;
-  font-size: 1rem;
+  color: #e74c3c;
+  font-size: 14px;
   font-weight: bold;
   background-color: #f4f2f2;
-  padding: 1.2rem 0;
-  width: 100%;
+  padding: 13px 0;
   text-align: center;
-  margin-top: 1px;
-  border-bottom: 1px solid #f0eeee;
-  overflow: hidden;
 }
 .right-side-list {
-  padding: 1.2rem;
   list-style: none;
+  padding: 0 !important
 }
 .right-side-item {
   position: relative;
@@ -276,26 +284,25 @@ ul > li{
   margin-bottom: 8px;
 }
 .right-side-link:link {
-  text-decoration: none;
   text-transform: capitalize;
-  font-size: .8rem;
-  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
   display: flex;
   align-items: center;
+  padding: 8px 0 0 15px;
   position: relative;
   z-index: 1;
-  padding: 5px 0px;
 }
 .right-side-link:hover{
   color: #e74c3c
 } 
 .right-side-img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  margin-right: .8rem;
+  margin-right: 14px;
 }
 .right-side-text{
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 14px;
+  margin-top: -2px
 }

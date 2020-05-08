@@ -3,8 +3,8 @@ import './style.css';
 import { connect } from 'react-redux';
 import { registerFeeds, getFeeds, getFeedsAuth } from '../../redux/actions/feedActions';
 import { Link } from 'react-router-dom';
-const List = lazy(() => import('../community/postList'));
-const AddPost = lazy(() => import('../community/addPost'));
+const List = lazy(() => import('./postList'));
+const AddPost = lazy(() => import('./addPost'));
 
 class index extends Component {
 
@@ -58,7 +58,7 @@ class index extends Component {
         return <div className="content">
 
             <nav className="sidebar ">
-                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} style={{ width: '100%', backgroundColor: '#f4f2f2', textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px'}} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span> Communities</h6>
+                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span> Communities</h6>
                 <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
                     <ul className="side-nav">
                         {this.renderCommunityLinks(TopicList)}
@@ -67,7 +67,7 @@ class index extends Component {
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
-                        <Link to="/morecommunities" className="side-more-text" style={{ textDecoration: "none" }}>See More +</Link>
+                        <Link to="/morecommunities" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
                     </div>
                     <hr className="side-nav-hr" />
                     <div className="side-social">

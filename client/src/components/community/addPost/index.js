@@ -79,11 +79,11 @@ export default class index extends Component {
         return <form className={"col-12 p-0 ask-something"} style={{ display: 'flex', flexDirection: 'column', marginBottom: '30px', backgroundColor: '#faf9f9', alignItems: 'center' }}
             onSubmit={(e) => this.submitHandler(e)}>
             <div className="col-12 pt-3 pb-2 pl-4 pr-4" style={{ borderBottom: '1px solid #dcdde1' }}>
-                <h6 style={{ fontSize: "18px", fontWeight: '600', color: 'grey' }}>Ask Somthing</h6>
+                <h6 style={{ fontSize: "16px", fontWeight: '600', color: 'grey' }}>Ask Somthing</h6>
             </div>
             <div className="col-12 p-4" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }} data-toggle="modal" data-target="#postMod">
                 <img src={profile.image ? profile.image : User} alt="user" style={{ width: '40px', height: '40px', borderRadius: '50px' }} />
-                <h6 className="ml-3" style={{ fontWeight: '600', fontSize: '16px', color: 'grey' }}>Hi {profile.name} ! What is on your mind?</h6>
+                <h6 className="ml-3" style={{ fontWeight: '600', fontSize: '15px', color: 'grey' }}>Hi {profile.name} ! What is on your mind?</h6>
             </div>
             <div className="modal fade" id="postMod" tabIndex="-1" role="dialog" aria-labelledby="Post" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">

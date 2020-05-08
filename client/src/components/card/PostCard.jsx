@@ -6,9 +6,9 @@ const PostCard = (item) => {
       <div className="post-head">
         <div
           style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "1000px",
+            width: "45px",
+            height: "45px",
+            borderRadius: "50%",
             backgroundColor: "#f9ca24",
             display: "flex",
             alignItems: "center",
@@ -29,7 +29,7 @@ const PostCard = (item) => {
         </div>
         <div className="post-buttons">
           <div className="post-option">
-            <span className="fa fa-share post-head-icon"></span>
+            <span className="fa fa-share-alt post-head-icon"></span>
           </div>
           <div className="post-option">
             <span className="fa fa-ellipsis-h post-head-icon"></span>
@@ -45,17 +45,17 @@ const PostCard = (item) => {
       <div className="post-footer">
         <h6 className="post-icons">
           {" "}
-          <span className="fa fa-check-square-o post-icon"></span>
+          <span className="fa fa-thumbs-o-up post-icon"></span>
           <span className="post-icon-text">Approve</span>
         </h6>
         <h6 className="post-icons">
           {" "}
-          <span className="fa fa-comments post-icon"></span>
+          <span className="fa fa-comment-o post-icon"></span>
           <span className="post-icon-text">Comment</span>
         </h6>
         <h6 className="post-icons">
           {" "}
-          <span className="fa fa-share-square post-icon"></span>
+          <span className="fa fa-share-square-o post-icon"></span>
           <span className="post-icon-text">Share</span>
         </h6>
       </div>
