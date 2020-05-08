@@ -76,9 +76,9 @@ export default class index extends Component {
     render() {
         const { profile } = this.props;
         const { step } = this.state;
-        return <form className={"col-12 p-0 ask-something"} style={{ display: 'flex', flexDirection: 'column', marginBottom: '30px', backgroundColor: '#faf9f9', alignItems: 'center' }}
+        return <form className={"col-12 p-0 ask-something"} style={{ borderRadius: "5px", display: 'flex', flexDirection: 'column', marginBottom: '30px', backgroundColor: '#faf9f9', alignItems: 'center' }}
             onSubmit={(e) => this.submitHandler(e)}>
-            <div className="col-12 pt-3 pb-2 pl-4 pr-4" style={{ borderBottom: '1px solid #dcdde1' }}>
+            <div className="col-12 pt-3 pb-2 pl-4" style={{borderRadius: "5px", backgroundColor: "#f3f5f6", borderBottom: '1px solid #dddfe2' }}>
                 <h6 style={{ fontSize: "16px", fontWeight: '600', color: 'grey' }}>Ask Somthing</h6>
             </div>
             <div className="col-12 p-4" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }} data-toggle="modal" data-target="#postMod">

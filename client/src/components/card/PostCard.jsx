@@ -19,13 +19,25 @@ const PostCard = (item) => {
             {item.postedBy && item.postedBy.name ? item.postedBy.name[0] : ""}
           </h4>
         </div>
-        <div className="post-user-detail">
+        <div className="d-flex flex-direction-row mr-auto">
+        <div className="post-user-detail d-flex">
+          <div>
           <div className="post-name">
             {item.postedBy ? item.postedBy.name : ""}
           </div>
           <div className="post-sub-name">
             {item.topicId ? item.topicId.name : ""}
           </div>
+          </div>
+          <div className="d-flex align-items-center ml-3">
+          <div className="post-option">
+            <span className="fa fa-caret-right post-head-icon"></span>
+          </div>
+          <div className="post-group-ref">
+            {item.topicId ? item.topicId.name : ""}
+          </div>
+          </div>
+        </div>
         </div>
         <div className="post-buttons">
           <div className="post-option">
