@@ -66,7 +66,7 @@ class index extends Component {
                     <div className="side-more-images">
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "red" }}>+20</div>
+                        <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
                         <Link to="/morecommunities" className="side-more-text" style={{ textDecoration: "none" }}>See More +</Link>
                     </div>
                     <hr className="side-nav-hr" />

@@ -1,8 +1,8 @@
 .center1 {
   flex: 1;
-  margin-right: 2rem;
+  margin-right: 20px;
   background-color: #fff;
-  line-height: 1.5rem;
+  line-height: 15px;
 }
 .content {
   display: flex;
@@ -48,15 +48,18 @@
 }
 
 .post-user-detail {
+  display: flex;
+  flex-direction: column;
   margin-right: auto;
   margin-left: 2rem;
 }
 .post-name {
-  font-size: 1.3rem;
+  font-size: 18px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 .post-sub-name {
-  font-size: 1rem;
+  font-size: 14px;
   color: grey;
 }
 .post-buttons {
@@ -69,20 +72,20 @@
   padding: 10px
 }
 .post-option:not(:last-child){
-  margin-right: 1.5rem;
+  margin-right: 15px;
 }
 .post-option:hover .post-head-icon {
  color: red
 }
 .post-head-icon{
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 /* ///////////////////////////////////////////// post body */
 .post-body {
-  padding: 2rem 1.5rem;
+  padding: 25px 20px;
 }
 .post-body-detail {
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: 400;
 }
 .post-body-img {
@@ -93,7 +96,7 @@
 .post-footer {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 14px 14px;
   border-top: 1px solid #dcdde1;
 }
 .post-icons {
@@ -101,7 +104,7 @@
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
-  margin-right: 2rem
+  margin-right: 20px
 }
 .post-icons:hover .post-icon {
   color: red;
@@ -111,10 +114,10 @@
 }
 .post-icon {
   color: rgb(102, 101, 101);
-  margin-right: .5rem;
+  margin-right: 7px;
 }
 .post-icon-text {
-  font-size: 1rem;
+  font-size: 14px;
   color: rgb(102, 101, 101)
 }
 .sidebar {
@@ -122,13 +125,13 @@
   flex: 0 0 20%;
   flex-direction: column;
   background-color: #fff;
-  padding-right: 2rem;
+  padding-right: 25px;
 }
 
 /* /////////////////////////////// Left Side //////////////////// */
 
 .side-nav {
-  font-size: 1.4rem;
+  font-size: 10px;
   list-style: none;
   padding: 1rem 0rem 0 1rem !important
 }
@@ -151,21 +154,26 @@ ul > li{
 .side-link:link {
   text-transform: capitalize;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   padding: 5px 0;
   position: relative;
   z-index: 1;
 }
+.last_listitem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .side-link:hover{
   color: #e74c3c
 }
 .side-img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin-right: 1.2rem;
+  margin-right: 10px;
 }
 .side-more-images {
   display: flex;
@@ -242,6 +250,7 @@ ul > li{
 }
 .right-side-border {
   border: 1px solid #f0eeee;
+  width: 100%
 }
 .right-side-heading-h {
  color: #e74c3c;
