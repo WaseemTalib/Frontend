@@ -43,10 +43,10 @@ class index extends Component {
     renderCoursesLinks(TopicList) {
         if (TopicList && TopicList.length > 0)
             return TopicList.slice(0, 2).map(i => {
-                return <li key={i._id} className="left-side-item">
-                    <Link to="" className="left-side-link">
-                        <img src={i.image} alt="topic" className="left-side-img" />
-                        <span className="left-side-text">Dummy Course</span>
+                return <li key={i._id} className="right-side-item">
+                    <Link to="" className="right-side-link">
+                        <img src={i.image} alt="topic" className="right-side-img" />
+                        <span className="right-side-text">Dummy Course</span>
                     </Link>
                 </li>
             })
@@ -59,7 +59,7 @@ class index extends Component {
 
             <nav className="sidebar ">
                 <a href="#popup" className="left-side-popup-button">+ Suggest Community</a>
-                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} style={{ width: '100%', backgroundColor: '#f4f2f2', textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span>Recommended Courses</h6>
+                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span>Recommended Courses</h6>
                 <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
                     <ul className="side-nav">
                         {this.renderCoursesLinks(TopicList)}
@@ -67,16 +67,16 @@ class index extends Component {
                     <div className="side-more-images">
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "red" }}>+20</div>
-                        <Link to="/courses" className="side-more-text" style={{ textDecoration: "none" }}>See More +</Link>
+                        <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
+                        <Link to="/morecommunities" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
                     </div>
                     <hr className="side-nav-hr" />
                     <div className="side-social">
                         <p className="side-list-heading">Follow us on</p>
                         <ul className="side-social-list">
-                            <li className="side-social-item"><Link className="side-social-link" to="">Instagram</Link></li>
-                            <li className="side-social-item"><Link className="side-social-link" to=""> Twitter</Link></li>
-                            <li className="side-social-item"><Link className="side-social-link" to="">Facebook</Link></li>
+                            <li className="side-social-item"><a className="side-social-link" href="#">Instagram</a></li>
+                            <li className="side-social-item"><a className="side-social-link" href="#"> Twitter</a></li>
+                            <li className="side-social-item"><a className="side-social-link" href="#">Facebook</a></li>
                         </ul>
                         <p className="side-list-heading">Download our App</p>
                         <ul className="side-social-list">
@@ -87,9 +87,9 @@ class index extends Component {
                     <Model></Model>
                 </div>
                 {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
-                    <div className="left-side-border">
-                        <h2 className="left-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>Communities</h2>
-                        <ul ref="courses" className={`left-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
+                    <div className="right-side-border">
+                        <h2 className="right-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>Communities</h2>
+                        <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
                             {this.renderCommunityLinks(TopicList)}
                         </ul>
                     </div>
@@ -98,10 +98,10 @@ class index extends Component {
             <div className="center1">
                 <List />
             </div>
-            {window.innerWidth > 1000 ? <div className="left-side">
-                <div className="left-side-border">
-                    <h2 className="left-side-heading-h">Community</h2>
-                    <ul className="left-side-list">
+            {window.innerWidth > 1000 ? <div className="right-side">
+                <div className="right-side-border">
+                    <h2 className="right-side-heading-h">Communities</h2>
+                    <ul className="right-side-list">
                         {this.renderCommunityLinks(TopicList)}
                     </ul>
                 </div>

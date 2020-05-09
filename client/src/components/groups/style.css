@@ -1,28 +1,41 @@
-
-.about-section{
- margin-top: 20px 
+.about-section {
+  margin-top: 20px;
 }
-.about-text{
+.about-text {
   text-align: center;
-  font-size: 10px;
-  padding: 5px 10px
+  font-size: 14px;
+  padding: 5px 20px;
 }
-.page-heading{
+.page-heading {
   text-align: center;
-  font-size: 15px
+  font-size: 18px;
 }
-
-.groupinfo-heading{
-  font-size: 15px;
+@media (max-width: 1000px){
+  .page-heading{
+    padding: 15px 0 10px 0
+  }
+}
+.groupinfo-heading {
+  font-size: 20px;
   font-weight: bold;
   color: #999;
-  padding: 10px 10px 0rem 10px 
+  padding: 15px 15px 0rem 15px;
 }
-.groupinfo-text{
+.groupinfo-text {
   color: #333;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
-  width: 40%;
+  width: 50%;
   line-height: 1.5;
-  padding: 10px 10px 0rem 10px 
+  padding: 15px 15px 0rem 15px;
+}
+.member-img {
+  width: 25px;
+  height: 25px;
+  margin: 0 14px 0 15px;
+  border-radius: 50%;
+  color: #f7f7f7;
+  background-color: orangered;
+  text-align: center;
+  display: inline-block;
 }

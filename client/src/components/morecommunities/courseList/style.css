@@ -7,9 +7,9 @@
   padding: 1.5rem
 }
 .communities-heading{
-  color: #000;
+  color: #444;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 18px;
   font-family: cursive;
   display: block;
   font-weight: bold;

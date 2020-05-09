@@ -45,9 +45,9 @@ class index extends Component {
     renderCoursesLinks(TopicList) {
         if (TopicList && TopicList.length > 0)
             return TopicList.slice(0, 2).map(i => {
-                return <li key={i._id} className="left-side-item">
-                    <div alt="topic" className="side-more-img" style={{ width: "2.3rem", verticalAlign: "middle", height: "2.3rem", backgroundColor: "blue", textAlign: "center", display: "inline-block" }}>F</div>
-                    <span className="left-side-text ml-4">Focal Person</span>
+                return <li key={i._id} className="right-side-item">
+                    <div alt="topic" className="member-img" >F</div>
+                    <span className="right-side-text">Focal Person</span>
                 </li>
             })
     }
@@ -56,10 +56,10 @@ class index extends Component {
         const { auth, profile, Feed, TopicList } = this.props;
 
         return <div className="content">
-            <Model/>
+            <Model />
             <nav className="sidebar ">
                 <h2 className="page-heading">Freelancer of Upwork Fiverr and PeoplePerHour</h2>
-                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} style={{ width: '100%', backgroundColor: '#f4f2f2', textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span>Communities You're In</h6>
+                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Communities You're In</h6>
                 <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
                     <ul className="side-nav">
                         {this.renderCommunityLinks(TopicList)}
@@ -67,39 +67,41 @@ class index extends Component {
                     <div className="side-more-images">
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "red" }}>+20</div>
+                        <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
                         <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
                     </div>
                 </div>
                 {/*////////////////////////////// code for mobile view start with auth //////////////////////// */}
                 {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
                     <div className="left-side-border">
-                        <h2 className="left-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>People That Are Following</h2>
-                        <ul ref="courses" className={`left-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
+                        <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>People That Are Following</h2>
+                        <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
                             {this.renderCoursesLinks(TopicList)}
                             <li><div className="side-more-images">
                                 <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                                 <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                                <div alt="topic" className="side-more-img" style={{ backgroundColor: "red" }}>+20</div>
+                                <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
                                 <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
                             </div></li>
                         </ul>
 
                     </div>
                     {auth && profile ?
-                        <div>
-                            {window.innerWidth < 1000 ? <div><h6 onClick={() => window.innerWidth < 1000 ? this.refs.recommend.classList.toggle("display_on_short") : ""} style={{ width: '100%', backgroundColor: '#f4f2f2', textAlign: 'center', fontWeight: 'bold', color: '#e74c3c', marginBottom: '0px' }} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span>Recommended to You</h6>
-                                <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="recommend">
-                                    <ul className="side-nav">
-                                        {this.renderCommunityLinks(TopicList)}
-                                    </ul>
-                                </div>
-                            </div> : ""}
-                        </div>
+                        <span>
+                            {window.innerWidth < 1000 ?
+                                <div className="right-side-border">
+                                    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.recommend.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Recommended to You</h6>
+                                    <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="recommend">
+                                        <ul className="side-nav">
+                                            {this.renderCommunityLinks(TopicList)}
+                                        </ul>
+                                    </div>
+                                </div> : ""}
+                        </span>
                         : <div>
                             {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
-                                <div className="left-side-border">
-                                    <h2 className="left-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.about.classList.toggle("display_on_short") : ""}>About Community</h2>
+                                <div className="right-side-border">
+                                    <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.about.classList.toggle("display_on_short") : ""}>About Community</h2>
                                     <h4 ref="about" className="about-text">Hire someone or Get hired Post your Work and Assignments.</h4>
                                 </div>
                             </div> : ""}
@@ -108,20 +110,20 @@ class index extends Component {
                 {/* ////////////////////// code for mobile view end with auth  /////////////////////*/}
             </nav>
             <div className="center1">
-                <div className="card" style={{ width: "100%", height: "50vh", marginBottom: "2rem" }}>
+                <div className="card" style={{ width: "100%", marginBottom: "2rem" }}>
                     <img className="card-img-top" src={"https://specials-images.forbesimg.com/imageserve/5d9182dc6c7c8f000990b672/960x0.jpg?fit=scale"} style={{ height: "40vh" }} alt="Card image cap" />
                     <div className="card-body">
-                        <button type="button" style={{ width: "20%", marginLeft: "2rem" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-check-square"></i> Following </button>
+                        <button type="button" style={{ width: "30%", marginLeft: "2rem" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-check-square"></i> Following </button>
                         {auth && profile ?
-                            <a href="#popup" type="button" style={{ width: "20%" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-plus"></i> Suggest Topic </a>
-                         : 
-                        <button className="btn btn-outline-danger mr-3"  id="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  type="button" style={{ width: "20%" }} ><i className=" fa fa-ellipsis-h "></i> More </button>
+                            <a href="#popup" type="button" style={{ width: "30%" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-plus"></i> Suggest Topic </a>
+                            :
+                            <button style={{ width: "30%" }} className="btn btn-outline-danger mr-3" id="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" style={{ width: "20%" }} ><i className=" fa fa-ellipsis-h "></i> More </button>
                         }
                         <div className="dropdown-menu" aria-labelledby="dropdown-menu">
-                        <button className="dropdown-item" style={{color: "#000"}} type="button">Unfollow Group</button>
-                        <button className="dropdown-item" style={{color: "#000"}} type="button">Report Group</button>
-                        <a href="#popup" className="dropdown-item" type="button">Suggest Topic</a>
-                    </div>
+                            <button className="dropdown-item" style={{ color: "#000" }} type="button">Unfollow Group</button>
+                            <button className="dropdown-item" style={{ color: "#000" }} type="button">Report Group</button>
+                            <a href="#popup" className="dropdown-item" type="button">Suggest Topic</a>
+                        </div>
                     </div>
                 </div>
                 {/*?///////////////////////////// else info only //////////////////////////*/}
@@ -146,41 +148,41 @@ class index extends Component {
 
             </div>
             {/* /////////////////// normal view start  /////////////////////////////////////// */}
-            {window.innerWidth > 1000 ? <div className="left-side">
-                <div className="left-side-border">
-                    <h2 className="left-side-heading-h">Members</h2>
-                    <ul className="left-side-list">
+            {window.innerWidth > 1000 ? <div className="right-side">
+                <div className="right-side-border">
+                    <h2 className="sidebar-heading">Members</h2>
+                    <ul className="right-side-list">
                         {this.renderCoursesLinks(TopicList)}
                     </ul>
                     <div className="side-more-images">
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "red" }}>+20</div>
-                        <Link to="/courses" className="side-more-text" style={{ textDecoration: "none" }}>See More +</Link>
+                        <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
+                        <Link to="/courses" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
                     </div>
                 </div>
                 {/* ////////////////////// Extra div used to avoide error  /////////////////////*/}
 
                 {/* ///////////////////// if auth  displays recommended //////////////// */}
                 {auth && profile ?
-                    <div> {window.innerWidth > 1000 ? <div className="about-section">
-                        <h2 className="left-side-heading-h"><span className="fa fa-feed mr-2"></span>Recommended to You</h2>
-
-                        <ul className="side-nav">
-                            {this.renderCommunityLinks(TopicList)}
-                        </ul>
+                    <div> {window.innerWidth > 1000 ? <div className="left-side about-section">
+                        <div className="left-side-border">
+                            <h6 className="sidebar-heading" style={{padding: "12px 60px"}} >Recommended to You</h6>
+                            <ul className="side-nav">
+                                {this.renderCommunityLinks(TopicList)}
+                            </ul>
+                        </div>
                     </div>
                         : ""}</div>
                     // {/* ////////////////// else about box //////////////////////////////// */}
                     : <div>
                         {window.innerWidth > 1000 ? <div className="left-side about-section">
                             <div className="left-side-border">
-                                <h2 className="left-side-heading-h">About Community</h2>
+                                <h2 className="sidebar-heading">About Community</h2>
                                 <h4 className="about-text">Hire someone or Get hired Post your Work and Assignments.</h4>
                             </div>
                         </div> : ""}
                     </div>
-
                 }
             </div> : ""}
             {/* /////////////////// normal view end  /////////////////////////////////////// */}
