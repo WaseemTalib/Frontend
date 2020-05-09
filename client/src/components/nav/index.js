@@ -136,7 +136,7 @@ class index extends Component {
         const { Auth, isError, profile } = this.props;
         if (width && width !== 0 && width >= 992)
             return (
-                <div className="navbar d-flex flex-lg-row flex-column col-12 p-4">
+                <div className="navbar d-flex flex-lg-row flex-column">
                     <h6 style={logoName}>GENIVERSITY</h6>
                     <div className="input-group col-lg-3 col-12">
                         <input type="text" className="form-control" placeholder="Search Geniversity" />
