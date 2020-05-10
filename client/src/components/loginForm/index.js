@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/userActions';
 
 const heading = {fontSize: '20px', fontWeight: 'bold', color: '#2f3542', textAlign: 'center', fontFamily: `''Montserrat', sans-serif`, width: '100%'};
-const inputStyle = {padding: '24px 24px 24px 24px', outline: 'none !important', fontFamily: `''Montserrat', sans-serif`, boxShadow: 'none !important', fontSize: '16px', marginTop: '12px'};
+const inputStyle = { padding: '24px 24px 24px 24px', borderLeft: "hidden", overflow: "hidden", outline: 'none !important', fontFamily: `''Montserrat', sans-serif`, boxShadow: 'none !important', fontSize: '16px' };
 const btnStyle = { borderRadius: '20px', marginTop: '16px' };
 const gStyle = { color: '#c0392b', marginRight: '12px', fontSize: '24px' };
 
@@ -31,7 +31,9 @@ class index extends Component {
         const { email, password } = this.state;
         const { isError, err, isLoading } = this.props;
         return (
-            <form className=" shadow-lg login-card " onSubmit={(e) => this.handleSubmit(e)}>
+            <form className=" shadow-lg login-card" onSubmit={(e) => this.handleSubmit(e)}>
+            
+            <Link className="link-blue" id={"close"} to='/community'><span className={"fa fa-close"} htmlFor={"close"} style={{float: "right", fontSize: "1.5rem", color: "red"}}></span></Link>
                 <h3 style={heading}>Sign in &#38; Start Exploring!</h3>
                 <button className="btn btn-block p-2 btn-google d-flex align-items-center justify-content-center"
                     style={btnStyle}>
@@ -42,14 +44,22 @@ class index extends Component {
                     <h6 className="col-2 p-0" style={{ textAlign: 'center', fontWeight: '600', color: '#747d8c' }}>OR</h6>
                     <div className="col-5 p-0" style={{ borderTop: '1px solid #ced6e0' }}></div>
                 </div>
-                <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+            
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
+                    </div>
                     <input type="text" className="form-control" style={inputStyle} name='email'
-                        value={email} placeholder="Your work email" onChange={this.handleInput} required />
+                        value={email} placeholder="Email Address" onChange={this.handleInput} required />
                 </div>
-                <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+            
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
+                    </div>
                     <input type="password" className="form-control" style={inputStyle} name='password'
-                        value={password} onChange={this.handleInput} placeholder="Your password" required />
-                </div>
+                        value={password} onChange={this.handleInput} placeholder="Enter Password" required />
+               </div>
                 <div className="col-12 p-0 d-flex flex-row justify-content-end">
                     <h6 className="link-blue">Forgot password?</h6>
                 </div>

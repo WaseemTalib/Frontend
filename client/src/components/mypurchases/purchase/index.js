@@ -10,7 +10,8 @@ export default class extends React.Component {
             <div className={Styles.center}>
                 <span className={Styles.title}>{this.props.title}</span>
                 <div className={Styles.disc}>{this.props.description}</div>
-            </div>
+                <div className={Styles.coursetitle} style={{color:"red"}}>My Course</div>
+                   </div>
                 <div className={Styles.right}>
                     <span>{this.props.price}</span>
                 </div>

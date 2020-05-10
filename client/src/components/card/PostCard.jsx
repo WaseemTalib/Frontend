@@ -17,7 +17,7 @@ const PostCard = (item) => {
           />
           <div className="co-name" style={{display: `inline-block`}}>
             <Link to="/">
-              {item.postedBy.name}
+              {"item.postedBy.name"}
             </Link>
           </div>
           <div style={{display: `inline-flex`}} class="align-items-center ml-3"><div class="post-option"><span class="fa fa-caret-right post-head-icon"></span></div><div class="post-group-ref">Computers</div></div>

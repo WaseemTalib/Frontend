@@ -200,3 +200,9 @@ button{
   background-color: #fa9c9c;
   color: #f41a1a;
 }
+
+
+.active_btn{
+  background-color: rgb(192, 57, 43) !important;
+  color: #fff !important
+}

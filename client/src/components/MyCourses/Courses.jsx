@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Style2 from "../ebooks/ebookList/styles.module.css";
-import { Link } from "react-router-dom";
+import Model from './model/index';
+
 class Courses extends Component {
   render() {
     return (
@@ -132,12 +133,13 @@ class Courses extends Component {
             </div>
           </div>
           <div className="col-lg-3">
-            <Link to="/addcourse" className="course add_course" style={{border: `4px dashed`}}>
+            <a href="#popup" className="course add_course" style={{border: `4px dashed`}}>
               <div className="">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
                 <div className="text_add">Add Course</div>
               </div>
-            </Link>
+            </a>
+            <Model></Model>
           </div>
         </div>
       </div>

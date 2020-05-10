@@ -3,7 +3,7 @@ import { RegisterUser } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 const heading = { fontSize: '28px', fontWeight: '500', color: '#2f3542', textAlign: 'center', fontFamily: `''Montserrat', sans-serif`, width: '100%' };
-const inputStyle = { padding: '24px 24px 24px 24px', outline: 'none !important', fontFamily: `''Montserrat', sans-serif`, boxShadow: 'none !important', fontSize: '16px', marginTop: '12px' };
+const inputStyle = { padding: '24px 24px 24px 24px', borderLeft: "hidden", overflow: "hidden", outline: 'none !important', fontFamily: `''Montserrat', sans-serif`, boxShadow: 'none !important', fontSize: '16px' };
 const btnStyle = { borderRadius: '20px', marginTop: '16px' };
 const gStyle = { color: '#c0392b', marginRight: '12px', fontSize: '24px' };
 
@@ -33,18 +33,32 @@ class index extends Component {
         return (
             <form className="col-lg-5 col-md-7 col-sm-9 col-11" onSubmit={(e) => this.handleSubmit(e)}>
                 <h3 style={heading}>Get started absolutely free</h3>
-                <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+                
+                <div class="input-group mt-5">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-user"></span></span>
+                    </div>
                     <input type="text" className="form-control" style={inputStyle} name='name' value={name}
-                        placeholder="Your name" onChange={this.handleInput} required />
+                        placeholder="Your Name" onChange={this.handleInput} required />
                 </div>
-                <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
+                    </div>
                     <input type="text" className="form-control" style={inputStyle} name='email' value={email}
-                        placeholder="Your work email" onChange={this.handleInput} required />
+                        placeholder="Email Address" onChange={this.handleInput} required />
                 </div>
-                <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
+                    </div>
                     <input type="password" className="form-control" name='password' value={password} style={inputStyle}
-                        onChange={this.handleInput} placeholder="Your password" required />
+                        onChange={this.handleInput} placeholder="Enter Password" required />
                 </div>
+
+
                 {isError && <h6 style={{ width: '100%', textAlign: 'center', marginTop: '16px', color: 'red', fontSize: '12px !important' }}>
                     {err}
                 </h6>}
@@ -65,7 +79,7 @@ class index extends Component {
                     <span className="fa fa-google" style={gStyle}></span>
                     Sign up with google
                 </button>
-           
+
             </form>
         )
     }

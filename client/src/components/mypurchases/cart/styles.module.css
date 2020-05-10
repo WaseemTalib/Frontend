@@ -7,11 +7,18 @@
   display: block;
 }
 .title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
   font-weight: 500;
-  font-size: 28px;
+  font-size: 32px;
   color: rgba(0, 0, 0, 0.8);
 }
+.coursetitle {
+  font-weight: 500;
+  font-size: 28px;
+}
 .disc {
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 80px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -20,26 +27,26 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .header {
-  margin: 30px 10px 0px 12%;
-}
-.courseTitle{
-  font-size: 1.3rem;
-  color: red;
-  text-align: center
+  margin: 30px 10px 1rem 2rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
 }
 .courseCard{
   text-align: center;
   background-color: #f7f7f7;
 }
 @media (max-width: 450px){
-  .header {
-    margin: 30px 10px 0px 5%;
+  /* .header {
+    margin: 30px 10px 0px 4rem;
   text-align: center;
-  }
+  } */
 }
 .checkOut {
-  width: 30%;
-  margin: 50px 10%;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 2rem;
+  margin: 2rem 2rem;
+  margin-left: auto
 }
 @media (max-width: 1100px) {
   .checkOut {
@@ -68,17 +75,20 @@
   }
 }
 .coText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: block;
   float: left;
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 .coPrice {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: block;
-  font-size: 35px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
   float: right;
 }
 .btnCheckOut {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: block;
   text-align: center;
   padding: 1rem 0;
@@ -92,6 +102,7 @@
   margin-top: 60px;
 }
 .swtichButtons {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fff;
   padding: 0.3rem;
   margin: 1rem 0;
@@ -116,8 +127,7 @@
   background-color: rgba(100, 100, 100, 0.1);
   border: 1px solid rgba(100, 100, 100, 0.1);
 }
-.button:focus,
-.button1:focus {
-  background-color: rgba(66, 64, 64, 0.15);
-  border: 1px solid rgba(66, 64, 64, 0.15);
+.cartAlign{
+  display: flex !important
 }
+

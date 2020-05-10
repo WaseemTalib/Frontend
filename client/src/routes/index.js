@@ -5,6 +5,7 @@ import SignupPage from '../pages/signupPage';
 import CommunityPage from '../pages/communityPage';
 import MoreCommunityPage from '../pages/morecommunitiesPage';
 import GroupsPage from '../pages/groupsPage';
+import AddcoursePage from '../pages/addcoursePage';
 import TopicPage from '../pages/topicPage';
 import CoursePage from '../pages/coursePage';
 import CourseDetailsPage from '../pages/coursedetailsPage';
@@ -19,6 +20,7 @@ export function Routes() {
         <Route exact path='/community' component={CommunityPage} />
         <Route exact path='/mycourses' component={MyCourses} />
         <Route exact path='/groups' component={GroupsPage} />
+        <Route exact path='/addcourse' component={AddcoursePage} />
         <Route exact path='/morecommunities' component={MoreCommunityPage} />
         <Route path='/login' component={LoginPage} />
         <Route path='/register' component={SignupPage} />

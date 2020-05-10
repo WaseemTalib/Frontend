@@ -64,7 +64,7 @@
 
 .course .tag{
     color: rgb(192, 57, 43);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -97,20 +97,20 @@
 
 
 .course-card{
-    height: 200px;
+    height: 250px;
+    width: 200px !important;
+    border-radius: 5px;
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.08), 1px 1px 10px 1px rgba(0, 0, 0, 0.05 );
     margin-bottom: 30px;
     position: relative;
     overflow: auto;
     cursor: pointer;
 }
-
 .course-card:hover{
-    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.08), 1px 4px 10px 1px rgba(0, 0, 0, 0.05 );
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 }
-
-.course-card img{
-    height: 150px;
+.course-card > img{
+    height: 200px;
     width: 100%;
 }
 .display_on_short{
