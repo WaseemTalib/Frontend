@@ -58,6 +58,7 @@ class index extends Component {
         return <div className="content">
 
             <nav className="sidebar ">
+            <div className="position-sticky top-0">
                 <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span> Communities</h6>
                 <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
                     <ul className="side-nav">
@@ -84,8 +85,9 @@ class index extends Component {
                         </ul>
                     </div>
                 </div>
-                {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
-                    <div className="right-side-border">
+                </div>
+                {window.innerWidth < 1000 ? <div className="position-relative" style={{ width: `100%` }}>
+                    <div className="right-side-border position-sticky top-0">
                         <h2 className="right-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>Recommended Courses</h2>
                         <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
                             {this.renderCoursesLinks(TopicList)}
@@ -99,8 +101,8 @@ class index extends Component {
                     <List list={Feed} />
                 </Suspense>
             </div>
-            {window.innerWidth > 1000 ? <div className="right-side">
-                <div className="right-side-border">
+            {window.innerWidth > 1000 ? <div className="right-side position-relative" >
+                <div className="right-side-border position-sticky top-0">
                     <h2 className="right-side-heading-h">Recommended Courses</h2>
                     <ul className="right-side-list">
                         {this.renderCoursesLinks(TopicList)}

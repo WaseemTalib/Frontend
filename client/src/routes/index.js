@@ -7,6 +7,7 @@ import MoreCommunityPage from '../pages/morecommunitiesPage';
 import GroupsPage from '../pages/groupsPage';
 import TopicPage from '../pages/topicPage';
 import CoursePage from '../pages/coursePage';
+import CourseDetailsPage from '../pages/coursedetailsPage';
 import EBookPage from '../pages/ebookPage';
 import ebookdetailsPage from '../pages/ebookdetailsPage';
 import MyPurchasesPage from '../pages/mypurchasesPage';
@@ -23,6 +24,7 @@ export function Routes() {
         <Route path='/register' component={SignupPage} />
         <Route path='/user/:id/topics' component={TopicPage} />
         <Route path='/courses' component={CoursePage}/>
+        <Route path='/coursedetails' component={CourseDetailsPage}/>
         <Route path='/profile' component={()=><Profile ismyProfile={true} />}/>
         <Route path='/otherprofile' component={()=><Profile ismyProfile={false} />}/>
         <Route path='/ebooks' component={EBookPage}/>

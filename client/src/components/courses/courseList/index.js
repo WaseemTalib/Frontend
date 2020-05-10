@@ -3,6 +3,8 @@ import '../style.css';
 import User from '../../../assets/img_avatar.png';
 import Styles from '../../ebooks/ebookList/styles.module.css';
 import Style2 from "../../ebooks/card/styles.module.css"
+import { Link } from 'react-router-dom';
+
 const styleActive = { color: '#c23616', borderBottom: '6px solid #c23616', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
 const simpleStyle = { color: '#718093', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
 var dummy = [1, 2, 3, 4, 5, 6,2,2,3,5,6,3,2,1,3,4];
@@ -36,7 +38,7 @@ export default class index extends Component {
                         Loreum ipsum is simply
                                 </h6>
                     <div className="m-2 d-flex flex-row justify-content-between align-items-center p-2">
-                        <button className="btn btn-danger">Buy Now</button>
+                        <Link to="/coursedetails" className="btn btn-danger">Buy Now</Link>
                         <h6 className="tag mt-2">$45.99</h6>
                 </div>
             </div>
