@@ -93,6 +93,7 @@ class index extends Component {
                         <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
                         <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
                         <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                        <Link to="/profilesetting" className="dropdown-item" type="button">Profile Setting</Link>
                         <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
@@ -126,6 +127,7 @@ class index extends Component {
                         <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
                         <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
                         <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                        <Link to="/profilesetting" className="dropdown-item" type="button">Profile Setting</Link>
                         <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
@@ -159,6 +161,7 @@ class index extends Component {
                                 <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
                                 <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
                                 <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                        <Link to="/profilesetting" className="dropdown-item" type="button">Profile Setting</Link>
                                 <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                                 <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                             </div>

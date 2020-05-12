@@ -8,40 +8,69 @@ export default class index extends Component {
 
     render() {
         return <div className="credits">
+         
+            
             <div className="credits-section">
+         <div className="credits-total">
+            <div className="yourcredits">Your Credits</div>
+            <div className="yourtotalcredits">Your Total Credits are $0.00</div>
+                </div>
+               <div className="credits-box" style={{backgroundColor: "#fff",width: "100%"}}>
+                <div className="credits-container-heading">
+                    <h3 className="credits-history-heading">Credit History</h3>
+                   <div className="credits-list">
+                    <p className="credits-item-heading">Amount</p>
+                    <p className="credits-item-heading">Status</p>
+                    <p className="credits-item-heading">Valid Form</p>
+                    <p className="credits-item-heading">Expiration Date</p>
+                </div>
+                </div>
                 <div className="credits-container">
-
-                    <table className="credits-table">
-                        <tr className="table-parent">
-
-                            <th className="credits-history" rowspan="3">Credit History</th>
-                            <th className="credits-headding">Amount</th>
-                            <th className="credits-headding">Status</th>
-                            <th className="credits-headding">Expiration Date</th>
-                            <th className="credits-headding">Valid Form</th>
-                        </tr>
-                        <tr>
-                            <td className="credits-entry" rowspan="3">Credit Card</td>
-                            <td className="credits-entry">50$</td>
-                            <td className="credits-entry">Received</td>
-                            <td className="credits-entry">14/2020</td>
-                            <td className="credits-entry">Till 2021</td>
-                        </tr>
-                    </table>
+                  <h3 className="credits-history">Web Hosting</h3>
+                   <div className="credits-list">
+                    <p className="credits-item">30$</p>
+                    <p className="credits-item">Received</p>
+                    <p className="credits-item">Null</p>
+                    <p className="credits-item">30-06-2020</p>
                 </div>
-                {/* <div className="credits-container">
-                    <p className="credits-history mr-auto">Credit History</p>
-                    <div >
-                        <ul className="credits-list">
-                            <li className="credits-item">Amount</li>
-                            <li className="credits-item">Status</li>
-                            <li className="credits-item">Valid Form</li>
-                            <li className="credits-item">Expiration Date</li>
-                        </ul>
-                    </div>
                 </div>
-                <div ></div> */}
-
+                <div className="credits-container">
+                  <h3 className="credits-history">Web Hosting</h3>
+                   <div className="credits-list">
+                    <p className="credits-item">30$</p>
+                    <p className="credits-item">Received</p>
+                    <p className="credits-item">Null</p>
+                    <p className="credits-item">30-06-2020</p>
+                </div>
+                </div>
+                <div className="credits-container">
+                  <h3 className="credits-history">Web Hosting</h3>
+                   <div className="credits-list">
+                    <p className="credits-item">30$</p>
+                    <p className="credits-item">Received</p>
+                    <p className="credits-item">Null</p>
+                    <p className="credits-item">30-06-2020</p>
+                </div>
+                </div>
+                <div className="credits-container">
+                  <h3 className="credits-history">Web Hosting</h3>
+                   <div className="credits-list">
+                    <p className="credits-item">30$</p>
+                    <p className="credits-item">Received</p>
+                    <p className="credits-item">Null</p>
+                    <p className="credits-item">30-06-2020</p>
+                </div>
+                </div>
+                <div className="credits-container">
+                  <h3 className="credits-history">Web Hosting</h3>
+                   <div className="credits-list">
+                    <p className="credits-item">30$</p>
+                    <p className="credits-item">Received</p>
+                    <p className="credits-item">Null</p>
+                    <p className="credits-item">30-06-2020</p>
+                </div>
+                </div>
+                </div>
             </div>
         </div>
 

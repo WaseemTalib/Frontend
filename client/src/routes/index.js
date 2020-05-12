@@ -4,6 +4,7 @@ import LoginPage from '../pages/loginPage';
 import SignupPage from '../pages/signupPage';
 import CommunityPage from '../pages/communityPage';
 import CreditsPage from '../pages/creditsPage';
+import ProfilesettingPage from '../pages/profilesettingPage';
 import WatchcoursePage from '../pages/watchcoursePage';
 import WatchplacePage from '../pages/watchplacePage';
 import MoreCommunityPage from '../pages/morecommunitiesPage';
@@ -21,9 +22,10 @@ import Messages from '../components/Messages';
 export function Routes() {
     return <div>
         <Switch>
-        <Route exact path='/community' component={Messages} />
+        {/* <Route exact path='/community' component={Messages} /> */}
         {/* <Route exact path='/community' component={CommunityPage} /> */}
         <Route exact path='/credits' component={CreditsPage} />
+        <Route exact path='/community' component={ProfilesettingPage} />
         <Route exact path='/watchcourses' component={WatchcoursePage} />
         <Route exact path='/watchplace' component={WatchplacePage} />
         <Route exact path='/mycourses' component={MyCourses} />
