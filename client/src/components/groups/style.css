@@ -35,7 +35,10 @@
   margin: 0 14px 0 15px;
   border-radius: 50%;
   color: #f7f7f7;
-  background-color: orangered;
+  background-color: seagreen;
   text-align: center;
   display: inline-block;
+}
+.member-margin{
+  margin-bottom: -.3rem
 }

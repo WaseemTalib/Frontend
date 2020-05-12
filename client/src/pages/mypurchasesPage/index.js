@@ -6,10 +6,9 @@ import Footer from '../../components/footer';
 class index extends Component { 
     render() {
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
-                <Navbar active={4} />
-                <Cart></Cart>
-
-                <Footer></Footer>
+                <Navbar active={3} />
+                <Cart/>
+                <Footer/>
              </div>
     }
 }

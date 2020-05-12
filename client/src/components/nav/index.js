@@ -46,10 +46,10 @@ class index extends Component {
         return (
             <React.Fragment>
                 <div className='d-flex flex-row justify-content-between pt-3 pb-3 pl-5 pr-5 col-12'>
-                <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
-                <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
-                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
+                    <Link to='/community' className={active === 1 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-users" style={{ marginRight: '12px' }}></span>My Community</Link>
+                    <Link to='/courses' className={active === 2 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-book" style={{ marginRight: '12px' }}></span>Courses</Link>
+                    <Link to='/ebooks' className={active === 3 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-gg-circle" style={{ marginRight: '12px' }}></span>E-Books</Link>
+                    <Link to='/mypurchases' className={active === 4 ? 'link-nav-active' : 'link-nav'}><span className="fa fa-credit-card" style={{ marginRight: '12px' }}></span>My Purchases</Link>
                 </div>
             </React.Fragment>
         )
@@ -59,11 +59,11 @@ class index extends Component {
         return (
             <React.Fragment>
                 <div className='d-flex flex-column align-items-center justify-content-center col-12'>
-                <Link to='/community' className={active === 1 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-users align-self-center p-1"></span>My Community</Link>
-                <Link to='/courses' className={active === 2 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-book align-self-center p-1"></span>Courses</Link>
-                <Link to='/ebooks' className={active === 3 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-gg-circle align-self-center p-1"></span>E-Books</Link>
-                <Link to='/mypurchases' className={active === 4 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-credit-card align-self-center p-1"></span>My Purchases</Link>
-            </div>
+                    <Link to='/community' className={active === 1 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-users align-self-center p-1"></span>My Community</Link>
+                    <Link to='/courses' className={active === 2 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-book align-self-center p-1"></span>Courses</Link>
+                    <Link to='/ebooks' className={active === 3 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-gg-circle align-self-center p-1"></span>E-Books</Link>
+                    <Link to='/mypurchases' className={active === 4 ? 'link-nav-active d-flex flex-column p-2' : 'link-nav d-flex flex-column p-2'}><span className="fa fa-credit-card align-self-center p-1"></span>My Purchases</Link>
+                </div>
             </React.Fragment>
         )
     }
@@ -91,11 +91,13 @@ class index extends Component {
                     <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
                         <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                        <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
                         <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                        <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
-            {isActive && <div className="m-2"></div>}
-            {isActive && <span className="fa fa-bell link-nav p-3" style={{ fontSize: '20px' }}></span>}
+                    {isActive && <div className="m-2"></div>}
+                    {isActive && <span className="fa fa-bell link-nav p-3" style={{ fontSize: '20px' }}></span>}
                 </div>}</React.Fragment>}
         </div>
     }
@@ -120,9 +122,11 @@ class index extends Component {
                     <img src={profile.image ? profile.img : Avat} alt="profile" className="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style={{ width: '30px', height: '30px', marginRight: '8px', borderRadius: '1000px' }} />
                     <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
+                        <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
                         <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                        <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
                         <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                        <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                         <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                     </div>
                     {isActive && <div className="m-2"></div>}
@@ -151,15 +155,17 @@ class index extends Component {
                             <img src={profile.image ? profile.img : Avat} alt="profile" className="dropdown-toggle dropleft" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 style={{ width: '40px', height: '40px', marginRight: '8px', borderRadius: '1000px' }} />
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                            <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
-                            <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
-                            <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                                <Link to="/profile" className="dropdown-item" type="button">View Profile</Link>
+                                <Link to="/otherprofile" className="dropdown-item" type="button">View Other Profile</Link>
+                                <Link to="/credits" className="dropdown-item" type="button">View Credits</Link>
+                                <Link to="/mycourses" className="dropdown-item" type="button">My Courses</Link>
+                                <Link to="/watchcourses" className="dropdown-item" type="button">Watch Courses</Link>
                                 <button className="dropdown-item" type="button" onClick={(e) => this.props.logOut()}>Logout</button>
                             </div>
                         </div>}
                 </div>
             )
-        else if (width && width !== 0 && width <= 600)  return <React.Fragment>{this.renderMobileNav()}</React.Fragment>
+        else if (width && width !== 0 && width <= 600) return <React.Fragment>{this.renderMobileNav()}</React.Fragment>
         else return <React.Fragment>{this.renderTabletNav()}</React.Fragment>
     }
 }

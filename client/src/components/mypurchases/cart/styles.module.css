@@ -9,20 +9,21 @@
 .title {
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
   font-weight: 500;
-  font-size: 32px;
+  font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
 }
 .coursetitle {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 26px;
 }
 .disc {
-  
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 80px;
   color: rgba(0, 0, 0, 0.5);
 }
 .mdisc {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 16px;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -42,18 +43,24 @@
   } */
 }
 .checkOut {
-  width: 100%;
+  flex-grow: 1;
   background-color: #f7f7f7;
   padding: 2rem;
   margin: 2rem 2rem;
   margin-left: auto
 }
+.flex {
+  display: flex;
+}
 @media (max-width: 1100px) {
+  .cartAlign{
+    flex-direction: column
+  }
   .checkOut {
     width: 50%;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .checkOut {
     width: 80%;
   }
@@ -65,10 +72,6 @@
   .btnCheckOut {
     margin-top: 0 !important;
   }
-  .coPrice {
-    color: rgb(192, 57, 43);
-    margin-top: 1rem;
-  }
   .coText {
     margin-right: 0 !important;
     float: none;
@@ -78,14 +81,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: block;
   float: left;
-  margin-right: 2rem;
+  margin-right: auto;
 }
 .coPrice {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(192, 57, 43);
   display: block;
   font-size: 30px;
-  font-weight: 600;
-  float: right;
+  font-weight: 800;
 }
 .btnCheckOut {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,9 +99,9 @@
   border-radius: 10px;
   background-color: rgb(192, 57, 43);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .swtichButtons {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -128,6 +130,6 @@
   border: 1px solid rgba(100, 100, 100, 0.1);
 }
 .cartAlign{
-  display: flex !important
+  display: flex 
 }
 

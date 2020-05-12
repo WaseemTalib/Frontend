@@ -1,0 +1,121 @@
+.coursedetails-learn-w {
+  margin-right: auto
+}
+.coursedetails-center-w{
+  margin-right: auto
+}
+.coursedetails-w{
+  padding: 2rem 5rem 0 5rem ;
+}
+.coursedetails-bottom-w {
+  padding: 0rem 5rem ;
+}
+.two-cols{
+  flex: 1;
+}
+.coursedetails-right{
+  flex: 0 0 30%
+}
+@media (max-width: 700px) {
+  .coursedetails-bottom-w {
+    flex-direction: column !important;
+    margin: 0 auto;
+  }
+  .coursedetails-w{
+    padding: 1rem 2rem;
+    text-align: center
+  }
+  .coursedetails-right{
+    padding-bottom: 2rem
+  }
+  .coursedetails-learn-w{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  padding-bottom: 0;
+  }
+  .coursedetails-instructor-heading{
+    margin: 0 !important;
+  }
+  .instructor-name{
+    font-size: 20px !important;
+    letter-spacing: 1px;
+    font-weight: 400 !important
+  }
+  .coursedetails-center-w{
+    margin: 0 auto;
+    padding-bottom: 0
+  }
+  .instructor{
+    flex-direction: column;
+  }
+  .instructor-logo{
+    margin-right: 0!important;
+    margin: 0 45%;
+  }
+  .requirement{
+    text-align: center
+  }
+  .coursedetails-center-w {
+    margin: 0
+  }
+  .coursedetails {
+    flex-direction: column !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .btninline{
+    flex-direction: column;
+  }
+  .btncourseBuy{
+    margin: 0 !important
+  }
+  .right {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+}
+.left-image {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 10px;
+}
+.btncourseBuy {
+  margin-right: 3rem;
+  font-size: 1.5rem;
+}
+.appinfo {
+    box-shadow: 0 1rem 3rem rgba(0,0,0, 0.5);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+}
+.appinfotext {
+  color: rgb(192, 57, 43);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.appinfotext > span {
+  margin-left: 1rem
+  }
+.coursedetails-right-heading {
+  font-size: 25px
+}
+.coursedetails-right-p {
+  font-size: 18px;
+}
+.instructor-logo{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 1.5rem
+}
+.instructor-name{
+ font-size: 25px;
+ font-weight: 600; 
+}
+.instructor-details{
+  font-size: 20px;
+  color: grey;
+  margin: 0 !important;
+}

@@ -3,16 +3,18 @@ import '../style.css';
 export default class index extends Component {
 
     renderList(list) {
-        return list.map( i => {
-            return <div className="col-lg-2 col-md-3 col-md-4" key={i._id}>
-                <div className="col-12 course-card p-0">
-                    <img src={i.image} alt="category"/>
-                    <h6>{i.name}</h6>
+        return list.map(i => {
+            return <div className="" key={i._id}>
+                <div className="card cardhover mb-3" style={{ width: "200px", height: "300px" }}>
+                    <img className="card-img-top" style={{height: "230px"}} src={i.image} alt="Card image cap" />
+                    <div className="card-body">
+                        <h6>{i.name}</h6>
+                    </div>
                 </div>
             </div>
         })
     }
-    
+
     render() {
         const { list } = this.props;
         return (
@@ -20,7 +22,7 @@ export default class index extends Component {
                 <div className="col-11" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
                     <h4 className="col-lg-7 col-12" style={{ fontWeight: '700', fontSize: '21px', marginTop: '50px' }}>
                         Top Categories</h4>
-                    <div className="col-12 d-flex flex-row justify-content-start flex-wrap mt-4 p-0">
+                    <div className="col-12 d-flex flex-row flex-wrap mt-4 p-0" style={{justifyContent: "space-around"}}>
                         {this.renderList(list)}
                     </div>
                 </div>

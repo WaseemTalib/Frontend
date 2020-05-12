@@ -86,7 +86,10 @@
   font-weight: 600;
 }
 .modeltitle{
-  font-size: 1.6rem;
+  font-size: 1.2rem !important;
   text-transform: uppercase;
   color: #fff
+}
+#detail{
+  resize: none
 }

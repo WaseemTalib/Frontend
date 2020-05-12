@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import Style2 from "../ebooks/ebookList/styles.module.css";
-import Model from './model/index';
-
+import { Link } from "react-router-dom";
+import Model from "./model"
 class Courses extends Component {
   render() {
     return (
-      <div className="my_courses col-lg-9">
+      <div className="my_courses col-lg-9 col-md-12">
         <h4>Course Progress</h4>
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -29,7 +29,7 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -49,7 +49,7 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -69,7 +69,7 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -90,7 +90,7 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -111,7 +111,7 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-4 col-sm-6">
             <div
               className={Style2.card + " course"}
               key={Math.random()}
@@ -132,15 +132,15 @@ class Courses extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3">
-            <a href="#popup" className="course add_course" style={{border: `4px dashed`}}>
+          <div className="col-lg-3 col-md-4 col-sm-6">
+          <a href="#popup" className="course add_course" style={{border: `4px dashed`}}>
               <div className="">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
                 <div className="text_add">Add Course</div>
               </div>
             </a>
-            <Model></Model>
           </div>
+          <Model></Model>
         </div>
       </div>
     );

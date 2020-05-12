@@ -17,7 +17,7 @@ export default class extends React.Component {
                 <Rating stars={this.props.star} ></Rating>
                 <h6 className={Styles.priceTag}>{this.props.price}</h6>
             </div>
-            <Link to='/ebookdetails' style={{ padding: "6px 20px", outline:"none !important", color:"rgb(192, 57, 43)", borderColor:"rgb(192, 57, 43)", borderRadius:"100px" }} className={"btn"}>BUY THIS BOOK</Link>
+            <Link to='/ebookdetails' className="btn-login-nav pl-3 pr-3">BUY THIS BOOK</Link>
             
         </div>
     }

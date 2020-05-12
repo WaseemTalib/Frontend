@@ -46,7 +46,7 @@ class index extends Component {
         if (TopicList && TopicList.length > 0)
             return TopicList.slice(0, 2).map(i => {
                 return <li key={i._id} className="right-side-item">
-                    <div alt="topic" className="member-img" >F</div>
+                    <div alt="topic" className="member-img">W</div>
                     <span className="right-side-text">Focal Person</span>
                 </li>
             })
@@ -150,11 +150,11 @@ class index extends Component {
             {/* /////////////////// normal view start  /////////////////////////////////////// */}
             {window.innerWidth > 1000 ? <div className="right-side">
                 <div className="right-side-border">
-                    <h2 className="sidebar-heading">Members</h2>
+                    <h2 className="sidebar-heading member-margin">Members</h2>
                     <ul className="right-side-list">
                         {this.renderCoursesLinks(TopicList)}
                     </ul>
-                    <div className="side-more-images">
+                    <div className="side-more-images" style={{paddingTop: ".5rem", paddingBottom: ".5rem", backgroundColor: "#fff"}}>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>

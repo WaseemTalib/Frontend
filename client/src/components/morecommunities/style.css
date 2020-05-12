@@ -1,4 +1,10 @@
-
+.cardhover:hover{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+  animation: cardhover 1s;
+}
+.cardhover{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4); 
+}
 
 
 .f-card {
@@ -156,7 +162,9 @@
   border-top: 1px solid #e5e5e5;
   padding-top: 4px;
 }
-
+.center2{
+  background-color: #fff !important;
+}
 .social-buttons span {
   font-size: 12px;
   margin: 0 auto;

@@ -9,7 +9,7 @@ import Footer from '../../components/footer';
 class index extends Component {
     render() {
         const { TopicList } = this.props;
-        const titles= ["Choose from 100,000 video courses with new additions pusblished every month","ABC"]
+        const titles= ["Recommended Courses","ABC"]
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={2} />
                 <Header />

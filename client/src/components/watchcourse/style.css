@@ -1,0 +1,40 @@
+.credits {
+  height: 70vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+.credits-section {
+  width: 80%;
+  height: 40vh;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.credits-container {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  padding: 2rem
+}
+.credits-history {
+  font-size: 22px;
+  font-weight: 700;
+}
+.credits-table{
+  text-align: center;
+  width: 100%;
+  float: left;
+
+}
+.credits-headding{
+  font-size: 18px;
+  font-weight: 700;
+}
+.credits-entry{
+  font-size: 14px
+}
