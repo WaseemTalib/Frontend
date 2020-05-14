@@ -28,6 +28,10 @@ padding: 0 !important
 .setting-popup{
     border-radius: 10px
 }
+.my_card{
+  margin: 0 !important;
+  width: auto !important;
+}
 .login-card{
     border-radius: 0 !important
 }
