@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class ProfileHeader extends Component {
   render() {
     const buttons = ["My Profile","Posted Courses", "Posted E-Books"];
-    const pages =["/profile","/mycourses","myebooks"]
+    const pages =["/profile","/mycourses","/profilebooks"]
     return (
       <div>
         <div className="profile_header_wrapper">

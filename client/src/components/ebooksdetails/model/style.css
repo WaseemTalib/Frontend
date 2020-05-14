@@ -11,7 +11,6 @@
   opacity: 0;
   visibility: hidden;
 }
-
 .popup:target {
   opacity: 1;
   visibility: visible;
@@ -20,7 +19,6 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
-
 .popup__box {
   width: 50%;
   height: 32rem;
@@ -76,7 +74,7 @@
 .buttons{
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: center
 }
 .top-img{
   position: relative;

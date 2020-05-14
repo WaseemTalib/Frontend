@@ -1,28 +1,18 @@
 import React, { Component } from 'react'
-import ProfileHeader from './ProfileHeader'
-import PersonalInfo from '../Profile/PersonalInfo';
-import Adddetail from "./adddetail"
-import { Link } from 'react-router-dom';
-class Profile extends Component {
-  
-  render () {
-    
+import Settingform from './settingform';
+
+export default class Profile extends Component {
+
+  render() {
+
     return (
-      <div>
-        {/* <ProfileHeader condition={true} index={1} /> */}
         <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-3 col-md-12 mb-md-5 mb-sm-5" style={{ marginTop: `150px` }}>
-            <PersonalInfo /> 
-          </div>
-          <div className="col-lg-9 col-md-12">
-            <Adddetail/>
-          </div> 
-          
-        </div>
+          <div className="row">
+            <div className="col-lg-12 col-md-12" style={{padding: "3rem 1rem", backgroundColor: "#f7f7f7"}}>
+          <Settingform />
+            </div>
         </div>
       </div>
     )
   }
 }
-export default Profile

@@ -7,13 +7,13 @@ class PrivateInfo extends Component {
       <div className="col-lg-12">
         <div style={{ backgroundColor: "#fff", marginTop: "3rem", marginBottom: "3rem", boxShadow: "0 5px 5px #777", borderRadius: "5px", overflow: "hidden" }}>
           <div class="popup__right">
-            <h3 style={{ fontSize: "22px", color: "#fff" }}>Course Details</h3>
+            <h3 style={{ fontSize: "22px", color: "#fff" }}>Book Details</h3>
           </div>
 
           <form className="col-lg-12 col-md-12 col-12 login-card">
 
             <div style={{ marginBottom: "1.5rem", fontSize: "14px" }}>
-              <label className="label">What Student Learn from your course?</label>
+              <label className="label">What Student Learn from your Book?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
                 <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
@@ -28,7 +28,7 @@ class PrivateInfo extends Component {
             </div>
 
             <div style={{ marginBottom: "1.5rem", fontSize: "14px" }}>
-              <label className="label">What are the Basic Requirements of the Course?</label>
+              <label className="label">What are the Basic Requirements of the Book?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
                 <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
@@ -58,7 +58,7 @@ class PrivateInfo extends Component {
             </div>
 
             <div style={{ marginBottom: "1.5rem" }}>
-              <label className="label">Who this Course is for?</label>
+              <label className="label">Who this Book is for?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
                 <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
@@ -75,7 +75,7 @@ class PrivateInfo extends Component {
             <div className="col-lg-12">
               <a className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
-                  <label htmlFor="coursefile"><i class="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Photo</div></label>
+                  <label htmlFor="coursefile"><i class="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
                   <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                 </div>
               </a>

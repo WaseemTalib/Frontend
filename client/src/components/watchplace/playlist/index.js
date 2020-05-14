@@ -27,9 +27,9 @@ export default class index extends Component {
                         <span className="videocard-title">Video Name 1</span>
                         <span className="fa fa-share mr-3"></span>
                         {this.state.isActive ?
-                            <span className="fa fa-sort-down" onClick={this.handleShow}></span>
-                            :
                             <span className="fa fa-sort-up" onClick={this.handleShow}></span>
+                            :
+                            <span className="fa fa-sort-down" onClick={this.handleShow}></span>
                         }
                     </div>
                     <div className="bottom-align">

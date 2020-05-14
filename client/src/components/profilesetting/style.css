@@ -1,0 +1,114 @@
+.settingprofile{
+    display: flex;
+}
+@media (max-width: 1000px) {
+  .settingprofile{
+    flex-direction: column
+} 
+.flex-grow{
+  flex-grow: 0 !important
+}
+.input-inline{
+  display: block !important
+}
+.setting-right{
+padding: 0 !important
+
+}
+}
+.setting-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.setting-right {
+    flex: 0 0 80%;
+    padding: 1rem 2rem
+}
+.setting-popup{
+    border-radius: 10px
+}
+.login-card{
+    border-radius: 0 !important
+}
+.setting-container {
+  display: flex;
+  align-items: baseline;
+}
+.setting-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 1.5rem 2.5rem;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+.setting-item {
+  font-size: 16px;
+  padding: .7rem 2rem .7rem 1.2rem;
+}
+.setting-item:hover > .setting-link {
+    color: red
+}
+.setting-item:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+}
+.setting-item:active, .setting-item-1{
+    transform: scale(1.05);
+    background-color: #fff;
+    border: 1px solid #000
+}
+.setting-link-1 {
+    color: red !important
+}
+.setting-link {
+    text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.setting-link:hover {
+  text-decoration: none;
+  color: #000;
+}
+.setting-username {
+  text-align: left;
+}
+.setting_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border: 10px solid #ddd;
+}
+.setting_image_wrapper {
+  position: relative;
+  left: 70px;
+  text-align: center;
+}
+
+.setting-input{
+    padding: 24px 49% !important;
+    outline: none ;
+    font-family: "Montserrat, sans-serif";
+    box-shadow: none;
+}
+.input-inline{
+    display: flex;
+    padding: 0;
+    justify-content: space-between
+}
+.inline-input{
+    width: 100% !important
+}
+.setting-label{
+    display: inline;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: 600;
+}

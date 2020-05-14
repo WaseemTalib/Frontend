@@ -10,6 +10,7 @@ import WatchplacePage from '../pages/watchplacePage';
 import MoreCommunityPage from '../pages/morecommunitiesPage';
 import GroupsPage from '../pages/groupsPage';
 import AddcoursePage from '../pages/addcoursePage';
+import AddbooksPage from '../pages/addbooksPage';
 import TopicPage from '../pages/topicPage';
 import CoursePage from '../pages/coursePage';
 import CourseDetailsPage from '../pages/coursedetailsPage';
@@ -18,19 +19,23 @@ import ebookdetailsPage from '../pages/ebookdetailsPage';
 import MyPurchasesPage from '../pages/mypurchasesPage';
 import Profile from '../components/Profile';
 import MyCourses from '../components/MyCourses';
+import Profilebooks from '../components/profilebooks';
 import Messages from '../components/Messages';
 export function Routes() {
     return <div>
         <Switch>
-        {/* <Route exact path='/community' component={Messages} /> */}
+        <Route exact path='/community' component={Profilebooks} />
+        <Route exact path='/Messages' component={Messages} />
         {/* <Route exact path='/community' component={CommunityPage} /> */}
         <Route exact path='/credits' component={CreditsPage} />
-        <Route exact path='/community' component={ProfilesettingPage} />
+        <Route exact path='/profilesetting' component={ProfilesettingPage} />
         <Route exact path='/watchcourses' component={WatchcoursePage} />
         <Route exact path='/watchplace' component={WatchplacePage} />
         <Route exact path='/mycourses' component={MyCourses} />
+        <Route exact path='/profilebooks' component={Profilebooks} />
         <Route exact path='/groups' component={GroupsPage} />
         <Route exact path='/addcourse' component={AddcoursePage} />
+        <Route exact path='/addbooks' component={AddbooksPage} />
         <Route exact path='/morecommunities' component={MoreCommunityPage} />
         <Route path='/login' component={LoginPage} />
         <Route path='/inbox' component={Messages} />

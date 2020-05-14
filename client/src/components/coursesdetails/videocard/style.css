@@ -1,0 +1,129 @@
+.course-content {
+  display: flex;
+  margin: 3rem 3rem
+}
+@media (max-width: 1000px) {
+  .course-content {
+    flex-direction: column;
+  }
+  .course-content-list {
+    display: flex;
+  }
+}
+.course-content-playlist {
+  flex: 0 0 100%;
+  background-color: #f7f7f799;
+}
+.course-content-lecture{
+  color: rgba(63, 115, 138, 0.842);
+  padding: 0 2rem
+}
+.course-content-time{
+  color: rgba(63, 115, 138, 0.842);
+  padding: 0 2rem 0 1rem
+}
+.hiddenlist {
+  background-color: #add8e66b;
+  height: min-content;
+  padding: 0.5rem 1rem;
+}
+.course-content-header {
+  display: flex;
+  padding: 1rem 1rem 1rem 2rem;
+  align-items: baseline;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  border-top: .5px solid grey;
+    border-bottom: .5px solid grey
+  
+}
+.course-content-main-heading {
+  display: flex;
+  padding: 1.5rem 1rem 1.5rem 2rem;
+  align-items: baseline;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  margin-right: auto
+}
+.course-content-coursetitle {
+  margin: 0;
+
+  margin-right: auto;
+  font-size: 18px;
+  color: skyblue;
+  text-transform: uppercase;
+}
+.course-content-lecturetitle {
+  margin-right: auto;
+  font-size: 15px;
+  font-weight: 600
+}
+.course-content-item {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  background-color: #fff;
+  padding: 1rem 1rem 1rem 4rem;
+}
+.course-content-item {
+  border-top: 1px solid grey;
+}
+.course-content-item:not(:first-child){
+  border-bottom: 1px solid grey;
+}
+.fa-sort-up, .fa-sort-down{
+  margin-right: auto
+}
+.icon-blue{
+  color: skyblue
+}
+.course-content-title {
+  margin-right: 2rem;
+  margin-left: 1rem;
+  font-size: 16px;
+  color: rgba(63, 115, 138, 0.842);
+  font-weight: 600;
+}
+.course-content-count {
+  border-right: 1px solid grey;
+  padding: 0 10px;
+}
+.course-content-duration {
+  padding: 0 10px;
+}
+.course-content-align {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: baseline;
+}
+.active-align {
+  margin: 0;
+  margin-left: 2rem;
+  width: 40%;
+  font-size: 14px;
+}
+.course-content-comment-section {
+  padding: 1rem 0;
+}
+.course-contnet-comment {
+  display: flex;
+  padding: 1rem 0.5rem;
+}
+.course-content-comment-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.course-content-comment-disc {
+  font-size: 13px;
+}
+.course-content-comment-input {
+  text-align: center;
+}
+.course-content-input {
+  width: 80%;
+  padding: 10px 24px;
+  outline: none;
+  font-family: "Montserrat, sans-serif";
+  box-shadow: none;
+  font-size: 16px;
+}

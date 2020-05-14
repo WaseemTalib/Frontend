@@ -1,78 +1,94 @@
-.videocard{
-    display: flex
+.videocard {
+  display: flex;
 }
-.videocard-playlist{
-    flex: 0 0 20%;
-    background-color: #f7f7f7;
+@media (max-width: 1000px){
+    .videocard{
+        flex-direction: column
+    }
+    .videocard-list {
+        display: flex;
+        flex-direction: column
+    }
+    
 }
-.videocard-video{
-    flex: 1
+.videocard-playlist {
+  flex: 0 0 20%;
+  background-color: #f7f7f7;
+  height: 75vh;
+  overflow-y: scroll
 }
-.videocard-playlist{
-
+.videocard-video {
+  flex: 1;
 }
-.videocard-header{
-    display: flex;
-    padding: .5rem 1rem;
-    align-items: baseline;
-}
-.videocard-coursetitle{
-    margin-right: auto
-}
-.videocard-list{
-
-}
-.videocard-item{
+.hiddenlist{
     background-color: #add8e66b;
-    padding: 1rem 1rem
+    height: min-content;
+    padding: .5rem 1rem;
+    /* color: #fff; */
+    
 }
-.videocard-title{
-    margin-right: auto;
-    margin-left: 1rem;
-    font-size: 16px;
-    font-weight: 600
+.videocard-list {
+    /* overflow: scroll */
 }
-.videocard-count{
-    border-right: 1px solid grey;
-    padding: 0 10px
+.videocard-header {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: baseline;
 }
-.videocard-duration{
-    padding: 0 10px
+.videocard-coursetitle {
+  margin-right: auto;
 }
-.upper-align{
-    display: flex;
-    flex: 0 0 100%;
-    align-items: baseline
+.videocard-item {
+  background-color: #add8e66b;
+  padding: 1rem 1rem;
 }
-.bottom-align{
-    display: flex;
-    flex: 0 0 100%;
-    font-size: 12px;
-    padding: 10px 15px;
-    letter-spacing: 1px;
+.videocard-title {
+  margin-right: auto;
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 600;
 }
-.videocard-comment-section{
-    padding: 1rem 0
+.videocard-count {
+  border-right: 1px solid grey;
+  padding: 0 10px;
 }
-.videocard-comment{
-    display: flex;
-    padding: 1rem .5rem
+.videocard-duration {
+  padding: 0 10px;
 }
-.videocard-comment-name{
-    font-size: 16px;
-    font-weight: 700
+.upper-align {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: baseline;
 }
-.videocard-comment-disc{
-    font-size: 13px
+.bottom-align {
+  display: flex;
+  flex: 0 0 100%;
+  font-size: 12px;
+  padding: 10px 15px;
+  letter-spacing: 1px;
 }
-.videocard-comment-input{
-    text-align: center    
+.videocard-comment-section {
+  padding: 1rem 0;
 }
-.videocard-input{
-    width: 80%;
-    padding: 10px 24px ;
-    outline: none ;
-    font-family: "Montserrat, sans-serif";
-    box-shadow: none ;
-    font-size: 16px;
+.videocard-comment {
+  display: flex;
+  padding: 1rem 0.5rem;
+}
+.videocard-comment-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.videocard-comment-disc {
+  font-size: 13px;
+}
+.videocard-comment-input {
+  text-align: center;
+}
+.videocard-input {
+  width: 80%;
+  padding: 10px 24px;
+  outline: none;
+  font-family: "Montserrat, sans-serif";
+  box-shadow: none;
+  font-size: 16px;
 }

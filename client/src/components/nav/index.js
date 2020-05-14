@@ -4,7 +4,7 @@ import Avat from '../../assets/img_avatar.png';
 import { logOut } from '../../redux/actions/userActions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-const logoName = { fontSize: '18px', fontWeight: 'bold', color: '#c0392b', fontFamily: `'Montserrat', sans-serif` };
+const logoName = { fontSize: '18px', textDecoration: "none", fontWeight: 'bold', color: '#c0392b', fontFamily: `'Montserrat', sans-serif` };
 const logoNameMob = { fontSize: '20px', fontWeight: 'bold', color: '#c0392b', fontFamily: `'Montserrat', sans-serif` };
 class index extends Component {
 
@@ -73,8 +73,8 @@ class index extends Component {
         const { Auth, isError, profile } = this.props;
         return <div className="navbar d-flex flex-column col-12 p-3">
             <div className="d-flex flex-row justify-content-between align-items-center col-12 p-3">
-                <h6 style={logoNameMob}>GENIVERSITY</h6>
-                <button className="btn btnHam" onClick={(e) => this.setState({ isActive: !isActive })}><span className="fa fa-bars"></span></button>
+            <Link to="/" style={logoName}>GENIVERSITY</Link>
+              <button className="btn btnHam" onClick={(e) => this.setState({ isActive: !isActive })}><span className="fa fa-bars"></span></button>
             </div>
             {isActive && <div className="input-group col-lg-3 col-12 p-3">
                 <input type="text" className="form-control" placeholder="Search Geniversity" />
@@ -107,8 +107,8 @@ class index extends Component {
         const { Auth, isError, profile } = this.props;
         return <div className="navbar d-flex flex-column col-12 p-3">
             <div className="d-flex flex-row justify-content-between align-items-center col-12 p-3">
-                <h6 style={logoNameMob}>GENIVERSITY</h6>
-                <button className="btn btnHam" onClick={(e) => this.setState({ isActive: !isActive })}><span className="fa fa-bars"></span></button>
+            <Link to="/" style={logoName}>GENIVERSITY</Link>
+             <button className="btn btnHam" onClick={(e) => this.setState({ isActive: !isActive })}><span className="fa fa-bars"></span></button>
             </div>
             {isActive && <div className="input-group col-lg-3 col-12 p-3">
                 <input type="text" className="form-control" placeholder="Search Geniversity" />
@@ -143,7 +143,7 @@ class index extends Component {
         if (width && width !== 0 && width >= 992)
             return (
                 <div className="navbar d-flex flex-lg-row flex-column">
-                    <h6 style={logoName}>GENIVERSITY</h6>
+                    <Link to="/" style={logoName}>GENIVERSITY</Link>
                     <div className="input-group col-lg-3 col-12">
                         <input type="text" className="form-control" placeholder="Search Geniversity" />
                         <div className="input-group-append">

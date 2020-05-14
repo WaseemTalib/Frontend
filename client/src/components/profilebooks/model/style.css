@@ -25,7 +25,7 @@
   width: 50%;
   height: 32rem;
   background-color: #fff;
-  position: absolute;
+  position: absolux te;
   top: 50%;
   left: 50%;
   border-radius: 3px;
@@ -35,7 +35,8 @@
   border-radius: 20px;
   transform: translate(-50%, -50%) scale(0.5);
   transition: all 0.4s 0.2s;
-  text-align: center
+  text-align: center;
+  overflow: hidden
 }
 @media (max-width: 1000px){
   .popup__box{
@@ -49,23 +50,28 @@
     height: 28rem
   }
 }
-.login-card{
-  
-  border-radius: 20px;
+.popup__right {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly
-}
-.credit-info {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #999898;
 }
-@media (max-width: 800px){
-  .credit-info {
-    flex-direction: column;
-  } 
+
+.popup__icon,
+.popup__icon:link,
+.popup__icon:visited {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  justify-content: right
 }
+.popup__icon:hover {
+  color: #e74c3c;
+}
+
 .inputStyle {
   padding: 24px !important;
   outline: none !important;
@@ -73,41 +79,21 @@
   box-shadow: none !important;
   font-size: 16px;
 }
-.buttons{
-  display: flex;
-  align-items: center;
-  justify-content: space-between
+.label{
+  display: block;
+  font-size: 1.1rem;
+  text-align: left;
+  font-weight: 600;
 }
-.top-img{
-  position: relative;
-  top: -2rem;
-  width: 250px;
-  height: 125px;
-  margin-bottom: -2rem
+.modeltitle{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #fff
 }
-.dropdown{
-  width: 50%;
-  color: #fff;
-  border-color: rgb(192, 57, 43);
-  background-color: rgb(192, 57, 43);
-  margin-right: .5rem;
-  border-radius: 5px !important
+.option-bgimg{
+  /* background-color: url("../../../assets/img_avatar.png"); */
+  background-repeat: no-repeat
 }
-.cvc{
-  width: 50%;
-}
-@media (max-width:800px){
-  .inputStyle {
-    padding: 20px !important;
-  }  
-  .dropdown{
-    width: 100%;
-    margin-right: 0 !important;
-    margin-bottom: 1rem
-  }
-
-  .cvc{
-    padding: 0 !important
-  }
-  
+.description-text{
+  resize: none !important
 }

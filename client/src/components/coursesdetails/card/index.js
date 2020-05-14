@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.css';
+import Videocard from '../videocard';
+
 import {Link} from 'react-router-dom';
-import Model from '../model';
 
 export default class extends React.Component {
     render() {
@@ -31,8 +32,8 @@ export default class extends React.Component {
                 <span className={"coursedetails-right-p d-block pl-2 pb-2"}><span className="fa fa-bookmark mr-4"></span> Certificate of completion</span>
                 <span className={"coursedetails-right-p d-block pl-2 pb-2"}><span className="fa fa-language mr-4"></span> English</span>
             </div>
-        <Model></Model>
         </div>
+        <Videocard/>
         <div className={"coursedetails-bottom d-flex" }>
            <div className={"coursedetails-learn d-flex"}>
         <div className={"d-flex flex-column justify-content-center"}>
