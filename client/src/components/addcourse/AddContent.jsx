@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import Header from "../nav";
 import Footer from "../footer";
 import Dropdown from "./Dropdown";
+import { Link } from "react-router-dom";
 class AddContent extends Component {
   render() {
-    const dropdownItems = [1,2,3,4,5,6,7]
+    const dropdownItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
     return (
       <div className="add_content">
         <Header />
         <div className="content">
           <div className="content_inner">
-            <div className="add_content_wrapper">
+            <div className="add_content_wrapper" style={{textAlign: `center`,marginBottom: `50px`}}>
               <div className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
                   <label htmlFor="coursefile">
@@ -20,6 +21,7 @@ class AddContent extends Component {
                   <input type="file" id="coursefile" style={{ display: `none` }}/>
                 </div>
               </div>
+              Size: 300 x 300
             </div>
             <div className="price_wrapper input_content_wrapper">
               <p>
@@ -53,6 +55,9 @@ class AddContent extends Component {
             {dropdownItems.map(i=> <li className="dropdown_item"> <Dropdown i={i}/> </li>)}
           </ol>
           </div>
+          <div style={{ textAlign: "center",width: `100%` }}>
+              <Link to="/addcontent" className="btn btn-outline-danger addcoursebtn btnStyle">Submit</Link>
+            </div>
         </div>
         <Footer />
       </div>

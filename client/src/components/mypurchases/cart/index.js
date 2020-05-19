@@ -20,6 +20,7 @@ export default class extends React.Component {
            <div style={{flexGrow: 5}}>
             <Item id={1} title="ITem !" description="Free Lancer" price="$80" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
             <Item id={1} title="UTem @" description="Web Developer" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
+            <Item id={1} title="UTem @" description="Web Developer" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
             </div>
             <div className={Styles.checkOut}>
                 <div className={Styles.flex}>

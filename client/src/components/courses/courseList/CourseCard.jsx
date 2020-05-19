@@ -1,5 +1,6 @@
 import React from "react";
 import User from "../../../assets/img_avatar.png";
+import Rating from '../rating'
 import Style2 from "../../ebooks/card/styles.module.css";
 import { Link } from "react-router-dom";
 
@@ -24,9 +25,7 @@ const CourseCard = (props) => {
         <h6 className="static">Hello World</h6>
         <h6 className="dyna">Loreum ipsum is simply</h6>
         <div className="m-2 d-flex flex-row justify-content-between align-items-center p-2">
-          <Link to="/coursedetails" className="btn btn-danger">
-            Buy Now
-          </Link>
+        <Rating stars={4} ></Rating>
           <h6 className="tag mt-2">${Math.ceil(Math.random()*100)}</h6>
         </div>
       </Link>
@@ -39,11 +38,11 @@ const CourseCard = (props) => {
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam magnam
           earum corrupti fuga.</p>
           <ul style={{color: `#999`}}>
-            <li>HTML & CSS introduction</li>
-            <li>HTML & CSS introduction</li>
-            <li>HTML & CSS introduction</li>
-            <li>HTML & CSS introduction</li>
-            <li>HTML & CSS introduction</li>
+            <li>HTML &#38; CSS introduction</li>
+            <li>HTML &#38; CSS introduction</li>
+            <li>HTML &#38; CSS introduction</li>
+            <li>HTML &#38; CSS introduction</li>
+            <li>HTML &#38; CSS introduction</li>
           </ul>
           <button style={{backgroundColor: `#ff3000`,color: `#fff`,padding: `1rem 3rem`,borderRadius: `3px`,border:`none`}}>Add to Cart</button>
         </div>

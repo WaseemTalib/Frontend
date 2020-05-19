@@ -13,7 +13,9 @@ export default class index extends Component {
                         Reviews</h3>
                         <hr/>
                     <h4 className="coment-name col-lg-7 col-12" style={{ marginTop: '10px' }}>
-                        Donald Trump</h4>
+                    <div className="icon_message" style={{ display: `inline-flex` }}>
+            D
+          </div>Donald Trump</h4>
                     <Rating stars={4} ></Rating>
                 </div>
                 <div className="col-11" style={{ marginLeft: 'auto', marginRight: 'auto' }}>

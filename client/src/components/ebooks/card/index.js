@@ -4,6 +4,7 @@ import Styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 
 export default class extends React.Component {
+    
     render() {
         return <Link to="/ebookdetails" className={Styles.card}>
             <img src={this.props.image} className={Styles.image} alt="EBook" />

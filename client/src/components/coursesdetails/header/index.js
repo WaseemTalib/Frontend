@@ -9,18 +9,18 @@ export default class index extends Component {
             <div>
                 {window.innerWidth > 1000 ?
                     <div className="d-flex align-items-center">
-                        <div className={Styles.header + " col-9 col-lg-9 col-md-9 col-sm-9 "}>
+                        <div className={Styles.header + " col-8 col-lg-8 col-md-8 col-sm-8 "}>
                             <video width="100%" height="350" controls>
                                 <source src="../../assets/babyvideo.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                     </video>
                         </div>
-                        <div className={Styles.header + " col-3 col-lg-3 col-md-3 col-sm-3 "}>
+                        <div className={Styles.header + " col-4 col-lg-4 col-md-4 col-sm-4 "}>
                             <div className={"coursedetails-center justify-content-center d-flex flex-column"}>
-                                <span className={"m-0 p-0"} style={{ textAlign: "center", color: "gray", fontSize: "20px", fontWeight: "bold" }}>
+                                <span className={"m-0 p-0"} style={{ textAlign: "center", color: "gray", fontSize: "22px", fontWeight: "bold" }}>
                                     Introduction to Fixed-Wing
                   </span>
-                                <span className={"mb-4 mt-4"} style={{ textAlign: "center", fontSize: "14px", color: "gray", }}>
+                                <span className={"mb-4 mt-4"} style={{ textAlign: "center", fontSize: "15px", color: "gray", }}>
                                     Learn how to design fixed-wing drones from specific missions
                 </span>
                                 <span style={{ textAlign: "center" }}>

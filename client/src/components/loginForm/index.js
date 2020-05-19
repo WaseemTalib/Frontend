@@ -33,7 +33,7 @@ class index extends Component {
         return (
             <form className=" shadow-lg login-card" onSubmit={(e) => this.handleSubmit(e)}>
             
-            <Link className="link-blue" id={"close"} to='/community'><span className={"fa fa-close"} htmlFor={"close"} style={{float: "right", fontSize: "1.5rem", color: "red"}}></span></Link>
+            {/* <Link className="link-blue" id={"close"} to='/'><span className={"fa fa-close"} htmlFor={"close"} style={{float: "right", fontSize: "1.5rem", color: "red"}}></span></Link> */}
                 <h3 style={heading}>Sign in &#38; Start Exploring!</h3>
                 <button className="btn btn-block p-2 btn-google d-flex align-items-center justify-content-center"
                     style={btnStyle}>
@@ -74,7 +74,7 @@ class index extends Component {
                 </button>
 
                 <p style={{ width: '100%', textAlign: 'center', marginTop: '16px', color: 'grey', fontSize: '12px !important' }}>Don't have an account?
-                 <Link className="link-blue" to='/register'>  Sign up</Link></p>
+                 <Link className="link-blue" to='/register'> Sign up</Link></p>
             </form>
         )
     }

@@ -265,11 +265,14 @@ class index extends Component {
                     ></i>
                   </Link>
                   <hr />
-                  <Link to="/morecommunities" className="dropdown-item">
-                    Suggest Community
-                  </Link>
-                  <Link to="/mycourses" className="dropdown-item">
+                  <Link to="/watchcourses" className="dropdown-item">
                     My Courses
+                  </Link>
+                  <Link to="/mypurchases" className="dropdown-item">
+                    My E-Books
+                  </Link>
+                  <Link to="/morecommunities" className="dropdown-item">
+                    Communities
                   </Link>
                   <Link to="/credits" className="dropdown-item">
                     Gineversity Credits
@@ -277,7 +280,6 @@ class index extends Component {
                   <Link to="/profilesetting" className="dropdown-item">
                     Settings
                   </Link>
-                  <Link to="/watchcourses">Watch Course</Link>
                   <button
                     className="dropdown-item"
                     onClick={(e) => this.props.logOut()}
@@ -292,7 +294,7 @@ class index extends Component {
                     Contact Us
                   </Link>
                   <Link to="/" className="dropdown-item">
-                    Terms & Conditions
+                    Terms &#38; Conditions
                   </Link>
                   <Link to="/" className="dropdown-item">
                     Privacy Policy
@@ -392,11 +394,14 @@ class index extends Component {
                     ></i>
                   </Link>
                   <hr />
-                  <Link to="/morecommunities" className="dropdown-item">
-                    Suggest Community
-                  </Link>
-                  <Link to="/mycourses" className="dropdown-item">
+                  <Link to="/watchcourses" className="dropdown-item">
                     My Courses
+                  </Link>
+                  <Link to="/mypurchases" className="dropdown-item">
+                    My E-Books
+                  </Link>
+                  <Link to="/morecommunities" className="dropdown-item">
+                   Communities
                   </Link>
                   <Link to="/credits" className="dropdown-item">
                     Gineversity Credits
@@ -404,7 +409,6 @@ class index extends Component {
                   <Link to="/profilesetting" className="dropdown-item">
                     Settings
                   </Link>
-                  <Link to="/watchcourses" className="dropdown-item">Watch Course</Link>
                   <button
                     className="dropdown-item"
                     onClick={(e) => this.props.logOut()}
@@ -419,7 +423,7 @@ class index extends Component {
                     Contact Us
                   </Link>
                   <Link to="/" className="dropdown-item">
-                    Terms & Conditions
+                    Terms &#38; Conditions
                   </Link>
                   <Link to="/" className="dropdown-item">
                     Privacy Policy
@@ -513,11 +517,14 @@ class index extends Component {
                   ></i>
                 </Link>
                 <hr />
-                <Link to="/morecommunities" className="dropdown-item">
-                  Suggest Community
-                </Link>
-                <Link to="/mycourses" className="dropdown-item">
+                <Link to="/watchcourses" className="dropdown-item">
                   My Courses
+                </Link>
+                <Link to="/mypurchases" className="dropdown-item">
+                  My E-Books
+                </Link>
+                <Link to="/morecommunities" className="dropdown-item">
+                  Communities
                 </Link>
                 <Link to="/credits" className="dropdown-item">
                   Gineversity Credits
@@ -525,7 +532,6 @@ class index extends Component {
                 <Link to="/profilesetting" className="dropdown-item">
                   Settings
                 </Link>
-                <Link to="/watchcourses" className="dropdown-item">Watch Course</Link>
                 <button
                   className="dropdown-item"
                   onClick={(e) => this.props.logOut()}
@@ -540,7 +546,7 @@ class index extends Component {
                   Contact Us
                 </Link>
                 <Link to="/" className="dropdown-item">
-                  Terms & Conditions
+                  Terms &#38; Conditions
                 </Link>
                 <Link to="/" className="dropdown-item">
                   Privacy Policy

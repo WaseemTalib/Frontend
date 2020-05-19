@@ -40,7 +40,7 @@ export function Routes() {
             <Route exact path='/addcontent' component={AddContent} />
             <Route exact path='/morecommunities' component={MoreCommunityPage} />
             <Route path='/inbox' component={Messages} />
-            <Route path='/register' component={SignupPage} />
+          
             <Route path='/user/:id/topics' component={TopicPage} />
             <Route path='/courses' component={CoursePage} />
             <Route path='/coursedetails' component={CourseDetailsPage} />
@@ -58,6 +58,7 @@ export function PublicRoutes() {
     return <div>
         <Switch>
             <Route exact path='/login' component={LoginPage} />
+            <Route path='/register' component={SignupPage} /> 
             <Route render={() => <Redirect to='/login' />} />
         </Switch>
     </div>
