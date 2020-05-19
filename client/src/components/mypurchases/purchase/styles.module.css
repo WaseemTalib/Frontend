@@ -1,24 +1,24 @@
 .item{
     background-color: #f7f7f7;
     display: flex;
-    margin: 1rem 2rem;
-    padding: 1rem 2rem;
+    margin: 2rem;
+    padding: 2rem;
     align-items: center;
     border-radius: 5px 
     }
 
 .left{
     display: flex;
-    flex: 0 0 15%;
+    flex: 0 0 20%;
 }
 .image{
     width: 100%;
     border-radius: 10px;
-    height: 100px;
+    height: 120px;
 }
 .center{
     display: flex;
-    flex: 0 0 75%;
+    flex: 0 0 70%;
     flex-direction: column;
     word-wrap: break-word;
     padding-left: 3rem
@@ -30,7 +30,7 @@
 }
 .disc{
     overflow: hidden;
-    height: 30px;
+    height: 60px;
     color: rgba(0,0,0,0.5);
 }
 .del {
@@ -42,7 +42,7 @@
     flex: 0 0 10%;
     color: red;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 @media(max-width:1000px){
@@ -74,9 +74,5 @@
     .right{
         flex: 0 0 100%
     }
-    .image {
-        width: 80%;
-        margin: 0 auto
-      }
 }
 

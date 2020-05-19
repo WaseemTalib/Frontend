@@ -17,7 +17,7 @@ class ProfileHeader extends Component {
                 ""
             }
           </div>
-          <div className="profile_image_wrapper" style={{ zIndex: 1000 }}>
+          <div className="profile_image_wrapper" style={{ zIndex: 500 }}>
             <div className="profile_image" style={{ backgroundImage: `url(https://www.goodmorningimagesdownload.com/wp-content/uploads/2019/10/Nice-Whatsapp-Dp-Profile-Images-101-300x300.jpg)` }}>
               {this.props.condition ? <div className=""><input type="file" name="aa" id="profile" style={{ display: `none` }} />
                 <label htmlFor="profile" className="btn btn-danger"><i className="fa fa-camera"></i></label></div> : ""}

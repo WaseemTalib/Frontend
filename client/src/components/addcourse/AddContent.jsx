@@ -26,20 +26,24 @@ class AddContent extends Component {
                 <label htmlFor="price">Set Price: </label>
                 <input id="price" type="text" placeholder="Price" />
               </p>
-            </div>
-            <div className="input_content_wrapper">
-              
               <p>
                 <label htmlFor="title">Title: </label>
                 <input id="title" type="text" placeholder="Title" />
               </p>
               <p>
-                <label htmlFor="description">Description: </label>
+                <label htmlFor="description">Short Description: </label>
                 <textarea id="description" rows={5} placeholder="Description"></textarea>
               </p>
               <p>
                 <label htmlFor="category">Category: </label>
                 <input id="category" placeholder="Category" />
+              </p>
+            </div>
+            <div className="input_content_wrapper">
+              
+              <p>
+                <label htmlFor="description">Description: </label>
+                <textarea id="description" rows={5} placeholder="Description"></textarea>
               </p>
             </div>
           </div>

@@ -7,12 +7,12 @@
 .left {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  flex: 0 0 22%;
+  flex: 0 0 30%;
 }
 .image {
   width: 100%;
   border-radius: 10px;
-  height: 110px;
+  height: 140px;
 }
 .center {
   display: flex;
@@ -31,7 +31,7 @@
   font-size: 13px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: hidden;
-  height: 20px;
+  height: 40px;
   color: rgba(0, 0, 0, 0.5);
 }
 .del {
@@ -57,7 +57,7 @@
 }
 .courseCard {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   margin: 0rem 2rem 0rem 1rem;
   border-bottom: 1px solid #333;
 }
@@ -91,9 +91,5 @@
   }
   .disc {
     padding-top: 1.2rem;
-  }
-  .image {
-    width: 80%;
-    margin: 0 auto
   }
 }

@@ -73,7 +73,7 @@ class PrivateInfo extends Component {
             <div className="col-lg-12">
               <a className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
-                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Cover Photo</div></label>
+                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Introductory's Video</div></label>
                   <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                 </div>
               </a>
