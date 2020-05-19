@@ -22,7 +22,7 @@ export default class index extends Component {
             <div className='col-12'>
                 <div className="videocard">
                     <div className="videocard-video">
-                        <video width="100%" height="auto" autoplay controls>
+                        <video width="100%" controls>
                             <source src="../../assets/babyvideo.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                 </video>

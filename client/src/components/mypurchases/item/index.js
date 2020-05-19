@@ -6,9 +6,6 @@ export default class extends React.Component {
         return <div className={Styles.courseCard} >
 
             <div className={Styles.item}>
-                <div class="form-check">
-                    <input class="form-check-input position-static" style={{  width:"1.5rem", height:"1.5rem", marginRight:"1rem"}} type="checkbox" id="blankCheckbox" value="option1" aria-label="..." />
-                </div>
                 <div className={Styles.left}>
                     <img className={Styles.image} alt={"img"} src={this.props.image}></img>
                 </div>

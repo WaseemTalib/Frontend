@@ -53,7 +53,7 @@ export const updateTopics = (data) => async dispatch => {
             var response = await api.post("/account/updateTopics", data, { headers: { 'authorization': `${localStorage.getItem('token')}` } });
             if (response.data.user && !response.data.error) {
                 dispatch({ type: GUPS, payload: response.data.user });
-                if (!response.data.user.firstSignup) history.push(`/user/${response.data.user._id}/community`);
+                if (!response.data.user.firstSignup) history.push(`/`);
                 else history.push(`/user/${response.data.user._id}/topics`);
             }
             else dispatch({ type: GUPE });
@@ -69,7 +69,8 @@ export const getProfile = () => async dispatch => {
             if (response.data.user && !response.data.error) {
                 dispatch({ type: GUPS, payload: response.data.user });
                 dispatch({ type: Current_User_Suc });
-                history.push('/community');
+                if (!response.data.user.firstSignup) history.push(`/`);
+                else history.push(`/user/${response.data.user._id}/topics`);;
             }
             else dispatch({ type: GUPE });
         } else dispatch({ type: GUPE });

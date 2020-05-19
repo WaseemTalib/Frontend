@@ -45,17 +45,17 @@ class index extends Component {
                     <div className="col-5 p-0" style={{ borderTop: '1px solid #ced6e0' }}></div>
                 </div>
             
-                <div class="input-group mt-4">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
+                <div className="input-group mt-4">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
                     </div>
                     <input type="text" className="form-control" style={inputStyle} name='email'
                         value={email} placeholder="Email Address" onChange={this.handleInput} required />
                 </div>
             
-                <div class="input-group mt-4">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
+                <div className="input-group mt-4">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
                     </div>
                     <input type="password" className="form-control" style={inputStyle} name='password'
                         value={password} onChange={this.handleInput} placeholder="Enter Password" required />

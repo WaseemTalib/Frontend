@@ -7,7 +7,8 @@ const CourseCard = (props) => {
   console.log(props)
   return (
     <div className="card_outer" style={{ display: `inline-block`,position: `relative` }}>
-      <div
+      <Link
+        to="/coursedetails"
         className={Style2.card + " course"}
         key={Math.random()}
         style={{ height: `max-content !important` }}
@@ -28,14 +29,23 @@ const CourseCard = (props) => {
           </Link>
           <h6 className="tag mt-2">${Math.ceil(Math.random()*100)}</h6>
         </div>
-      </div>
+      </Link>
       <div className="course_details_wrapper" style={props.style}>
         <div className="course_details">
+          <p>Last Updated 5/20/20</p>
           <h2>Hello</h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam magnam
-          earum corrupti fuga, qui iusto officiis at natus delectus quis dolor
-          ea nam, dignissimos, harum voluptatibus. Voluptate amet nisi
-          dignissimos?
+          <p><span style={{color: `#2998aa`}}>Web Development</span> | Development</p>
+          <p style={{fontSize: `0.8rem`}}> <i className="fa fa-play" aria-hidden="true"></i> 404 Lectures | <i className="fa fa-clock-o" aria-hidden="true"></i> 47 hours | <i className="fa fa-sliders" aria-hidden="true"></i> All levels</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam magnam
+          earum corrupti fuga.</p>
+          <ul style={{color: `#999`}}>
+            <li>HTML & CSS introduction</li>
+            <li>HTML & CSS introduction</li>
+            <li>HTML & CSS introduction</li>
+            <li>HTML & CSS introduction</li>
+            <li>HTML & CSS introduction</li>
+          </ul>
+          <button style={{backgroundColor: `#ff3000`,color: `#fff`,padding: `1rem 3rem`,borderRadius: `3px`,border:`none`}}>Add to Cart</button>
         </div>
       </div>
     </div>

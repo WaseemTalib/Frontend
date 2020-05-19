@@ -1,54 +1,12 @@
-/* popup */
-.popup {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 3000;
-  transition: all 0.3s;
-  opacity: 0;
-  visibility: hidden;
+.books-model-both{
+  display: flex
 }
-
-.popup:target {
-  opacity: 1;
-  visibility: visible;
+.books-model-left{
+  flex: 0 0 40%;
+  padding: 1rem 1rem 0 0
 }
-.popup:target .popup__box {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.popup__box {
-  width: 50%;
-  height: 32rem;
-  background-color: #fff;
-  position: absolux te;
-  top: 50%;
-  left: 50%;
-  border-radius: 3px;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-  display: table;
-  opacity: 0;
-  border-radius: 20px;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all 0.4s 0.2s;
-  text-align: center;
-  overflow: hidden
-}
-@media (max-width: 1000px){
-  .popup__box{
-    width: 50%;
-    height: 28rem
-  }
-}
-@media (max-width: 600px){
-  .popup__box{
-    width: 75%;
-    height: 28rem
-  }
+.books-model-right{
+  flex: 0 0 60%
 }
 .popup__right {
   width: 100%;

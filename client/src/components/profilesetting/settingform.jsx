@@ -11,8 +11,8 @@ class PrivateInfo extends Component {
       <div className="settingprofile">
        <ProfilesettingNav/>
         <div className="setting-right">
-          <div class="setting-popup">
-            <div class="popup__right">
+          <div className="setting-popup">
+            <div className="popup__right">
               <h3 style={{ fontSize: "22px", color: "#fff" }}>Create Course</h3>
             </div>
             <form className="col-lg-12 col-md-12 col-12 login-card">

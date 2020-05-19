@@ -6,12 +6,10 @@ class PrivateInfo extends Component {
     return (
       <div className="col-lg-12">
         <div style={{ backgroundColor: "#fff", marginTop: "3rem", marginBottom: "3rem", boxShadow: "0 5px 5px #777", borderRadius: "5px", overflow: "hidden" }}>
-          <div class="popup__right">
+          <div className="popup__right">
             <h3 style={{ fontSize: "22px", color: "#fff" }}>Course Details</h3>
           </div>
-
           <form className="col-lg-12 col-md-12 col-12 login-card">
-
             <div style={{ marginBottom: "1.5rem", fontSize: "14px" }}>
               <label className="label">What Student Learn from your course?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
@@ -75,13 +73,13 @@ class PrivateInfo extends Component {
             <div className="col-lg-12">
               <a className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
-                  <label htmlFor="coursefile"><i class="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Photo</div></label>
+                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Cover Photo</div></label>
                   <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                 </div>
               </a>
             </div>
             <div style={{ textAlign: "center" }}>
-              <Link to="/" className="btn btn-outline-danger addcoursebtn btnStyle">Submit for Preview</Link>
+              <Link to="/addcontent" className="btn btn-outline-danger addcoursebtn btnStyle">Submit for Preview</Link>
             </div>
           </form>
         </div>

@@ -7,12 +7,12 @@
 .left {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  flex: 0 0 30%;
+  flex: 0 0 22%;
 }
 .image {
   width: 100%;
   border-radius: 10px;
-  height: 140px;
+  height: 110px;
 }
 .center {
   display: flex;
@@ -24,19 +24,19 @@
 .title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
 }
 .disc {
-  font-size: 16px;
+  font-size: 13px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: hidden;
-  height: 40px;
+  height: 20px;
   color: rgba(0, 0, 0, 0.5);
 }
 .del {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   cursor: pointer;
 }
 .right {
@@ -44,12 +44,12 @@
   display: flex;
   flex: 0 0 10%;
   color: rgb(192, 57, 43);
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .courseTitle {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: red;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 .courseCard {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   margin: 0rem 2rem 0rem 1rem;
   border-bottom: 1px solid #333;
 }
@@ -91,5 +91,9 @@
   }
   .disc {
     padding-top: 1.2rem;
+  }
+  .image {
+    width: 80%;
+    margin: 0 auto
   }
 }

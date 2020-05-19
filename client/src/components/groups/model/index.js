@@ -10,11 +10,11 @@ export default class index extends Component {
     render() {
         return (
 
-            <section class="popup" id="popup">
-                <div class="popup__box">
-                    <div class="popup__right">
+            <section className="popup" id="popup">
+                <div className="popup__box">
+                    <div className="popup__right">
                     <h3 className="modeltitle">Suggest Community</h3>
-                        <a href="#" class="popup__icon"> <i class="fa fa-times popup__close"></i></a>
+                        <a href="#" className="popup__icon"> <i className="fa fa-times popup__close"></i></a>
                     </div>
 
                     <form className="col-lg-12 col-md-12 col-12 login-card">

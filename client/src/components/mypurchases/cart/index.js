@@ -18,8 +18,9 @@ export default class extends React.Component {
             </div>
            <div className={Styles.cartAlign}>
            <div style={{flexGrow: 5}}>
-            <Item id={1} title="Ismail Ahmad" description="Free Lancer" price="$80" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
-            <Item id={1} title="Adeeb Ahmad" description="Web Developer" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
+            <Item id={1} title="ITem !" description="Free Lancer" price="$80" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
+            <Item id={1} title="UTem @" description="Web Developer" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
+            <Item id={1} title="UTem @" description="Web Developer" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Item>
             </div>
             <div className={Styles.checkOut}>
                 <div className={Styles.flex}>
@@ -43,9 +44,9 @@ export default class extends React.Component {
                 </div>
                 </div>
                 {this.state.btn1 ?  
-                <Purchase id={1} title="ا ب پ" coursetitle="My Courses"  description="describe me well" price="$40" image="https://picserio.com/data/out/218/cute-kitty-wallpapers_4320821.jpg"></Purchase>
+                <Purchase id={1} title="Hello" coursetitle="My Courses"  description="describe me well" price="$40" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Purchase>
                 :
-                <Purchase id={1} title="abc" coursetitle="My Courses" description="describe me well" price="$80" image="https://picserio.com/data/out/218/cute-kitty-wallpapers_4320821.jpg"></Purchase>
+                <Purchase id={1} title="abc" coursetitle="My Courses" description="describe me well" price="$80" image="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Purchase>
                 }
                 </div>
             </div>

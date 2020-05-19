@@ -9,7 +9,7 @@ export default class index extends Component {
     }
 
     child = () => {
-        if (this.state.isActive == false) {
+        if (this.state.isActive === false) {
             this.setState({
                 isActive: true
             })

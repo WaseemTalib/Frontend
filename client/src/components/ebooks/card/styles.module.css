@@ -1,6 +1,6 @@
 .card{
     display: inline-block;
-    width:200px;
+    width:200px !important;
     border-radius: 10px;
     border:1px solid  rgba(0,0,0,0.2);
     overflow: hidden;
@@ -8,6 +8,9 @@
     text-align: center;
     padding-bottom: 1rem;
     white-space: normal;
+}
+.card:hover{
+    text-decoration: none;
 }
 .card .image{
     width: 100%;

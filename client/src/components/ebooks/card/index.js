@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default class extends React.Component {
     render() {
-        return <div className={Styles.card}>
+        return <Link to="/ebookdetails" className={Styles.card}>
             <img src={this.props.image} className={Styles.image} alt="EBook" />
             <span className={Styles.title}>
                 {this.props.title}
@@ -19,6 +19,6 @@ export default class extends React.Component {
             </div>
             <Link to='/ebookdetails' className="btn-login-nav pl-3 pr-3">BUY THIS BOOK</Link>
             
-        </div>
+        </Link>
     }
 }

@@ -1,8 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Comment from "./Comment";
+import InputComment from "./InputComment";
+import { addComments } from '../../redux/actions/feedActions';
+import { connect } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const PostCard = (item) => {
+const PostCard = (props) => {
+  const { item, addComments, profile } = props;
+  const [list, setList] = useState([]), [tempId, setTid] = useState(1);
+
+  useEffect(() => {
+    setList(item.comments ? item.comments : []);
+  }, [item, setList]);
+
+  function renderList(list) {
+    return list && list.length > 0 && list.map(i => {
+      return <Comment key={i._id} name={i.postedBy && i.postedBy.name ? i.postedBy.name : ' '} replyList={i.replies} isReply={false}>
+        {i.comment}
+      </Comment>
+    });
+  }
+
+  function handleComment(e, text) {
+    var data = { feedId: item._id, comment: text, postedBy: profile._id };
+    addComments(data);
+    var tempList = list ? list : [];
+    tempList.push({
+      _id: tempId,
+      postedBy: { image: profile.image, name: profile.name, _id: profile._id },
+      replyList: [],
+      comment: text
+    });
+    setTid(tempId + 1);
+    setList(tempList);
+  }
+
   return (
-    <div key={item._id} className="post col-md-12">
+    <div className="post col-md-12">
       <div className="post-head">
         <div
           style={{
@@ -15,17 +51,17 @@ const PostCard = (item) => {
             justifyContent: "center",
           }}
         >
-          <h4 style={{ fontWeight: "700", color: "white", marginTop: "3px" }}>
-            {item.postedBy && item.postedBy.name ? item.postedBy.name[0] : ""}
-          </h4>
+          <Link to="/otherprofile" style={{ fontWeight: "700", color: "white", marginTop: "3px" }}>
+            {item && item.postedBy && item.postedBy.name ? item.postedBy.name[0] : ""}
+          </Link>
         </div>
         <div className="post-user-detail">
-          <div className="post-name" style={{display: `inline`}}>
-            {item.postedBy ? item.postedBy.name : ""}
-          </div>
-          <div class="align-items-center" style={{display: "inline-flex"}}><div class="post-option"><span class="fa fa-caret-right post-head-icon"></span></div><div class="post-group-ref">Computers</div></div>
+          <Link to="/otherprofile" className="post-name" style={{ display: `inline` }}>
+            {item && item.postedBy ? item.postedBy.name : ""}
+          </Link>
+          <div class="align-items-center" style={{ display: "inline-flex" }}><div class="post-option"><span class="fa fa-caret-right post-head-icon"></span></div><div class="post-group-ref">{item && item.topicId ? item.topicId.name : ''}</div></div>
           <div className="post-sub-name">
-            12:35AM
+            {item && item.posted ? item.posted : ''}
           </div>
         </div>
         <div className="post-buttons ml-auto">
@@ -38,10 +74,8 @@ const PostCard = (item) => {
         </div>
       </div>
       <div className="post-body">
-        {item.feed && <p className="post-body-detail">{item.feed}</p>}
-        
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSky6u4ARSU9V-SdIC4__iA_GQjpiaQBVTNxIxPWiWJl8C_ysEp&usqp=CAU" alt="post" className="post-body-img" />
-        
+        {item && item.feed && <p className="post-body-detail">{item.feed}</p>}
+        {item && item.url && <img src={item.url} alt="post" className="post-body-img" />}
       </div>
       <div className="post-footer">
         <h6 className="post-icons">
@@ -49,19 +83,31 @@ const PostCard = (item) => {
           <span className="fa fa-check-square-o post-icon"></span>
           <span className="post-icon-text">Approve</span>
         </h6>
-        <h6 className="post-icons">
+        <a href="#comments" style={{ textDecoration: `none`, color: `#555` }} className="post-icons" onClick={e => props.handleFeed(e, item._id)}>
           {" "}
           <span className="fa fa-comments post-icon"></span>
           <span className="post-icon-text">Comment</span>
-        </h6>
+        </a>
         <h6 className="post-icons">
           {" "}
           <span className="fa fa-share-square post-icon"></span>
           <span className="post-icon-text">Share</span>
         </h6>
       </div>
+      <div className="comment_section">
+        <div className="comments_wrapper">
+          {renderList(list)}
+        </div>
+        <InputComment placeholder="Write a Comment" onhandleComment={handleComment} />
+      </div>
     </div>
   );
 };
 
-export default PostCard;
+const mapStateToProps = state => {
+  return {
+    profile: state.Profile.data
+  }
+}
+
+export default connect(mapStateToProps, { addComments })(PostCard);

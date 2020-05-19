@@ -7,14 +7,14 @@
   display: block;
 }
 .title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
 }
 .coursetitle {
   font-weight: 500;
-  font-size: 26px;
+  font-size: 16px;
 }
 .disc {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -22,8 +22,8 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .mdisc {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -32,11 +32,11 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
 }
-.courseCard{
+.courseCard {
   text-align: center;
   background-color: #f7f7f7;
 }
-@media (max-width: 450px){
+@media (max-width: 450px) {
   /* .header {
     margin: 30px 10px 0px 4rem;
   text-align: center;
@@ -46,15 +46,18 @@
   flex-grow: 1;
   background-color: #f7f7f7;
   padding: 2rem;
-  margin: 2rem 2rem;
-  margin-left: auto
+  margin: 1rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
 }
 .flex {
   display: flex;
 }
 @media (max-width: 1100px) {
-  .cartAlign{
-    flex-direction: column
+  .cartAlign {
+    flex-direction: column;
   }
   .checkOut {
     width: 50%;
@@ -86,7 +89,7 @@
 .coPrice {
   color: rgb(192, 57, 43);
   display: block;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
 }
 .btnCheckOut {
@@ -129,7 +132,6 @@
   background-color: rgba(100, 100, 100, 0.1);
   border: 1px solid rgba(100, 100, 100, 0.1);
 }
-.cartAlign{
-  display: flex 
+.cartAlign {
+  display: flex;
 }
-

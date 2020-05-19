@@ -12,8 +12,8 @@ export default class index extends Component {
 
         return (
 
-            <section class="popup" id="popup">
-                <div class="popup__box">
+            <section className="popup" id="popup">
+                <div className="popup__box">
                     <form className="col-lg-12 col-md-12 col-12 login-card">
                         <a href="#tours" id={"close"} href="#purchase"><span className={"fa fa-close"} htmlFor={"close"} style={{ float: "right", fontSize: "1.5rem", color: "rgb(192, 57, 43)" }}></span></a>
 

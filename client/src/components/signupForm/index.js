@@ -34,25 +34,25 @@ class index extends Component {
             <form className="col-lg-5 col-md-7 col-sm-9 col-11" onSubmit={(e) => this.handleSubmit(e)}>
                 <h3 style={heading}>Get started absolutely free</h3>
                 
-                <div class="input-group mt-5">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-user"></span></span>
+                <div className="input-group mt-5">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-user"></span></span>
                     </div>
                     <input type="text" className="form-control" style={inputStyle} name='name' value={name}
                         placeholder="Your Name" onChange={this.handleInput} required />
                 </div>
 
-                <div class="input-group mt-4">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
+                <div className="input-group mt-4">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-envelope"></span></span>
                     </div>
                     <input type="text" className="form-control" style={inputStyle} name='email' value={email}
                         placeholder="Email Address" onChange={this.handleInput} required />
                 </div>
 
-                <div class="input-group mt-4">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
+                <div className="input-group mt-4">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" style={{padding: "0 15px 0 15px", backgroundColor: "transparent", borderRight: "none" }}><span className="fa fa-lock"></span></span>
                     </div>
                     <input type="password" className="form-control" name='password' value={password} style={inputStyle}
                         onChange={this.handleInput} placeholder="Enter Password" required />

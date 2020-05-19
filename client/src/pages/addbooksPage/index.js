@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/nav';
-import Addcourse from '../../components/addbooks/index';
+import Addcourse from '../../components/addbooks';
 import Footer from '../../components/footer';
 import { connect } from 'react-redux';
 

@@ -6,18 +6,18 @@ class PrivateInfo extends Component {
         <div className="private_one">
           <div className="info_wrapper">
           <div className="side_content">
-            <h6>Credentials <span style={{float: `right`,color: `#ff3000`}}><i class="fa fa-pencil"></i></span></h6>
+            <h6>Credentials <span style={{float: `right`,color: `#ff3000`}}><i className="fa fa-pencil"></i></span></h6>
             <hr/>
             <ul className="items_list">
               <li className="list_content">
                 <h6>
-                  <i class="fa fa-id-card education_icon" aria-hidden="true"></i>
+                  <i className="fa fa-id-card education_icon" aria-hidden="true"></i>
                   <span className="detail"> Superior University Lahore </span>
                 </h6>
               </li>
               <li className="list_content">
                 <h6>
-                  <i class="fa fa-briefcase job_icon" aria-hidden="true"></i>
+                  <i className="fa fa-briefcase job_icon" aria-hidden="true"></i>
                   <span className="detail"> Web Developer </span>
                 </h6>
               </li>
@@ -25,7 +25,7 @@ class PrivateInfo extends Component {
           </div>
         </div>
         <div className="info_wrapper" style={{marginTop: `20px`}}>
-          <h6>About Yourself <span style={{float: `right`,color: `#ff3000`}}><i class="fa fa-pencil"></i></span></h6>
+          <h6>About Yourself <span style={{float: `right`,color: `#ff3000`}}><i className="fa fa-pencil"></i></span></h6>
           <hr/>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aspernatur placeat deleniti autem odio</p>
         </div>

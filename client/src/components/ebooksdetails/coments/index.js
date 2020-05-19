@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import Rating from '../rating';
+import Rating from '../../ebooks/rating';
 export default class index extends Component {
 
 
@@ -14,7 +14,7 @@ export default class index extends Component {
                         <hr/>
                     <h4 className="coment-name col-lg-7 col-12" style={{ marginTop: '10px' }}>
                         Donald Trump</h4>
-                    <Rating stars={this.props.star} ></Rating>
+                    <Rating stars={4} ></Rating>
                 </div>
                 <div className="col-11" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
                     <div className="description col-lg-6 col-12" style={{ marginTop: '10px' }}>

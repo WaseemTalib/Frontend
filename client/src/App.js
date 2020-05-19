@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Routes } from './routes';
+import React, { Component, Fragment } from 'react';
+import { Routes , PublicRoutes } from './routes';
 import { getCurrentUser } from './redux/actions/userActions';
 import { connect } from 'react-redux';
 import Loader from './pages/loaderPage';
@@ -16,12 +16,12 @@ class App extends Component {
 
   render() {
     const { isError, isLoading, Auth } = this.props;
+    console.log(isError, isLoading, Auth);
     return (
-      <React.Fragment>
-        {!isLoading && !isError && Routes()}
-        {isError && !isLoading && Auth && <Error />}
-        {isLoading && <Loader />}
-      </React.Fragment>
+      <Fragment>
+        {!isLoading && !isError && Auth ? Routes() : !isLoading ? PublicRoutes() : 
+        Auth && !isLoading && isError ? <Error/> : <Loader /> } 
+      </Fragment>
     );
   }
 }

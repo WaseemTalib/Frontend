@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from '../rating';
+import Rating from '../../ebooks/rating';
 import './styles.css';
 import {Link} from 'react-router-dom';
 import Model from '../model';
@@ -19,15 +19,12 @@ export default class extends React.Component {
                 {"by " + this.props.writer}
                 </span>
                 <div className="mb-3 d-flex flex-row justify-content-between align-items-center" style={{ padding: "0px 5px" }}>
-                    <Rating stars={this.props.star} ></Rating>
+                    <Rating stars={5} ></Rating>
                 </div>
                 <div className={"btninline d-flex mb-3"}>
                     <Link to={"/mypurchases"} className={"btn btn-outline-danger mr-3 btnBuy"}>
-                        Add to My Purchase
+                        Add to My Cart
                      </Link>
-                    <a href={"#popup"} className={"btn btn-outline-danger btnBuy"}>
-                        Buy Now
-                    </a>
                 </div>
                 <div className={"appinfo d-flex p-3"} style={{width: `100%`}}>
                     <img src={"https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?size=626&ext=jpg"} className={"right-image"} style={{ width: "7rem" }} alt="EBook" />

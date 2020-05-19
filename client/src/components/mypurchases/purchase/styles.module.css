@@ -1,47 +1,48 @@
 .item{
     background-color: #f7f7f7;
     display: flex;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
     align-items: center;
     border-radius: 5px 
     }
 
 .left{
     display: flex;
-    flex: 0 0 20%;
+    flex: 0 0 15%;
 }
 .image{
     width: 100%;
     border-radius: 10px;
-    height: 120px;
+    height: 100px;
 }
 .center{
     display: flex;
-    flex: 0 0 70%;
+    flex: 0 0 75%;
     flex-direction: column;
     word-wrap: break-word;
     padding-left: 3rem
 }
 .title{
     font-weight: 600;
-    font-size: 24px;
+    font-size: 25px;
     color: rgba(0,0,0,0.8);
 }
 .disc{
     overflow: hidden;
-    height: 60px;
+    height: 30px;
     color: rgba(0,0,0,0.5);
 }
 .del {
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 .right{
     display: flex;
     flex: 0 0 10%;
     color: red;
-    font-size: 35px;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 @media(max-width:1000px){
@@ -73,5 +74,9 @@
     .right{
         flex: 0 0 100%
     }
+    .image {
+        width: 80%;
+        margin: 0 auto
+      }
 }
 

@@ -1,3 +1,7 @@
 #keys
 .env
 node_modules/
+/build
+/.firebase
+firebase.json
+.firebaserc

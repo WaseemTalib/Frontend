@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/nav';
-import Footer from '../../components/footer';
-import WatchCourse from '../../components/watchcourse';
+import Community from '../../components/community';
 import { connect } from 'react-redux';
 
 class index extends Component {
 
     render() {
+        const { Auth, profile } = this.props;
+        const { tId } = this.props.match.params;
         return (
             <div className="container-fluid p-0" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={1} />
-               <WatchCourse/>
-                <Footer />
+                <Community auth={Auth} profile={profile} tId={tId} />
             </div>
         )
     }

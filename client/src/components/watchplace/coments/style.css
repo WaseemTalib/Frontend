@@ -1,0 +1,35 @@
+.starChecked {
+  color: orange;
+}
+.ratingStar {
+  margin-left: 5px;
+  font-size: 2rem;
+}
+.coment-name{
+    font-weight: 700; 
+    font-size: 2.2rem
+}
+.coment-button{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem
+} 
+@media (max-width: 800px) {
+  .ratingStar {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .star{
+      display: flex;
+      justify-content: center;
+      margin-left: 0 !important 
+  }
+  .coment-name{
+    font-weight: 500; 
+    font-size: 1.7rem;
+    text-align: center
+}
+}
+.star {
+  margin-left: 2rem;
+}

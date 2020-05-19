@@ -12,11 +12,7 @@
   font-size: 18px;
   font-family: cursive;
   display: block;
+  line-height: 1.5;
   font-weight: bold;
   margin-bottom: 2rem;
-}
-.cards{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap
 }

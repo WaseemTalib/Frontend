@@ -2,27 +2,44 @@ import React, { Component } from 'react'
 import ProfileHeader from '../Profile/ProfileHeader'
 import PersonalInfo from '../Profile/PersonalInfo';
 import Adddetail from "./adddetail"
-import { Link } from 'react-router-dom';
+import { registerCourses } from '../../redux/actions/courseActions';
+import { connect } from 'react-redux';
+
 class Profile extends Component {
-  
-  render () {
-    
+
+  handleSubmit(e) {
+    const { registerCourses, profile } = this.props;
+    var data = { topicId: '', postedBy: profile._id, covervideo: '', coverImage: '', title: '',
+      status: '', shortdescription: '', learningoutcomes: '', targetedstudents: ''
+    }
+    registerCourses(data);
+  }
+
+  render() {
+    const { profile, TopicList } = this.props;
     return (
       <div>
-        <ProfileHeader condition={true} index={1} />
+        <ProfileHeader condition={true} index={1} profile={profile} />
         <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-3 col-md-12 mb-md-5 mb-sm-5" style={{ marginTop: `150px` }}>
-            <PersonalInfo /> 
+          <div className="row">
+            <div className="col-lg-3 col-md-12 mb-md-5 mb-sm-5" style={{ marginTop: `150px` }}>
+              <PersonalInfo profile={profile} />
+            </div>
+            <div className="col-lg-9 col-md-12">
+              <Adddetail profile={profile} topics={TopicList} onSubmit={this.handleSubmit} />
+            </div>
           </div>
-          <div className="col-lg-9 col-md-12">
-            <Adddetail/>
-          </div> 
-          
-        </div>
         </div>
       </div>
     )
   }
 }
-export default Profile
+const mapStateToProps = state => {
+  return {
+    Auth: state.Auth.auth,
+    profile: state.Profile.data,
+    TopicList: state.Topics.data
+  }
+}
+
+export default connect(mapStateToProps, { registerCourses })(Profile);

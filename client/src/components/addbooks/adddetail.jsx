@@ -6,7 +6,7 @@ class PrivateInfo extends Component {
     return (
       <div className="col-lg-12">
         <div style={{ backgroundColor: "#fff", marginTop: "3rem", marginBottom: "3rem", boxShadow: "0 5px 5px #777", borderRadius: "5px", overflow: "hidden" }}>
-          <div class="popup__right">
+          <div className="popup__right">
             <h3 style={{ fontSize: "22px", color: "#fff" }}>Book Details</h3>
           </div>
 
@@ -75,7 +75,7 @@ class PrivateInfo extends Component {
             <div className="col-lg-12">
               <a className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
-                  <label htmlFor="coursefile"><i class="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
+                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
                   <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                 </div>
               </a>

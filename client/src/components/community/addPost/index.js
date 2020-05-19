@@ -66,7 +66,7 @@ export default class index extends Component {
     renderStep2() {
         const { topicId } = this.state;
         return <div className="modal-body" style={{ maxHeight: '70vh', overflow: 'auto' }}>
-            <h6 style={{ fontWeight: '600', fontSize: '16px' }}>Select Topic</h6>
+            <h6 style={{ fontWeight: '600', fontSize: '16px' }}>Select Community</h6>
             <div className="col-12 d-flex flex-row flex-wrap">
                 {topicId === '' ? this.renderList() : this.renderListFiltered(topicId)}
             </div>

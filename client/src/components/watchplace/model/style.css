@@ -1,0 +1,63 @@
+
+.login-card{
+  
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+.credit-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px){
+  .credit-info {
+    flex-direction: column;
+  } 
+}
+.inputStyle {
+  padding: 24px !important;
+  outline: none !important;
+  font-family: "Montserrat, sans-serif";
+  box-shadow: none !important;
+  font-size: 16px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.top-img{
+  position: relative;
+  top: -2rem;
+  width: 250px;
+  height: 125px;
+  margin-bottom: -2rem
+}
+.dropdown{
+  width: 50%;
+  color: #fff;
+  border-color: rgb(192, 57, 43);
+  background-color: rgb(192, 57, 43);
+  margin-right: .5rem;
+  border-radius: 5px !important
+}
+.cvc{
+  width: 50%;
+}
+@media (max-width:800px){
+  .inputStyle {
+    padding: 20px !important;
+  }  
+  .dropdown{
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 1rem
+  }
+
+  .cvc{
+    padding: 0 !important
+  }
+  
+}

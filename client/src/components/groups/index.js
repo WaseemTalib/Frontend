@@ -1,10 +1,10 @@
 import React, { Component, lazy, Suspense, Fragment } from 'react';
 import './style.css';
 import { connect } from 'react-redux';
-import { registerFeeds, getFeeds, getFeedsAuth } from '../../redux/actions/feedActions';
+import { registerFeeds, getFeeds } from '../../redux/actions/feedActions';
 import { Link } from 'react-router-dom';
 import Model from './model';
-const List = lazy(() => import('../community/postList'));
+import List from "../community/postList"
 const AddPost = lazy(() => import('../community/addPost'));
 
 class index extends Component {
@@ -15,15 +15,8 @@ class index extends Component {
     }
 
     componentDidMount() {
-        const { profile, getFeeds, getFeedsAuth } = this.props;
-        var data;
-        if (profile && profile._id) {
-            data = { limit: 0, _id: profile._id };
-            getFeedsAuth(data, 0);
-        } else {
-            data = { limit: 0 };
-            getFeeds(data, 0);
-        }
+        const { getFeeds } = this.props;
+        getFeeds(0, 0);
     }
 
     submit(data) {
@@ -55,58 +48,61 @@ class index extends Component {
     render() {
         const { auth, profile, Feed, TopicList } = this.props;
 
-        return <div className="content">
+        return <div className="groups_page">
+<div className="content">
             <Model />
             <nav className="sidebar ">
-                <h2 className="page-heading">Freelancer of Upwork Fiverr and PeoplePerHour</h2>
-                <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Communities You're In</h6>
-                <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
-                    <ul className="side-nav">
-                        {this.renderCommunityLinks(TopicList)}
-                    </ul>
-                    <div className="side-more-images">
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                        <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
-                        <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
-                    </div>
-                </div>
-                {/*////////////////////////////// code for mobile view start with auth //////////////////////// */}
-                {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
-                    <div className="left-side-border">
-                        <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>People That Are Following</h2>
-                        <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
-                            {this.renderCoursesLinks(TopicList)}
-                            <li><div className="side-more-images">
-                                <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
-                                <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
-                                <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
-                                <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
-                            </div></li>
+                <div style={{ position: `sticky`, top: `100px` }}>
+                    <h2 className="page-heading">Freelancer of Upwork Fiverr and PeoplePerHour</h2>
+                    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Communities You're In</h6>
+                    <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
+                        <ul className="side-nav">
+                            {this.renderCommunityLinks(TopicList)}
                         </ul>
-
+                        <div className="side-more-images">
+                            <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
+                            <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
+                            <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
+                            <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
+                        </div>
                     </div>
-                    {auth && profile ?
-                        <span>
-                            {window.innerWidth < 1000 ?
-                                <div className="right-side-border">
-                                    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.recommend.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Recommended to You</h6>
-                                    <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="recommend">
-                                        <ul className="side-nav">
-                                            {this.renderCommunityLinks(TopicList)}
-                                        </ul>
+                    {/*////////////////////////////// code for mobile view start with auth //////////////////////// */}
+                    {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
+                        <div className="left-side-border">
+                            <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>People That Are Following</h2>
+                            <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
+                                {this.renderCoursesLinks(TopicList)}
+                                <li><div className="side-more-images">
+                                    <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
+                                    <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
+                                    <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
+                                    <Link to="/groups" className="side-more-text" style={{ textDecoration: "none" }}>See More</Link>
+                                </div></li>
+                            </ul>
+
+                        </div>
+                        {auth && profile ?
+                            <span>
+                                {window.innerWidth < 1000 ?
+                                    <div className="right-side-border">
+                                        <h6 onClick={() => window.innerWidth < 1000 ? this.refs.recommend.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}>Recommended to You</h6>
+                                        <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="recommend">
+                                            <ul className="side-nav">
+                                                {this.renderCommunityLinks(TopicList)}
+                                            </ul>
+                                        </div>
+                                    </div> : ""}
+                            </span>
+                            : <div>
+                                {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
+                                    <div className="right-side-border">
+                                        <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.about.classList.toggle("display_on_short") : ""}>About Community</h2>
+                                        <h4 ref="about" className="about-text">Hire someone or Get hired Post your Work and Assignments.</h4>
                                     </div>
                                 </div> : ""}
-                        </span>
-                        : <div>
-                            {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
-                                <div className="right-side-border">
-                                    <h2 className="sidebar-heading" onClick={() => window.innerWidth < 1000 ? this.refs.about.classList.toggle("display_on_short") : ""}>About Community</h2>
-                                    <h4 ref="about" className="about-text">Hire someone or Get hired Post your Work and Assignments.</h4>
-                                </div>
-                            </div> : ""}
-                        </div>}
-                </div> : ""}
+                            </div>}
+                    </div> : ""}
+                </div>
                 {/* ////////////////////// code for mobile view end with auth  /////////////////////*/}
             </nav>
             <div className="center1">
@@ -144,17 +140,16 @@ class index extends Component {
                 {/* /////////////////// if auth add post and list //////////////////// */}
 
                 <div> {auth && profile && <Suspense fallback={<Fragment />}><AddPost profile={profile} list={TopicList} submit={this.submit} /></Suspense>}</div>
-                <div>{auth && profile && <Suspense fallback={<Fragment />}><List list={Feed} /></Suspense>}</div>
-
+                <List list={[1, 2, 3, 4]} />
             </div>
             {/* /////////////////// normal view start  /////////////////////////////////////// */}
-            {window.innerWidth > 1000 ? <div className="right-side">
-                <div className="right-side-border">
+            {window.innerWidth > 1000 ? <div className="right-side" style={{ overflow: `visible` }}>
+                <div className="right-side-border" ref="upper_container" style={{ position: `sticky`, top: `103.36805725097656px` }}>
                     <h2 className="sidebar-heading member-margin">Members</h2>
                     <ul className="right-side-list">
                         {this.renderCoursesLinks(TopicList)}
                     </ul>
-                    <div className="side-more-images" style={{paddingTop: ".5rem", paddingBottom: ".5rem", backgroundColor: "#fff"}}>
+                    <div className="side-more-images" style={{ paddingTop: ".5rem", paddingBottom: ".5rem", backgroundColor: "#fff" }}>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "blue" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img" style={{ backgroundColor: "green" }}>&ensp;</div>
                         <div alt="topic" className="side-more-img last_listitem" style={{ backgroundColor: "red" }}>+20</div>
@@ -165,9 +160,9 @@ class index extends Component {
 
                 {/* ///////////////////// if auth  displays recommended //////////////// */}
                 {auth && profile ?
-                    <div> {window.innerWidth > 1000 ? <div className="left-side about-section">
+                    <div style={{ position: `sticky`, top: `298.38543701171875px` }}> {window.innerWidth > 1000 ? <div className="left-side about-section">
                         <div className="left-side-border">
-                            <h6 className="sidebar-heading" style={{padding: "12px 60px"}} >Recommended to You</h6>
+                            <h6 className="sidebar-heading" style={{ padding: "12px 60px" }} >Recommended to You</h6>
                             <ul className="side-nav">
                                 {this.renderCommunityLinks(TopicList)}
                             </ul>
@@ -175,7 +170,7 @@ class index extends Component {
                     </div>
                         : ""}</div>
                     // {/* ////////////////// else about box //////////////////////////////// */}
-                    : <div>
+                    : <div style={{ position: `sticky`, top: `298.38543701171875px` }}>
                         {window.innerWidth > 1000 ? <div className="left-side about-section">
                             <div className="left-side-border">
                                 <h2 className="sidebar-heading">About Community</h2>
@@ -187,6 +182,7 @@ class index extends Component {
             </div> : ""}
             {/* /////////////////// normal view end  /////////////////////////////////////// */}
 
+        </div>
         </div>
     }
 }
@@ -205,5 +201,5 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { registerFeeds, getFeeds, getFeedsAuth })(index);
+export default connect(mapStateToProps, { registerFeeds, getFeeds})(index);
 

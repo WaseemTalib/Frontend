@@ -1,5 +1,6 @@
 .videocard {
   display: flex;
+  margin-top: 20px;
 }
 @media (max-width: 1000px){
     .videocard{
@@ -19,6 +20,7 @@
 }
 .videocard-video {
   flex: 1;
+  /* margin-top: 20px; */
 }
 .hiddenlist{
     background-color: #add8e66b;
@@ -26,9 +28,6 @@
     padding: .5rem 1rem;
     /* color: #fff; */
     
-}
-.videocard-list {
-    /* overflow: scroll */
 }
 .videocard-header {
   display: flex;

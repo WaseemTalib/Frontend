@@ -9,7 +9,7 @@ export default class index extends Component {
         isDrop: false
     }
     parent = () => {
-        if (this.state.isDrop == false) {
+        if (this.state.isDrop === false) {
             this.setState({
                 isDrop: true
             })
@@ -23,7 +23,7 @@ export default class index extends Component {
     }
 
     child = () => {
-        if (this.state.isActive == false) {
+        if (this.state.isActive === false) {
             this.setState({
                 isActive: true
             })

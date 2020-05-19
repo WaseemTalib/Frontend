@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Model from "./model"
 class Courses extends Component {
   render() {
+    const { profile, courses, topics } = this.props;
+    console.log(courses);
     return (
       <div className="my_courses col-lg-9 col-md-12">
         <h4>Course Progress</h4>
@@ -24,8 +26,8 @@ class Courses extends Component {
               <h6 className="static">Programming for</h6>
               <h6 className="dyna">Loreum ipsum is simply</h6>
               <div className="m-2 p-2">
-                <h6 style={{color: `#00f`}}>Edit/Manage Course</h6>
-                <div className="progress_bar" style={{["--i"]: 80}}></div>
+                <h6 style={{ color: `#00f` }}>Edit/Manage Course</h6>
+                <div className="progress_bar" style={{ ["--i"]: 80 }}></div>
               </div>
             </div>
           </div>
@@ -45,7 +47,7 @@ class Courses extends Component {
               <h6 className="static">Programming for</h6>
               <h6 className="dyna">Loreum ipsum is simply</h6>
               <div className="m-2 d-flex flex-row justify-content-between align-items-center p-2">
-                Total Students Enrolled : {Math.random().toString().substr(2,5)}
+                Total Students Enrolled : {Math.random().toString().substr(2, 5)}
               </div>
             </div>
           </div>
@@ -85,8 +87,8 @@ class Courses extends Component {
               <h6 className="static">Programming for</h6>
               <h6 className="dyna">Loreum ipsum is simply</h6>
               <div className="m-2 p-2">
-                <h6 style={{color: `#00f`}}>Edit/Manage Course</h6>
-              <div className="progress_bar" style={{["--i"]: 50}}></div>
+                <h6 style={{ color: `#00f` }}>Edit/Manage Course</h6>
+                <div className="progress_bar" style={{ ["--i"]: 50 }}></div>
               </div>
             </div>
           </div>
@@ -106,8 +108,8 @@ class Courses extends Component {
               <h6 className="static">Programming for</h6>
               <h6 className="dyna">Loreum ipsum is simply</h6>
               <div className="m-2 p-2">
-                <h6 style={{color: `#00f`}}>Edit/Manage Course</h6>
-              <div className="progress_bar" style={{["--i"]: 20}}></div>
+                <h6 style={{ color: `#00f` }}>Edit/Manage Course</h6>
+                <div className="progress_bar" style={{ ["--i"]: 20 }}></div>
               </div>
             </div>
           </div>
@@ -127,20 +129,20 @@ class Courses extends Component {
               <h6 className="static">Programming for</h6>
               <h6 className="dyna">Loreum ipsum is simply</h6>
               <div className="m-2 p-2">
-                <h6 style={{color: `#00f`}}>Edit/Manage Course</h6>
-              <div className="progress_bar" style={{["--i"]: 100}}></div>
+                <h6 style={{ color: `#00f` }}>Edit/Manage Course</h6>
+                <div className="progress_bar" style={{ ["--i"]: 100 }}></div>
               </div>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 col-sm-6">
-          <a href="#popup" className="course add_course" style={{border: `4px dashed`}}>
+            <a href="#popup" className="course add_course" style={{ border: `4px dashed` }}>
               <div className="">
-                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <i className="fa fa-plus-square" aria-hidden="true"></i>
                 <div className="text_add">Add Course</div>
               </div>
             </a>
           </div>
-          <Model></Model>
+          <Model profile={profile} topics={topics}></Model>
         </div>
       </div>
     );
