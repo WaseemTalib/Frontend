@@ -49,9 +49,8 @@ export default class index extends Component {
         return (
             <div className={'col-12 '}>
                 <div className="col-12">
-                    <h2 className="col-lg-12 col-12 heading-primary" style={{ fontWeight: '700', marginTop: '50px' }}>
-                        {this.props.title} </h2>
-                    <div style={{position: `relative`}}>
+                <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '40px 25px' }}> {this.props.title}</h4>
+                <div style={{position: `relative`}}>
                     {leftDom}
                     <div className="col-lg-12">
                         <div className="container-fluid">

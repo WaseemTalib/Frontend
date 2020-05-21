@@ -29,7 +29,7 @@ export function Routes() {
             <Route exact path='/addbooks' component={AddbooksPage} />
             <Route exact path='/profilesetting' component={ProfilesettingPage} />
             <Route exact path='/myebooks' component={Profilebooks} />
-            <Route exact path='/' component={CommunityPage} />
+            {/* <Route exact path='/' component={CommunityPage} /> */}
             <Route exact path='/community/:tId' component={CommunityPageT} />
             <Route exact path='/credits' component={CreditsPage} />
             <Route exact path='/watchcourses' component={WatchcoursePage} />
@@ -46,7 +46,8 @@ export function Routes() {
             <Route path='/coursedetails' component={CourseDetailsPage} />
             <Route path='/profile' component={() => <Profile ismyProfile={true} />} />
             <Route path='/otherprofile' component={() => <Profile ismyProfile={false} />} />
-            <Route path='/ebooks' component={EBookPage} />
+            {/* <Route path='/ebooks' component={EBookPage} /> */}
+            <Route path='/' component={EBookPage} />
             <Route path='/ebookdetails' component={ebookdetailsPage} />
             <Route path='/mypurchases' component={MyPurchasesPage} />
             <Route render={() => <Redirect to='/' />} />

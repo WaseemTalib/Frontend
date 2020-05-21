@@ -91,3 +91,9 @@
   box-shadow: none;
   font-size: 16px;
 }
+@media (max-width: 1000px) {
+  .down {
+    margin-right: 3rem !important;
+    margin-left: 1rem;
+  }
+}

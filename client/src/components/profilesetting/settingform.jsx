@@ -13,7 +13,7 @@ class PrivateInfo extends Component {
         <div className="setting-right">
           <div className="setting-popup">
             <div className="popup__right">
-              <h3 style={{ fontSize: "22px", color: "#fff" }}>Create Course</h3>
+              <h3 style={{ fontSize: "22px", color: "#fff" }}>Personal Information</h3>
             </div>
             <form className="col-lg-12 col-md-12 col-12 login-card">
               <span className="input-inline">
@@ -55,7 +55,7 @@ class PrivateInfo extends Component {
                 </textarea>
               </div>
               <div style={{textAlign:"center"}}>
-              <Link to="/addcourse" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>Submit</Link>
+              <Link to="/addcourse" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>Update</Link>
               </div>
             </form>
           </div>

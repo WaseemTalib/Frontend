@@ -30,7 +30,7 @@ class index extends Component {
             <React.Fragment>
                 <div className="col-12 hide-scroll">
                     <div className="col-12 p-0 d-flex flex-lg-row flex-column flex-lg-wrap"></div>
-                    {this.state.list.map(e => <Card {...e} key={e._id} status={this.updateStatus}></Card>)}
+                    {this.state.list.map(e => <Card topic={true} {...e} key={e._id} status={this.updateStatus}></Card>)}
                 </div>
                 <div className="col-12 p-0 d-flex flex-row justify-content-end">
                     <div onClick={this.completed} style={{ marginBottom:'12px',marginTop:'12px'}} className={"btn btn-primary " + (this.state.selected.length < 3 && "disabled")}>Let's Go</div>

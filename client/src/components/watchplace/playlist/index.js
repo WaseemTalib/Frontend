@@ -29,7 +29,7 @@ export default class index extends Component {
                         {this.state.isActive ?
                             <span className="fa fa-sort-up" onClick={this.handleShow}></span>
                             :
-                            <span className="fa fa-sort-down" onClick={this.handleShow}></span>
+                            <span className="fa fa-sort-down down" onClick={this.handleShow}></span>
                         }
                     </div>
                     <div className="bottom-align">

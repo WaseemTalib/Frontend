@@ -17,13 +17,13 @@ export default class index extends Component {
                         <h3 style={{ fontSize: "22px", color: "#fff" }}>Add New E-Books</h3>
                         <a href="#" className="popup__icon"> <i className="fa fa-times popup__close"></i></a>
                     </div>
-                    <form className="books-model-both" style={{padding: "2rem", overflowY: "scroll",height: `70vh`,flexDirection:`column`}}>
-                        
-                        <div style={{display: 'flex'}}>
-                        <div className="books-model-left">
+                    <form className="books-model-both" style={{ padding: "2rem", overflowY: "scroll", height: `70vh`, flexDirection: `column` }}>
+
+                        <div style={{ display: 'flex' }}>
+                            <div className="books-model-left">
                                 <a className="course add_course" style={{ height: "300px", border: `4px dashed` }}>
                                     <div className="" >
-                                        <label htmlFor="coursefile" style={{cursor: "pointer"}}><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
+                                        <label htmlFor="coursefile" style={{ cursor: "pointer" }}><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
                                         <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                                     </div>
                                 </a>
@@ -50,14 +50,14 @@ export default class index extends Component {
                         </div>
 
                         <div className="d-flex">
-                            <span style={{flex: "0 0 49%", marginRight: "2%"}}>
+                            <span style={{ flex: "0 0 49%", marginRight: "2%" }}>
                                 <label className="label">Price:</label>
                                 <div className="input-group mb-3" style={{ marginTop: '12px' }}>
                                     <input type="text" className="form-control inputStyle" name='email'
                                         required />
                                 </div>
                             </span>
-                            <span style={{flex: "0 0 49%"}}>
+                            <span style={{ flex: "0 0 49%" }}>
                                 <label className="label">No. of pages:</label>
                                 <div className="input-group mb-3" style={{ marginTop: '12px' }}>
                                     <input type="text" className="form-control inputStyle" name='email'
@@ -74,13 +74,17 @@ export default class index extends Component {
                                 <option value="audi">Hindi</option>
                             </select>
                         </span>
-
+                        <label className="label">Upload PDF:</label>
+                        <div className="" style={{padding: "15px",color: "red",borderRadius: "3px", border: "1px solid #ced4da"}} >
+                            <label htmlFor="bookpdf" style={{ cursor: "pointer" }}> <div className="btn btn-outline-danger btnStyle">No Choosen File</div>
+                            <input type="file" id="bookpdf" accept="application/pdf,application/vnd.ms-excel" /></label>
+                        </div>
                         <label className="label">Add Description:</label>
                         <div className="input-group mb-3 description-text" style={{ marginTop: '12px' }}>
                             <textarea id="detail" style={{ resize: "none" }} className="form-control inputStyle" name="detail" rows="1" cols="50" required>
                             </textarea>
                         </div>
-                        <Link to="/addbooks" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
+                        <Link to="/" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
                             Submit
                         </Link>
 

@@ -108,12 +108,12 @@ class index extends Component {
             <div className="center1">
                 <div className="card" style={{ width: "100%", marginBottom: "2rem" }}>
                     <img className="card-img-top" src={"https://specials-images.forbesimg.com/imageserve/5d9182dc6c7c8f000990b672/960x0.jpg?fit=scale"} style={{ height: "40vh" }} alt="Card image cap" />
-                    <div className="card-body">
-                        <button type="button" style={{ width: "30%", marginLeft: "2rem" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-check-square"></i> Following </button>
+                    <div style={{flex: "1 1 flex", display: "flex", minHeight: "1px", padding: "1.25rem 0"}}>
+                        <button type="button" style={{  marginLeft: "2rem" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-check-square"></i> Following </button>
                         {auth && profile ?
-                            <a href="#popup" type="button" style={{ width: "30%" }} className="btn btn-outline-danger mr-3"><i className=" fa fa-plus"></i> Suggest Topic </a>
+                            <a href="#popup" type="button" className="btn btn-outline-danger mr-3"><i className=" fa fa-plus"></i> Suggest Topic </a>
                             :
-                            <button style={{ width: "30%" }} className="btn btn-outline-danger mr-3" id="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" style={{ width: "20%" }} ><i className=" fa fa-ellipsis-h "></i> More </button>
+                            <button className="btn btn-outline-danger mr-3" id="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" style={{ width: "20%" }} ><i className=" fa fa-ellipsis-h "></i> More </button>
                         }
                         <div className="dropdown-menu" aria-labelledby="dropdown-menu">
                             <button className="dropdown-item" style={{ color: "#000" }} type="button">Unfollow Group</button>

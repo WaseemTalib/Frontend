@@ -1,7 +1,6 @@
 import React from "react";
 
-const ListItems = (props) => {
-  const { profile } = props;
+const ListItems = ({ profile }) => {
   return (
     <ul className="items_list">
       <li className="list_content">

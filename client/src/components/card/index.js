@@ -25,7 +25,7 @@ export default class extends Component {
 
     render() {
         return (
-            <div className="card" onClick={this.handleSelect} style={{ height: "120px", minWidth: "160px", width: "calc(16.5% - 10px)", float: "left", margin: "5px", color: this.props.color || "rgba(255,255,255,1)" }}>
+            <div className="card" onClick={this.props.topic ? this.handleSelect : ""} style={{ height: "120px", minWidth: "160px", width: "calc(16.5% - 10px)", float: "left", margin: "5px", color: this.props.color || "rgba(255,255,255,1)" }}>
                 <img className="card-img-top" src={this.props.image} alt="" style={{ height: "120px", minWidth: "160px", width: "calc(16.5%-10px)"}}/>
                 <div className="card-img-overlay">
                     <div className={"btn btn-primary " + ((this.state.selected) ? "d-block" : "d-none")} style={{ float: "right", borderRadius: "50px", width: "40px", height: "40px" }} id={this.props.id}>

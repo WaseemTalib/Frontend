@@ -309,9 +309,6 @@ ul > li {
 .right-side-item:hover{
   background-color: #cccccc;
 }
-.right-side-item:not(:last-child) {
-  margin-bottom: 4px;
-}
 .right-side-link:link {
   text-transform: capitalize;
   text-decoration: none;
