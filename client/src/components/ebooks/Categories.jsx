@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "../card";
+import { Link } from "react-router-dom"
 import Styles from '../ebooks/ebookList/styles.module.css';
 class Categories extends Component {
   state = {
@@ -9,11 +9,11 @@ class Categories extends Component {
   renderCourses = (list) => {
     const myList = list.slice(this.state.index, this.state.index + this.state.cards);
     return myList.map((el, i) => {
-      return <div className="col-lg-2 col-md-3 col-sm-4 p-1" >
+      return <Link to="/ebookscategories" className="col-lg-2 col-md-3 col-sm-4 p-1" >
      <div style={{ padding:"1rem 0",border: "1px solid rgba(0,0,0,0.2)",boxShadow: "0 .2rem .5rem rgba(0,0,0,0.3)", marginBottom: "2rem"}}>
       <h6 style={{ marginLeft: "1rem", color: "rgba(0,0,0,0.7)"}}>{el.name}</h6>
       </div>
-      </div>
+      </Link>
     })
   }
   render() {
@@ -69,8 +69,10 @@ class Categories extends Component {
       <div className="col-12 categories">
         <div className="container-fluid">
           <div className="col-12">
-            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '40px 25px' }}> {heading}</h4>
+            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 30px' }}> {heading}</h4>
           </div>
+          <hr style={{margin: "0 2rem 2rem 2rem"}} />
+         
           <div className="col-12">
             <div className="col-12">
               <div className="container-fluid">

@@ -10,8 +10,9 @@ class PrivateInfo extends Component {
             <h3 style={{ fontSize: "22px", color: "#fff" }}>Course Details</h3>
           </div>
           <form className="col-lg-12 col-md-12 col-12 login-card">
+          <div style={{fontSize:`1.5rem`}} className="label">Category > Course Title</div>
             <div style={{ marginBottom: "1.5rem", fontSize: "14px" }}>
-              <label className="label">What Student Learn from your course?</label>
+              <label htmlFor="detail" className="label">What Student Learn from your course?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
                 <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
@@ -26,9 +27,9 @@ class PrivateInfo extends Component {
             </div>
 
             <div style={{ marginBottom: "1.5rem", fontSize: "14px" }}>
-              <label className="label">What are the Basic Requirements of the Course?</label>
+              <label htmlFor="detail2" className="label">What are the Basic Requirements of the Course?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
-                <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
+                <textarea id="detail2" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
               <div style={{ border: "1px solid #ced4da", borderRadius: "0px 0px 10px 10px", borderTop: "hidden" }}>
                 <button style={{ backgroundColor: "#fff", outline: "none", border: "none", borderRight: "1px solid #ced4da", padding: "10px 20px", borderRadius: "0 0 0 10px" }}><span className="fa fa-list"></span></button>
@@ -41,9 +42,9 @@ class PrivateInfo extends Component {
             </div>
 
             <div style={{ marginBottom: "1.5rem" }}>
-              <label className="label">Please Write Long Description</label>
+              <label htmlFor="detail3" className="label">Please Write Long Description</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
-                <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
+                <textarea id="detail3" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
               <div style={{ border: "1px solid #ced4da", borderRadius: "0px 0px 10px 10px", borderTop: "hidden" }}>
                 <button style={{ backgroundColor: "#fff", outline: "none", border: "none", borderRight: "1px solid #ced4da", padding: "10px 20px", borderRadius: "0 0 0 10px" }}><span className="fa fa-list"></span></button>
@@ -56,9 +57,9 @@ class PrivateInfo extends Component {
             </div>
 
             <div style={{ marginBottom: "1.5rem" }}>
-              <label className="label">Who this Course is for?</label>
+              <label htmlFor="detail4" className="label">Who this Course is for?</label>
               <div className="input-group" style={{ marginTop: '12px' }}>
-                <textarea id="detail" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
+                <textarea id="detail4" style={{ resize: "none", borderRadius: "10px 10px 0px 0" }} className="form-control inputStyle" name="detail" rows="4" cols="50" required></textarea>
               </div>
               <div style={{ border: "1px solid #ced4da", borderRadius: "0px 0px 10px 10px", borderTop: "hidden" }}>
                 <button style={{ backgroundColor: "#fff", outline: "none", border: "none", borderRight: "1px solid #ced4da", padding: "10px 20px", borderRadius: "0 0 0 10px" }}><span className="fa fa-list"></span></button>
@@ -73,7 +74,7 @@ class PrivateInfo extends Component {
             <div className="col-lg-12">
               <a className="course add_course" style={{ border: `4px dashed` }}>
                 <div className="">
-                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Introductory's Video</div></label>
+                  <label htmlFor="coursefile"><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Introductory Video</div></label>
                   <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                 </div>
               </a>

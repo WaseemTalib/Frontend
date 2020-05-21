@@ -22,7 +22,7 @@ const CourseCard = (props) => {
           alt="course"
         />
         <img src={User} className="userImage" alt="user" />
-        <h6 className="static">Hello World</h6>
+        <h6 className="static"> {props.el || "Hello World"} </h6>
         <h6 className="dyna">Loreum ipsum is simply</h6>
         <div className="m-2 d-flex flex-row justify-content-between align-items-center p-2">
         <Rating stars={4} ></Rating>

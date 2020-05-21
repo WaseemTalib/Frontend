@@ -19,8 +19,7 @@ export default class index extends Component {
     renderEBooks(list) {
         var dummy = list || [];
         return dummy.map(i => {
-
-            return <Card {...i}></Card>
+            return <Card {...i}/>
         })
     }
 
@@ -52,8 +51,9 @@ export default class index extends Component {
         return (
             <div className={'col-12 ' + Styles.listWrapper} >
                 <div className="" style={{ marginBottom: "2rem", display: "block", overflow: "hidden", marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '40px 25px' }}>
+                    <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 20px' }}>
                         {this.props.title}</h4>
+                        <hr style={{margin: "0 1rem 2rem 1rem"}} />
                     {leftDom}
                     <div className={Styles.list} style={{ whiteSpace: "nowrap", marginLeft: this.state.slide }}>
                         {this.renderEBooks(this.props.bookList)}

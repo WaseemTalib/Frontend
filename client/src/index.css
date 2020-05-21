@@ -335,7 +335,6 @@ input[type="number"] {
   content: "";
   width: 30px;
   height: 30px;
-  /* z-index: -1; */
   position: absolute;
   left: -15px;
   background-color: #fff;
@@ -348,15 +347,28 @@ input[type="number"] {
   bottom: 70%;
   transform: skewX(-45deg);
 }
-.card_outer:last-child .course_details_wrapper::before,
-.card_outer:last-child .course_details_wrapper::after {
+.category_card:last-child .card_outer .course_details_wrapper::before,
+.category_card:last-child .card_outer .course_details_wrapper::after,
+.category_card_details:nth-child(4) .card_outer .course_details_wrapper::before,
+.category_card_details:nth-child(4) .card_outer .course_details_wrapper::after ,
+.category_card_details:nth-child(8) .card_outer .course_details_wrapper::before,
+.category_card_details:nth-child(8) .card_outer .course_details_wrapper::after {
   right: -15px;
   left: auto;
 }
-.card_outer:last-child .course_details_wrapper::before {
+
+.category_card:last-child .card_outer .course_details_wrapper::before {
   transform: skewX(-45deg);
 }
-.card_outer:last-child .course_details_wrapper::after {
+.category_card:last-child .card_outer .course_details_wrapper::after {
+  transform: skewX(45deg);
+}
+.category_card_details:nth-child(4) .card_outer .course_details_wrapper::before ,
+.category_card_details:nth-child(8) .card_outer .course_details_wrapper::before {
+  transform: skewX(-45deg);
+}
+.category_card_details:nth-child(4) .card_outer .course_details_wrapper::after ,
+.category_card_details:nth-child(8) .card_outer .course_details_wrapper::after {
   transform: skewX(45deg);
 }
 .message_outer_wrapper {
@@ -931,4 +943,32 @@ input[type="number"] {
 .categories .card-img-overlay h6{
   margin-top: 0 !important;
   color: #222;
+}
+/* .content_popup[data-hidden="true"]{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup_inner{
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+} */
+.my_input{
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #999;
+  margin: 10px;
+  margin-left: 0;
+}
+.my_input:focus{
+  border-bottom: 2px solid #ff3600;
+  outline: none;
 }

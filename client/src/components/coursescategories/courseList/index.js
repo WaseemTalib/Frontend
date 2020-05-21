@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../style.css';
 import Styles from '../../ebooks/ebookList/styles.module.css';
-import { Link } from 'react-router-dom';
-import CourseCard from './CourseCard';
+import CourseCard from '../../courses/courseList/CourseCard';
 
 const styleActive = { color: '#c23616', borderBottom: '6px solid #c23616', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
 const simpleStyle = { color: '#718093', fontWeight: '600', fontSize: '18px', padding: '16px 20px 16px 20px', marginBottom: '0px', cursor: 'pointer' };
-var dummy = [1,2,3,4,5,6,7,8,9,0];
+var dummy = ["Hello", "Adeeb", "Ahmad", "Ismail", "Zeeshan", "Waseem","Vely"];
 export default class index extends Component {
     state = {
         index: 0,
@@ -17,7 +16,10 @@ export default class index extends Component {
         const { list } = this.props;
         this.setState({ id: list[0]._id });
         window.onresize = this.onResize;
-        this.onResize()
+        if(window.innerWidth <= 1240) this.setState({cards: 4})
+        if(window.innerWidth <= 1010) this.setState({cards: 3})
+        if(window.innerWidth <= 780) this.setState({cards: 2})
+        if(window.innerWidth <= 540) this.setState({cards: 1})
     }
     onResize = ()=>{
         this.setState({width: window.innerWidth});
@@ -36,7 +38,7 @@ export default class index extends Component {
     renderCourses=(list) => {
         const myList = list.slice(this.state.index,this.state.index + this.state.cards);
         return myList.map((el,i) => {
-            return <CourseCard index={i} style={myList.length -1 === i ? {right: "100%"} : {left:`100%`}}  after={myList.length -1 === i ? {left: 0} : {right: 0}} />
+            return <div className="category_card"><CourseCard el={el} index={i} style={myList.length -1 === i ? {right: "100%"} : {left:`100%`}}  after={myList.length -1 === i ? {left: 0} : {right: 0}} /></div>
         })
     }
     render() {
@@ -46,8 +48,7 @@ export default class index extends Component {
         return (
             <div className={'col-12 '}>
                 <div className="col-12">
-                <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 35px' }}> {this.props.title}</h4>
-                <hr style={{margin: "0 1rem 2rem 1rem"}} />
+                <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '40px 25px' }}> {this.props.title}</h4>
                 <div style={{position: `relative`}}>
                     {leftDom}
                     <div className="col-lg-12">

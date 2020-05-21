@@ -29,11 +29,16 @@ class index extends Component {
                         <h3 style={{ fontSize: "22px", color: "#fff" }}>Create Course</h3>
                         <a href="#" className="popup__icon"> <i className="fa fa-times popup__close"></i></a>
                     </div>
-                    <form className="col-lg-12 col-md-12 col-12 login-card">
+                    <form className="books-model-both" style={{ padding: "2rem", overflowY: "scroll", height: `70vh`, flexDirection: `column` }}>
 
                         <label className="label">Title of Course:</label>
                         <div className="input-group mb-3" style={{ marginTop: '12px' }}>
-                            <input type="text" className="form-control inputStyle" name='email'
+                            <input type="text" className="form-control inputStyle" name='title'
+                                required />
+                        </div>
+                        <label className="label">Price:</label>
+                        <div className="input-group mb-3" style={{ marginTop: '12px' }}>
+                            <input type="number" className="form-control inputStyle" name='price'
                                 required />
                         </div>
                         <label className="label">Choose Category:</label>
@@ -44,7 +49,7 @@ class index extends Component {
                             <option value="audi">Health</option>
                         </select>
 
-                        <label className="label">Add Description:</label>
+                        <label className="label">Short Description:</label>
                         <div className="input-group mb-3 description-text" style={{ marginTop: '12px' }}>
                             <textarea id="detail" style={{ resize: "none" }} className="form-control inputStyle" name="detail" rows="1" cols="50" required>
                             </textarea>

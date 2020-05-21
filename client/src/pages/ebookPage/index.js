@@ -83,8 +83,8 @@ class index extends Component {
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={3} />
                 <Header />
-                {TopicList && TopicList.length > 0 && titles.map(title=><EBooks title={title} bookList = {topRIM}/>)}
                 <Categories list={[...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList]} heading="Genres" />
+                {TopicList && TopicList.length > 0 && titles.map(title=><EBooks title={title} bookList = {topRIM}/>)}
                 <Footer></Footer>
              </div>
     }

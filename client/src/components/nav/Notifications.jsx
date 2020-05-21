@@ -6,7 +6,7 @@ class Notifications extends Component {
     return (
       <div className="notifications_wrapper">
         <h2>Notifications</h2>
-        <Notification isActive={true}  />
+        <Notification isActive={true} message="Ismail has sent you a message"  />
         <Notification isActive={false} />
         <Notification isActive={true}  />
         <Notification isActive={false} />

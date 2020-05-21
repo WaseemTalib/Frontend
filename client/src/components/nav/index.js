@@ -277,7 +277,7 @@ class index extends Component {
                     <Link to="/watchcourses" className="dropdown-item">
                       My Courses
                   </Link>
-                    <Link to="/mypurchases" className="dropdown-item">
+                    <Link to="/readebook" className="dropdown-item">
                       My E-Books
                   </Link>
                     <Link to="/morecommunities" className="dropdown-item">
@@ -288,6 +288,9 @@ class index extends Component {
                   </Link>
                     <Link to="/profilesetting" className="dropdown-item">
                       Settings
+                  </Link>
+                    <Link to="/inbox" className="dropdown-item">
+                      Inbox
                   </Link>
                     <button
                       className="dropdown-item"
@@ -312,7 +315,6 @@ class index extends Component {
                   {isActive && (
                     <div>
                       <i onClick={() => this.setState({ notification: !this.state.notification })} className="fa fa-bell link-nav" id="notification" style={{ fontSize: "20px", margin: `0 20px` }}></i>
-                      <Link to="/inbox" className="fa fa-comments-o link-nav" id="notification" style={{ fontSize: "20px" }}></Link>
                     </div>
                   )}
                 </div>
@@ -406,7 +408,7 @@ class index extends Component {
                     <Link to="/watchcourses" className="dropdown-item">
                       My Courses
                   </Link>
-                    <Link to="/mypurchases" className="dropdown-item">
+                    <Link to="/readebook" className="dropdown-item">
                       My E-Books
                   </Link>
                     <Link to="/morecommunities" className="dropdown-item">
@@ -417,6 +419,9 @@ class index extends Component {
                   </Link>
                     <Link to="/profilesetting" className="dropdown-item">
                       Settings
+                  </Link>
+                  <Link to="/inbox" className="dropdown-item">
+                      Inbox
                   </Link>
                     <button
                       className="dropdown-item"
@@ -440,9 +445,6 @@ class index extends Component {
                   </div>
                   {isActive && (
                       <i onClick={() => this.setState({ notification: !this.state.notification })} className="fa fa-bell link-nav" id="notification" style={{ fontSize: "20px" }}></i>
-                  )}
-                  {isActive && (
-                      <Link to="/inbox" className="fa fa-comments-o link-nav" id="notification" style={{ fontSize: "20px" }}></Link>
                   )}
                 </div>
               )}
@@ -479,7 +481,6 @@ class index extends Component {
           </div>
           {this.renderActiveLink()}
             <i onClick={() => this.setState({ notification: !this.state.notification })} className="fa fa-bell link-nav" id="notification" style={{ fontSize: "20px" }}></i>
-            <Link to="/inbox" className="fa fa-comments-o link-nav" id="notification" style={{ fontSize: "20px" }}></Link>
           {!Auth || isError ? (
             <Link className="btn-login-nav col-lg-1 col-12 p-1" to="login">
               Login
@@ -527,7 +528,7 @@ class index extends Component {
                   <Link to="/watchcourses" className="dropdown-item">
                     My Courses
                 </Link>
-                  <Link to="/mypurchases" className="dropdown-item">
+                  <Link to="/readebook" className="dropdown-item">
                     My E-Books
                 </Link>
                   <Link to="/morecommunities" className="dropdown-item">
@@ -539,6 +540,9 @@ class index extends Component {
                   <Link to="/profilesetting" className="dropdown-item">
                     Settings
                 </Link>
+                <Link to="/inbox" className="dropdown-item">
+                      Inbox
+                  </Link>
                   <button
                     className="dropdown-item"
                     onClick={(e) => this.props.logOut()}

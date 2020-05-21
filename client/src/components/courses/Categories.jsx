@@ -4,13 +4,25 @@ import Styles from '../ebooks/ebookList/styles.module.css';
 class Categories extends Component {
   state = {
     index: 0,
-    cards: 6
+    cards: 6,
+    width: window.innerWidth
   }
   renderCourses = (list) => {
     const myList = list.slice(this.state.index, this.state.index + this.state.cards);
     return myList.map((el, i) => {
-      return <div className="col-lg-2 col-md-3 col-sm-4"><Card name={el.name} image={el.image} _id={i} /></div>
+      return <div className="col-lg-2 col-md-3 col-sm-4 col-6"><Card name={el.name} courses={true} link={this.props.link} image={el.image} _id={i} /></div>
     })
+  }
+  componentDidMount() {
+    window.onresize = this.onResize;
+    this.onResize()
+  }
+  onResize = ()=>{
+    this.setState({width: window.innerWidth});
+    if(window.innerWidth <= 992) this.setState({cards: 4})
+    if(window.innerWidth <= 768) this.setState({cards: 3})
+    if(window.innerWidth <= 576) this.setState({cards: 2})
+    if(window.innerWidth <= 300) this.setState({cards: 1})
   }
   render() {
     const { list, heading } = this.props;
@@ -65,17 +77,20 @@ class Categories extends Component {
       <div className="col-12 categories">
         <div className="container-fluid">
           <div className="col-12">
-            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '40px 25px' }}> {heading}</h4>
+            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 20px' }}> {heading}</h4>
           </div>
+          <hr style={{margin: "0 1rem 2rem 1rem"}} />
           <div className="col-12">
             <div className="col-12">
+                  {leftDom}
               <div className="container-fluid">
                 <div className="row">
-                  {leftDom}
+                  <div className="row">
                   {this.renderCourses(list)}
-                  {rightDom}
+                  </div>
                 </div>
               </div>
+                  {rightDom}
             </div>
           </div>
         </div>

@@ -31,6 +31,7 @@ class ProfileHeader extends Component {
               <div className="p-lg-3 p-sm-1">
                 {this.props.condition ? buttons.map((el, i) => i === this.props.index ? <button key={i} className="pagination_profile page_active"> {el} </button> : <Link key={i} to={pages[i]} className="pagination_profile"> {el} </Link>) : <h5>Timeline</h5>}
               </div>
+        <hr style={{margin: "0 1rem 0 1rem"}} />
             </div>
           </div>
         </div>

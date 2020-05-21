@@ -13,7 +13,7 @@ class index extends Component {
         return <div className="container-fluid p-0" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
                 <Navbar active={2} />
                 <Header />
-                {TopicList && TopicList.length > 0 && <RecomendedCategories heading="All Categories" list={[...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList]} />}
+                {TopicList && TopicList.length > 0 && <RecomendedCategories link="coursescategories" heading="Categories" list={[...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList,...TopicList]} />}
                 {TopicList && TopicList.length > 0 && titles.map(el=> <Courses list={TopicList.slice(0, TopicList.length > 5 ? 5 : TopicList.length)} title={el} />)}
                 {TopicList && TopicList.length > 0 && <Courses title="Intrested Courses" list={TopicList.slice(0, TopicList.length > 5 ? 5 : TopicList.length)}  />}
                 <Footer/>

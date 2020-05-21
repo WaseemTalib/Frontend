@@ -23,7 +23,7 @@ export default class index extends Component {
                             <div className="books-model-left">
                                 <a className="course add_course" style={{ height: "300px", border: `4px dashed` }}>
                                     <div className="" >
-                                        <label htmlFor="coursefile" style={{ cursor: "pointer" }}><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add cover Photo</div></label>
+                                        <label htmlFor="coursefile" style={{ cursor: "pointer" }}><i className="fa fa-plus-square" aria-hidden="true"></i> <div className="text_add">Add Thumbnail</div></label>
                                         <input type="file" id="coursefile" style={{ display: `none` }} accept="image/x-png,image/png,image/gif,image/jpeg,image/jpg" />
                                     </div>
                                 </a>
@@ -39,7 +39,7 @@ export default class index extends Component {
                                     <input type="text" className="form-control inputStyle" name='email'
                                         required />
                                 </div>
-                                <label className="label">Choose Category:</label>
+                                <label className="label">Choose Genre:</label>
                                 <select id="cars" className="form-control inputStyle mb-3" >
                                     <option value="volvo" className="option-bgimg" style={{ backgroundImage: `url(${Background})` }}>History</option>
                                     <option value="saab">Technology</option>
@@ -75,16 +75,16 @@ export default class index extends Component {
                             </select>
                         </span>
                         <label className="label">Upload PDF:</label>
-                        <div className="" style={{padding: "15px",color: "red",borderRadius: "3px", border: "1px solid #ced4da"}} >
+                        <div className="mb-3" style={{padding: "15px",color: "red",borderRadius: "3px", border: "1px solid #ced4da"}} >
                             <label htmlFor="bookpdf" style={{ cursor: "pointer" }}> <div className="btn btn-outline-danger btnStyle">No Choosen File</div>
                             <input type="file" id="bookpdf" accept="application/pdf,application/vnd.ms-excel" /></label>
                         </div>
-                        <label className="label">Add Description:</label>
+                        <label className="label">Add Synosis:</label>
                         <div className="input-group mb-3 description-text" style={{ marginTop: '12px' }}>
                             <textarea id="detail" style={{ resize: "none" }} className="form-control inputStyle" name="detail" rows="1" cols="50" required>
                             </textarea>
                         </div>
-                        <Link to="/" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
+                        <Link to="/addbookcontent" className="btn btn-outline-danger pt-3 pb-3 mr-2" style={btnStyle}>
                             Submit
                         </Link>
 
