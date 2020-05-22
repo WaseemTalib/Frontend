@@ -6,6 +6,7 @@ import Footer from '../../components/footer';
 import CoursesComp from './Courses';
 import { connect } from 'react-redux';
 import { getMyCourses } from '../../redux/actions/courseActions';
+import { Link } from 'react-router-dom';
 
 class MyCourses extends Component {
 
@@ -15,17 +16,17 @@ class MyCourses extends Component {
   }
 
   render() {
-    const { Courses, profile, TopicList } = this.props;
+    const { Courses, profile, TopicList,condition } = this.props;
     return (
-      <div>
+      <div className="my_courses_page">
         <Navbar />
-        <ProfileHeader condition={true} index={1} profile={profile} />
+        <ProfileHeader condition={condition} index={1} profile={profile} />
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-3 col-md-12 mb-md-5 mb-sm-5 personal_info_wrapper" style={{ marginTop: `150px` }}>
-              <PersonalInfo profile={profile} />
+              {condition ? <PersonalInfo profile={profile} /> : <div className="info_wrapper"><Link to="/inbox" className="btn text-danger" style={{ width: `100%` }}><i className="fa fa-envelope"></i> Send Message</Link></div>}
             </div>
-            <CoursesComp courses={Courses} topics={TopicList} profile={profile} />
+            <CoursesComp condition={condition} courses={Courses} topics={TopicList} profile={profile} />
           </div>
         </div>
         <Footer />

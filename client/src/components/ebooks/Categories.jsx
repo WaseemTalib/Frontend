@@ -9,7 +9,7 @@ class Categories extends Component {
   renderCourses = (list) => {
     const myList = list.slice(this.state.index, this.state.index + this.state.cards);
     return myList.map((el, i) => {
-      return <Link to="/ebookscategories" className="col-lg-2 col-md-3 col-sm-4 p-1" >
+      return <Link to="/ebookscategories" className="col-lg-2 col-md-4 col-sm-4 col-6 p-1" >
      <div style={{ padding:"1rem 0",border: "1px solid rgba(0,0,0,0.2)",boxShadow: "0 .2rem .5rem rgba(0,0,0,0.3)", marginBottom: "2rem"}}>
       <h6 style={{ marginLeft: "1rem", color: "rgba(0,0,0,0.7)"}}>{el.name}</h6>
       </div>
@@ -22,7 +22,7 @@ class Categories extends Component {
       this.state.index > 0 ? (
         <div
           className={Styles.leftWrapper}
-          style={{ position: "absolute", top: "15%", left: 0, zIndex: 100 }}
+          style={{ position: "absolute", top: "50%",transform: `translateY(-50%)`, left: 0, zIndex: 100 }}
         >
           <button
             className={Styles.btnNav}
@@ -42,7 +42,7 @@ class Categories extends Component {
         className={Styles.rightWrapper}
         style={{
           position: "absolute",
-          top: "15%",
+          top: "50%",transform: `translateY(-50%)`,
           width: "50px",
           background: "transparent",
           right: 0,
@@ -72,15 +72,14 @@ class Categories extends Component {
             <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 30px' }}> {heading}</h4>
           </div>
           <hr style={{margin: "0 2rem 2rem 2rem"}} />
-         
           <div className="col-12">
             <div className="col-12">
               <div className="container-fluid">
-                <div className="row">
                   {leftDom}
+                <div className="row" style={{width: `95%`,margin: `0 auto`}}>
                   {this.renderCourses(list)}
-                  {rightDom}
                 </div>
+                  {rightDom}
               </div>
             </div>
           </div>

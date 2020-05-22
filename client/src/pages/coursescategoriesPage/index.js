@@ -18,15 +18,15 @@ class index extends Component {
             id:1,
             price:"$25",
             star:4.2}
-        const myList = list.slice(this.state.index,this.state.index+12)
+        const myList = list.slice(this.state.index,this.state.index+10)
 
-        return myList.map((el, i) => <div className="col-lg-3 mb-3 category_card category_card_details"> {this.props.course ? <CourseCard el={el} style={ i%4 >= 3 ? {right: "100%"} : {left:`100%`}}  /> : <EbookCard {...ebook} />} </div>)
+        return myList.map((el, i) => <div className="col-auto mb-3 category_card category_card_details"> {this.props.course ? <CourseCard el={el} style={ i%5 >= 4 ? {right: "100%"} : {left:`100%`}}  /> : <EbookCard {...ebook} />} </div>)
     }
     renderPagination = (list)=>{
-        const pages = Math.ceil(list.length / 12);
+        const pages = Math.ceil(list.length / 10);
         const array = [];
         for (let i = 0; i < pages; i++) {
-            array.push(<span onClick={()=>this.setState({index: i*12})} style={{border: "1px solid lightgrey", padding: "1rem", marginRight: "10px",color: this.state.index/12 === i ? "white" : "" ,backgroundColor: this.state.index/12 === i ? "red" : ""}}> {i+1} </span>)
+            array.push(<span onClick={()=>this.setState({index: i*10})} style={{border: "1px solid lightgrey", padding: "1rem", marginRight: "10px",color: this.state.index/10 === i ? "white" : "" ,backgroundColor: this.state.index/10 === i ? "red" : ""}}> {i+1} </span>)
         }
         return array;
     }
@@ -38,15 +38,15 @@ class index extends Component {
             <div className="container-fluid" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
             <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 25px' }}> Computer {this.props.course ? "Courses" : "Genres"} </h4>
             <hr style={{margin: "0 1rem 2rem 1rem"}} />
-                <div className="row mb-3">
+                <div className="row mb-3 justify-content-center ">
                     {this.renderCards(list)}
                 </div>
                <div className="d-flex align-items-center justify-content-center mb-3">
                {(this.state.index > 0) ? 
-               <span onClick={()=> this.setState({index:   this.state.index-12})} style={{border: "1px solid lightgrey", padding: "1rem", marginRight: "10px"}}><i className="fa fa-angle-double-left"></i></span>
+               <span onClick={()=> this.setState({index:   this.state.index-10})} style={{border: "1px solid lightgrey", padding: "1rem", marginRight: "10px"}}><i className="fa fa-angle-double-left"></i></span>
                : ""}
                {this.renderPagination(list)}
-               {this.state.index+12 < list.length ? <span onClick={()=> this.setState({index: this.state.index+12})} style={{border: "1px solid lightgrey", padding: "1rem"}}><i className="fa fa-angle-double-right"></i></span> : ""}
+               {this.state.index+10 < list.length ? <span onClick={()=> this.setState({index: this.state.index+10})} style={{border: "1px solid lightgrey", padding: "1rem"}}><i className="fa fa-angle-double-right"></i></span> : ""}
                </div>
                 <Footer />
             </div>

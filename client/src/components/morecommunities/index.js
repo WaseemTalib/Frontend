@@ -54,7 +54,7 @@ class index extends Component {
 
 <nav className="sidebar ">
     <a href="#popup" className="left-side-popup-button">+ Suggest Community</a>
-    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"} style={{fontSize: ".9rem"}}>Recommended Courses</h6>
+    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"} style={{fontSize: ".9rem", display: "none"}}>Recommended Courses</h6>
     <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
         <ul className="side-nav">
             {this.renderCoursesLinks(TopicList)}
@@ -83,7 +83,7 @@ class index extends Component {
     </div>
     {window.innerWidth < 1000 ? <div style={{ width: `100%` }}>
         <div className="right-side-border">
-            <h2 className="right-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}><span className="fa fa-feed mr-2"></span>Communities</h2>
+            <h2 className="right-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""} style={{display: "none"}}><span className="fa fa-feed mr-2"></span>Communities</h2>
             <ul ref="courses" className={`right-side-list ${window.innerWidth < 1000 ? "display_on_short" : ""}`}>
                 {this.renderCommunityLinks(TopicList)}
             </ul>

@@ -206,40 +206,8 @@ class index extends Component {
           <Link to="/" style={logoNameMob}>
             GENIVERSITY
           </Link>
-          <button
-            className="btn btnHam"
-            onClick={(e) => this.setState({ isActive: !isActive })}
-          >
-            <span className="fa fa-bars"></span>
-          </button>
-        </div>
-        {isActive && (
-          <div className="input-group col-lg-3 col-12 p-3 p-lg-3 p-md-3 p-sm-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search Geniversity"
-            />
-            <div className="input-group-append">
-              <button className="btn btn-outline-danger bg-danger">
-                <span
-                  className="fa fa-search"
-                  style={{ color: "white" }}
-                ></span>
-              </button>
-            </div>
-          </div>
-        )}
-        {isActive && this.renderMobActiveLink()}
-        {isActive && <div className="m-2"></div>}
-        {isActive && (
-          <React.Fragment>
-            {!Auth || isError || !profile ? (
-              <Link className="btn-login-nav col-lg-1 col-12 p-1" to="login">
-                Login
-              </Link>
-            ) : (
-                <div className="col-12 d-flex justify-content-center align-items-center">
+          <div>
+          <div className="col-auto d-flex justify-content-center align-items-center">
                   <img
                     src={profile.image ? profile.img : Avat}
                     alt="profile"
@@ -274,6 +242,9 @@ class index extends Component {
                       ></i>
                     </Link>
                     <hr />
+                    <Link to="/inbox" className="dropdown-item">
+                      Inbox
+                  </Link>
                     <Link to="/watchcourses" className="dropdown-item">
                       My Courses
                   </Link>
@@ -289,9 +260,7 @@ class index extends Component {
                     <Link to="/profilesetting" className="dropdown-item">
                       Settings
                   </Link>
-                    <Link to="/inbox" className="dropdown-item">
-                      Inbox
-                  </Link>
+                    
                     <button
                       className="dropdown-item"
                       onClick={(e) => this.props.logOut()}
@@ -312,12 +281,124 @@ class index extends Component {
                       Privacy Policy
                   </Link>
                   </div>
-                  {isActive && (
                     <div>
                       <i onClick={() => this.setState({ notification: !this.state.notification })} className="fa fa-bell link-nav" id="notification" style={{ fontSize: "20px", margin: `0 20px` }}></i>
                     </div>
-                  )}
                 </div>
+        </div>
+          <button
+            className="btn btnHam"
+            onClick={(e) => this.setState({ isActive: !isActive })}
+          >
+            <span className="fa fa-bars"></span>
+          </button>
+          </div>
+          
+        {isActive && (
+          <div className="input-group col-lg-3 col-12 p-3 p-lg-3 p-md-3 p-sm-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search Geniversity"
+            />
+            <div className="input-group-append">
+              <button className="btn btn-outline-danger bg-danger">
+                <span
+                  className="fa fa-search"
+                  style={{ color: "white" }}
+                ></span>
+              </button>
+            </div>
+          </div>
+        )}
+        {isActive && this.renderMobActiveLink()}
+        {isActive && <div className="m-2"></div>}
+        {isActive && (
+          <React.Fragment>
+            {!Auth || isError || !profile ? (
+              <Link className="btn-login-nav col-lg-1 col-12 p-1" to="login">
+                Login
+              </Link>
+            ) : (
+                this.state.width > 992 ? <div className="col-12 d-flex justify-content-center align-items-center">
+                <img
+                  src={profile.image ? profile.img : Avat}
+                  alt="profile"
+                  className="dropdown-toggle"
+                  id="dropdownMenu2"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    marginRight: "8px",
+                    borderRadius: "1000px",
+                  }}
+                />
+                <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <Link
+                    to="/profile"
+                    style={{ fontWeight: `bold`, position: `relative` }}
+                    className="dropdown-item"
+                  >
+                    <div className="icon_message">{profile.name ? profile.name[0] : ''}</div>
+                    {profile.name}
+                    <i
+                      className="fa fa-chevron-right"
+                      style={{
+                        position: `absolute`,
+                        bottom: "10px",
+                        right: "20px",
+                      }}
+                      aria-hidden="true"
+                    ></i>
+                  </Link>
+                  <hr />
+                  <Link to="/watchcourses" className="dropdown-item">
+                    My Courses
+                </Link>
+                  <Link to="/readebook" className="dropdown-item">
+                    My E-Books
+                </Link>
+                  <Link to="/morecommunities" className="dropdown-item">
+                    Communities
+                </Link>
+                  <Link to="/credits" className="dropdown-item">
+                    Gineversity Credits
+                </Link>
+                  <Link to="/profilesetting" className="dropdown-item">
+                    Settings
+                </Link>
+                  <Link to="/inbox" className="dropdown-item">
+                    Inbox
+                </Link>
+                  <button
+                    className="dropdown-item"
+                    onClick={(e) => this.props.logOut()}
+                  >
+                    Logout
+                </button>
+                  <hr />
+                  <Link to="/" className="dropdown-item">
+                    About Us
+                </Link>
+                  <Link to="/" className="dropdown-item">
+                    Contact Us
+                </Link>
+                  <Link to="/" className="dropdown-item">
+                    Terms &#38; Conditions
+                </Link>
+                  <Link to="/" className="dropdown-item">
+                    Privacy Policy
+                </Link>
+                </div>
+                {isActive && (
+                  <div>
+                    <i onClick={() => this.setState({ notification: !this.state.notification })} className="fa fa-bell link-nav" id="notification" style={{ fontSize: "20px", margin: `0 20px` }}></i>
+                  </div>
+                )}
+              </div> : ""
               )}
           </React.Fragment>
         )}
@@ -405,6 +486,9 @@ class index extends Component {
                       ></i>
                     </Link>
                     <hr />
+                    <Link to="/inbox" className="dropdown-item">
+                      Inbox
+                  </Link>
                     <Link to="/watchcourses" className="dropdown-item">
                       My Courses
                   </Link>
@@ -419,9 +503,6 @@ class index extends Component {
                   </Link>
                     <Link to="/profilesetting" className="dropdown-item">
                       Settings
-                  </Link>
-                  <Link to="/inbox" className="dropdown-item">
-                      Inbox
                   </Link>
                     <button
                       className="dropdown-item"
@@ -525,6 +606,9 @@ class index extends Component {
                     ></i>
                   </Link>
                   <hr />
+                  <Link to="/inbox" className="dropdown-item">
+                      Inbox
+                  </Link>
                   <Link to="/watchcourses" className="dropdown-item">
                     My Courses
                 </Link>

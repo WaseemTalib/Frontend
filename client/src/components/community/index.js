@@ -62,8 +62,8 @@ class index extends Component {
         return <div className="content">
             <nav className="sidebar" style={{ position: `relative`, flex: `0 0 20%` }}>
                 <div style={{ position: `sticky`, top: `113px` }}>
-                    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : ""} className={"sidebar-heading"}><span className="fa fa-feed mr-2"></span> Communities</h6>
-                    <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown">
+                    <h6 onClick={() => window.innerWidth < 1000 ? this.refs.dropdown.classList.toggle("display_on_short") : "" } style={{display: "none"}} className={"sidebar-heading"} ><span className="fa fa-feed mr-2"></span> Communities</h6>
+                    <div className={`hide_on_click ${window.innerWidth < 1000 ? "display_on_short" : ""}`} ref="dropdown" >
                         <ul className="side-nav">
                             {this.renderCommunityLinks(TopicList)}
                         </ul>
@@ -88,7 +88,7 @@ class index extends Component {
                             </ul>
                         </div>
                     </div>
-                    {window.innerWidth < 1000 ? <div style={{ position: `relative`, width: `100%` }}>
+                    {window.innerWidth < 1000 ? <div style={{display: "none", position: `relative`, width: `100%` }}>
                         <div>
                             <div className="right-side-border">
                                 <h2 className="right-side-heading-h" onClick={() => window.innerWidth < 1000 ? this.refs.courses.classList.toggle("display_on_short") : ""}>Recommended Courses</h2>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../ebooks/header';
-import Card from './read';
+import Read from './read';
 
 export default class index extends Component {
 
@@ -9,10 +9,10 @@ export default class index extends Component {
     }
 
     render() {
-        return <div className="watchcourse" style={{backgroundColor: "rgb(226, 225, 225)"}}>
-    <Header/>
-    <Card/>
-    <Card/>
+        return <div className="watchcourse" style={{ backgroundColor: "rgb(226, 225, 225)" }}>
+            <Header />
+            <Read />
+            <Read />
         </div>
 
     }

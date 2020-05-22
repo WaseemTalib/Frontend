@@ -14,7 +14,7 @@ export default class extends React.Component {
                    </div>
                 <div className={"wright"}>
                 <span className={"wtitle mb-3"}>500 Total Pages</span>
-                <Link to="/" className={"wbtn btn btn-outline-danger"}>Start Reading</Link>
+                <Link to="/startread" className={"wbtn btn btn-outline-danger"}>Start Reading</Link>
                 </div>
         </div>
 

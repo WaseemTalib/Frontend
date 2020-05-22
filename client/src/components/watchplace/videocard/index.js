@@ -22,11 +22,10 @@ export default class index extends Component {
             <div className='col-12'>
                 <div className="videocard">
                     <div className="videocard-video">
-                        <video width="100%" controls>
+                        <video controls>
                             <source src="../../assets/babyvideo.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                 </video>
-                    </div>
                     {this.state.isActive ?
                         <div id="cards" className="videocard-playlist">
                             <div className="videocard-header">
@@ -47,6 +46,7 @@ export default class index extends Component {
                         :
                         <div className="videoList hiddenlist" onClick={this.show}>Play List <span className="fa fa-sort-down"></span></div>
                     }
+                    </div>
                 </div>
             </div>
         )
