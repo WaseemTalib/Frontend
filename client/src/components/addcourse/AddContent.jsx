@@ -34,26 +34,27 @@ class AddContent extends Component {
             <div className="price_wrapper input_content_wrapper">
               <p>
                 <label htmlFor="title">Title: </label>
-                <input value="My Title" readOnly id="title" type="text" placeholder="Price" />
+                <input style={{border: "none", outline: "none", padding: "0"}} value="My Title" readOnly id="title" type="text" placeholder="Price" />
               </p>
              <p>
                 <label htmlFor="category">Category: </label>
-                <input value="COmputer" readOnly id="category" type="text" placeholder="Price" />
+                <input style={{border: "none", outline: "none", padding: "0"}} value="Computer" readOnly id="category" type="text" placeholder="Price" />
               </p>
              <p>
                 <label htmlFor="short">Short Description: </label>
-                <input value="The file will have its original line endings in your working directory" readOnly id="short" type="text" placeholder="Price" />
+                <input style={{border: "none", outline: "none", padding: "0"}} value="The file will have its original line endings in your working directory" readOnly id="short" type="text" placeholder="Price" />
+              </p>
+              <p >
+                <label htmlFor="price">Price: </label>
+                <input id="price" value="30$" type="text" style={{border: "none", outline: "none", padding: "0"}} placeholder="Price" />
               </p>
              </div>
              <div className="input_content_wrapper">
-              <p>
+              <p className="mb-3">
                 <label htmlFor="description">Description: </label>
-                <textarea id="description" value="The file will have its original line endings in your working directory" readOnly rows={5} placeholder="Description"></textarea>
+                <textarea  style={{border: "none", outline: "none", padding: "0"}} id="description" value="The file will have its original line endings in your working directory" readOnly rows={5} placeholder="Description"></textarea>
               </p>
-              <p className="mt-5">
-                <label htmlFor="price">Price: </label>
-                <input id="price" type="text" placeholder="Price" />
-              </p>
+              
              </div>
             </div>
           <div className="dropdown_items_wrapper">

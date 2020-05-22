@@ -64,7 +64,7 @@ class index extends Component {
           className={active === 1 ? "link-nav-active" : "link-nav"}
         >
           <span className="fa fa-users" style={{ marginRight: "12px" }}></span>
-          My Community
+          Communities
         </Link>
         <Link
           to="/courses"
@@ -110,7 +110,7 @@ class index extends Component {
               className="fa fa-users"
               style={{ marginRight: "12px" }}
             ></span>
-            My Community
+            Communities
           </Link>
           <Link
             to="/courses"
@@ -157,8 +157,8 @@ class index extends Component {
                 : "link-nav d-flex flex-column p-2"
             }
           >
-            <span className="fa fa-users align-self-center p-1"></span>My
-            Community
+            <span className="fa fa-users align-self-center p-1"></span>
+            Communities
           </Link>
           <Link
             to="/courses"

@@ -74,11 +74,7 @@ export default class index extends Component {
                                 <option value="audi">Hindi</option>
                             </select>
                         </span>
-                        <label className="label">Upload PDF:</label>
-                        <div className="mb-3" style={{padding: "15px",color: "red",borderRadius: "3px", border: "1px solid #ced4da"}} >
-                            <label htmlFor="bookpdf" style={{ cursor: "pointer" }}> <div className="btn btn-outline-danger btnStyle">No Choosen File</div>
-                            <input type="file" id="bookpdf" accept="application/pdf,application/vnd.ms-excel" /></label>
-                        </div>
+                      
                         <label className="label">Add Synosis:</label>
                         <div className="input-group mb-3 description-text" style={{ marginTop: '12px' }}>
                             <textarea id="detail" style={{ resize: "none" }} className="form-control inputStyle" name="detail" rows="1" cols="50" required>

@@ -36,7 +36,7 @@ class index extends Component {
             <Navbar active={this.props.course ? 2 : 3} />
             {this.props.course ? <CourseHeader /> : <EbookHeader/>}
             <div className="container-fluid" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
-            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 25px' }}> Computer {this.props.course ? "(Courses)" : "(Genres)"} </h4>
+            <h4 className="" style={{ fontWeight: '700', fontSize: '25px', margin: '20px 25px' }}> Computer {this.props.course ? "Courses" : "Genres"} </h4>
             <hr style={{margin: "0 1rem 2rem 1rem"}} />
                 <div className="row mb-3">
                     {this.renderCards(list)}

@@ -29,8 +29,7 @@ import Addbookcontent from "../components/addbooks/Addbookcontent"
 export function Routes() {
     return <div>
         <Switch>
-            {/* <Route exact path='/addbooks' component={AddbooksPage} /> */}
-            <Route exact path='/' component={AddbooksPage} />
+            <Route exact path='/addbooks' component={AddbooksPage} />
             <Route exact path='/profilesetting' component={ProfilesettingPage} />
             <Route exact path='/myebooks' component={Profilebooks} />
             {/* <Route exact path='/' component={CommunityPage} /> */}
@@ -39,7 +38,8 @@ export function Routes() {
             <Route exact path='/watchcourses' component={WatchcoursePage} />
             <Route exact path='/readebook' component={ReadeBookPage} />
             <Route exact path='/watchplace' component={WatchplacePage} />
-            <Route exact path='/mycourses' component={MyCourses} />
+            <Route exact path='/' component={MyCourses} />
+            {/* <Route exact path='/mycourses' component={MyCourses} /> */}
             <Route exact path='/groups' component={GroupsPage} />
             <Route exact path='/addcourse' component={AddcoursePage} />
             <Route exact path='/addcontent' component={AddContent} />
@@ -48,8 +48,8 @@ export function Routes() {
             <Route path='/inbox' component={Messages} />
             <Route path='/user/:id/topics' component={TopicPage} />
             <Route path='/courses' component={CoursePage} />
-            <Route path='/coursescategories' component={()=><CoursesCategoriesPage course={true} />} />
-            <Route path='/ebookscategories' component={()=> <CoursesCategoriesPage course={false}/>} />
+            <Route path='/coursescategories' component={() => <CoursesCategoriesPage course={true} />} />
+            <Route path='/ebookscategories' component={() => <CoursesCategoriesPage course={false} />} />
             <Route path='/coursedetails' component={CourseDetailsPage} />
             <Route path='/profile' component={() => <Profile ismyProfile={true} />} />
             <Route path='/otherprofile' component={() => <Profile ismyProfile={false} />} />
@@ -65,7 +65,7 @@ export function PublicRoutes() {
     return <div>
         <Switch>
             <Route exact path='/login' component={LoginPage} />
-            <Route path='/register' component={SignupPage} /> 
+            <Route path='/register' component={SignupPage} />
             <Route render={() => <Redirect to='/login' />} />
         </Switch>
     </div>

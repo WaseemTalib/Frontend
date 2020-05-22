@@ -34,21 +34,21 @@ class AddContent extends Component {
 
               <p>
                 <label htmlFor="title">Title: </label>
-                <input value="Title" readOnly id="title" type="text" placeholder="title" />
+                <input style={{border: "none", outline: "none", padding: "0"}} value="Title" readOnly id="title" type="text" placeholder="title" />
               </p>
               <p>
                 <label htmlFor="price">Genre: </label>
-                <input value="Computer" readOnly id="price" type="text" placeholder="Price" />
+                <input style={{border: "none", outline: "none", padding: "0"}} value="Computer" readOnly id="price" type="text" placeholder="Price" />
               </p>
               <p >
                 <label htmlFor="price">Set Price: </label>
-                <input id="price" value="30$" readOnly type="text" placeholder="30$" />
+                <input style={{border: "none", outline: "none", padding: "0"}} id="price" value="30$" readOnly type="text" placeholder="30$" />
               </p>
             </div>
             <div className="input_content_wrapper">
               <p className=" mb-2">
                 <label htmlFor="description">Synosis: </label>
-                <textarea id="description" value="The file will have its original line endings in your working directory" readOnly rows={5} placeholder="Description"></textarea>
+                <textarea style={{border: "none", outline: "none", padding: "0"}} id="description" value="The file will have its original line endings in your working directory" readOnly rows={5} placeholder="Description"></textarea>
               </p>
               <p className="mb-5">
                 <label >Upload PDF:</label>
