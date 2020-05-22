@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
-import {Link} from 'react-router-dom';
-
+import Rating from '../rating'
 export default class extends React.Component {
     render() {
         return <div>
@@ -13,7 +12,9 @@ export default class extends React.Component {
                 </span>
                 <span className={"mb-4 mt-4"} style={{fontSize: "16px"}}>
                 Learn how to design fixed-wing drones from specific missions.<br/>
-                Explore Tradeoffs in aircraft design and performance.<hr/>
+                Explore Tradeoffs in aircraft design and performance.
+                <span style={{textAlign: "center"}}> <Rating stars={4} className="mt-3" ></Rating></span>
+               <hr/>
                 </span>
             </div>
           

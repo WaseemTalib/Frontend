@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Rating from './rating'
 export default class extends React.Component {
 
     render() {
@@ -27,6 +27,8 @@ export default class extends React.Component {
                 <h2 className="description-heading col-lg-7 col-12" style={{display: "inline"}} >Synosis: </h2>
                 <span style={{ marginRight: "0" }}> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia a provident veniam! Delectus.</span>
             </div>
+           <span style={{textAlign: "center"}}> <Rating stars={4} className="mt-3" ></Rating></span>
+        
          </div>
 
     }

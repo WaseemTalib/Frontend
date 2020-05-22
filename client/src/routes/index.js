@@ -40,12 +40,12 @@ export function Routes() {
             <Route exact path='/ebookscategories' component={() => <CoursesCategoriesPage course={false} />} />
             <Route exact path='/profile' component={() => <Profile ismyProfile={true} />} />
             <Route exact path='/otherprofile' component={() => <Profile ismyProfile={false} />} />
-            <Route exact path='/' component={CommunityPage} />
+            {/* <Route exact path='/' component={CommunityPage} /> */}
             <Route exact path='/community/:tId' component={CommunityPageT} />
             <Route exact path='/credits' component={CreditsPage} />
             <Route exact path='/watchcourses' component={WatchcoursePage} />
             <Route exact path='/readebook' component={ReadeBookPage} />
-            <Route exact path='/startread' component={StartRead} />
+            <Route exact path='/' component={StartRead} />
             <Route exact path='/watchplace' component={WatchplacePage} />
             <Route exact path='/groups' component={GroupsPage} />
             <Route exact path='/addcourse' component={AddcoursePage} />
